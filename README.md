@@ -1,4 +1,4 @@
-oehealth
+OeHealth
 ========
 
-the OpenERP health solution
+the **OpenERP** health solution
