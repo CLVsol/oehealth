@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="0">
+
+        <record id="oehealth_base.group_oehealth_user" model="res.groups">
+            <field name="name">Health User</field>
+        </record>
+
+        <record id="oehealth_base.group_oehealth_suser" model="res.groups">
+            <field name="name">Health SuperUser</field>
+            <field name="implied_ids" eval="[(4, ref('oehealth_base.group_oehealth_user'))]"/>
+        </record>
+
+        <record id="oehealth_base.group_oehealth_manager" model="res.groups">
+            <field name="name">Health Manager</field>
+            <field name="implied_ids" eval="[(4, ref('oehealth_base.group_oehealth_suser'))]"/>
+        </record>
+
+        <record id="oehealth_base.group_oehealth_smanager" model="res.groups">
+            <field name="name">Health SuperManager</field>
+            <field name="implied_ids" eval="[(4, ref('oehealth_base.group_oehealth_manager'))]"/>
+        </record>
+
+        <record id="oehealth_base.group_oehealth_rmanager" model="res.groups">
+            <field name="name">Health RegisterManager</field>
+        </record>
+
+     </data>
+</openerp>

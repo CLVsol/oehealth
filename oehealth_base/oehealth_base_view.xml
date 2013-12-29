@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+    
+        <!-- Health -->
+        <menuitem name="Health" id="menu_health" 
+            sequence="11"/>
+            
+        <!-- Health/Health -->
+        <menuitem name="Health" id="menu_health_health" 
+            parent="menu_health"
+            sequence="10"/>
+        <!-- Health/Health/Patient -->
+        <menuitem name="Patient" id="menu_health_health_patient" 
+            parent="menu_health_health"
+            sequence="10"/>
+        <!-- Health/Health/Lab Test -->
+        <menuitem name="Lab Test" id="menu_health_health_lab_test" 
+            parent="menu_health_health"
+            sequence="20"/>
+        <!-- Health/Health/Community -->
+        <menuitem name="Community" id="menu_health_health_community" 
+            parent="menu_health_health"
+            sequence="30"/>
+        <!-- Health/Health/Base -->
+        <menuitem name="Base" id="menu_health_health_base" 
+            parent="menu_health_health"
+            sequence="40"/>
+            
+        <!-- Health/Insurance -->
+        <menuitem name="Insurance" id="menu_health_insurance" 
+            parent="menu_health"
+            sequence="20"/>
+        <!-- Health/Insurance/Insurance -->
+        <menuitem name="Insurance" id="menu_health_insurance_insurance" 
+            parent="menu_health_insurance"
+            sequence="10"/>
+        <!-- Health/Insurance/Insurance Client -->
+        <menuitem name="Insurance Client" id="menu_health_insurance_insurance_client" 
+            parent="menu_health_insurance"
+            sequence="20"/>
+
+        <!-- Health/Medication -->
+        <menuitem name="Medication" id="menu_health_medication" 
+            parent="menu_health"
+            sequence="30"/>
+        <!-- Health/Medication/Medication -->
+        <menuitem name="Medication" id="menu_health_medication_medication" 
+            parent="menu_health_medication"
+            sequence="10"/>
+        <!-- Health/Medication/Medicament -->
+        <menuitem name="Medicament" id="menu_health_medication_medicament" 
+            parent="menu_health_medication"
+            sequence="20"/>
+        <!-- Health/Medication/Prescription -->
+        <menuitem name="Prescription" id="menu_health_medication_prescription" 
+            parent="menu_health_medication"
+            sequence="30"/>
+        <!-- Health/Medication/Dispensation -->
+        <menuitem name="Dispensation" id="menu_health_medication_dispensation" 
+            parent="menu_health_medication"
+            sequence="40"/>
+        <!-- Health/Medication/Authorization -->
+        <menuitem name="Authorization" id="menu_health_medication_authorization" 
+            parent="menu_health_medication"
+            sequence="50"/>
+        <!-- Health/Medication/Pharmacy -->
+        <menuitem name="Pharmacy" id="menu_health_medication_pharmacy" 
+            parent="menu_health_medication"
+            sequence="60"/>
+
+        <!-- Health/GaranteMed -->
+        <menuitem name="GaranteMed" id="menu_health_garantemed" 
+            parent="menu_health"
+            sequence="40"/>
+        <!-- Health/GaranteMed/Borderaux -->
+        <menuitem name="Borderaux" id="menu_health_garantemed_borderaux" 
+            parent="menu_health_garantemed"
+            sequence="10"/>
+
+        <!-- Health/Configuration -->
+        <menuitem name="Configuration" id="menu_health_config"  
+            parent="menu_health"
+            sequence="90" />
+
+        <!-- Health/Configuration/Health -->
+        <menuitem name="Health" id="menu_health_config_health" 
+            parent="menu_health_config"
+            sequence="10"/>
+        <!-- Health/Configuration/Health/Patient -->
+        <menuitem name="Patient" id="menu_health_config_health_patient" 
+            parent="menu_health_config_health"
+            sequence="10"/>
+        <!-- Health/Configuration/Health/Lab Test -->
+        <menuitem name="Lab Test" id="menu_health_config_health_lab_test" 
+            parent="menu_health_config_health"
+            sequence="15"/>
+        <!-- Health/Configuration/Health/Community -->
+        <menuitem name="Community" id="menu_health_config_health_community" 
+            parent="menu_health_config_health"
+            sequence="20"/>
+        <!-- Health/Configuration/Health/Base -->
+        <menuitem name="Base" id="menu_health_config_health_base" 
+            parent="menu_health_config_health"
+            sequence="30"/>
+
+        <!-- Health/Configuration/Insurance -->
+        <menuitem name="Insurance" id="menu_health_config_insurance" 
+            parent="menu_health_config"
+            sequence="20"/>
+        <!-- Health/Configuration/Insurance/Insurance -->
+        <menuitem name="Insurance" id="menu_health_config_insurance_insurance" 
+            parent="menu_health_config_insurance"
+            sequence="10"/>
+        <!-- Health/Configuration/Insurance/Insurance Client -->
+        <menuitem name="Insurance Client" id="menu_health_config_insurance_insurance_client" 
+            parent="menu_health_config_insurance"
+            sequence="20"/>
+
+        <!-- Health/Configuration/Medication -->
+        <menuitem name="Medication" id="menu_health_config_medication" 
+            parent="menu_health_config"
+            sequence="40"/>
+        <!-- Health/Configuration/Pharmacy -->
+        <menuitem name="Pharmacy" id="menu_health_config_pharmacy" 
+            parent="menu_health_config"
+            sequence="50"/>
+        <!-- Health/Configuration/Pharmacy -->
+        <menuitem name="Garatemed" id="menu_health_config_garantemed" 
+            parent="menu_health_config"
+            sequence="70"/>
+            
+    </data>
+</openerp>
