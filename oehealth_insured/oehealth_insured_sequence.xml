@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<openerp>
+    <data noupdate="1">
+
+        <record id="seq_type_oehealth_insured" model="ir.sequence.type">
+            <field name="name">Health Insured Sequence</field>
+            <field name="code">oehealth.insured.code</field>
+        </record>
+        
+        <record id="seq_oehealth_insured" model="ir.sequence">
+            <field name="name">Health Insured Sequence</field>
+            <field name="code">oehealth.insured.code</field>
+            <field name="padding" eval="9"/>
+            <field name="prefix">00000</field>
+        </record>
+
+    </data>
+</openerp>

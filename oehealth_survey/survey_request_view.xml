@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <!-- Survey Request -->
+        
+        <record model="ir.ui.view" id="survey_request_form">
+            <field name="name">oehealth_survey_request_form</field>
+            <field name="model">survey.request</field>
+            <field name="inherit_id" ref="survey.survey_request_form"/>
+            <field name="arch" type="xml">
+                <field name="user_id" position="replace">
+                     <field name="patient_id"/>
+                     <field name="user_id" on_change="on_change_user(user_id)"/>
+                </field>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="survey_request_tree">
+            <field name="name">oehealth_survey_request_tree</field>
+            <field name="model">survey.request</field>
+            <field name="inherit_id" ref="survey.survey_request_tree"/>
+            <field name="arch" type="xml">
+                <field name="user_id" position="replace">
+                     <field name="patient_id"/>
+                     <field name="user_id"/>
+                </field>
+            </field>
+        </record>
+
+    </data>
+</openerp>

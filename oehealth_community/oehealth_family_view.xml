@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="view_oehealth_family_form" model="ir.ui.view">
+            <field name="name">oehealth.family.form</field>
+            <field name="model">oehealth.family</field>
+            <field name="inherit_id" ref="oehealth_family.view_oehealth_family_form"/>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <group string="Information" position="replace">
+                    <group string="Communities" />
+                    <field name="community_ids" colspan="4" nolabel="1">
+                        <tree>
+                            <field name="community_id"/>
+                            <field name="info"/>
+                        </tree>
+                    </field>
+                    <group string="Information" />
+                </group>
+            </field>
+        </record>
+
+    </data>
+</openerp>

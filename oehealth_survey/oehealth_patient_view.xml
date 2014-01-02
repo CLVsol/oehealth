@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <!-- Patient details -->
+        <record model="ir.ui.view" id="view_oehealth_patient_form">
+            <field name="name">oehealth.patient.form</field>
+            <field name="model">oehealth.patient</field>
+            <field name="inherit_id" ref="oehealth_patient.view_oehealth_patient_form"/>
+            <field name="arch" type="xml">
+                <page string="Patient Annotations" position="after">
+                    <page string="Surveys">
+                        <field name="survey_ids" colspan="4" nolabel="1" readonly="1">
+                        </field>
+                    </page>
+                </page>
+            </field>
+        </record>
+    
+    </data>
+</openerp>

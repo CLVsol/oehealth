@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="0">
+
+        <record id="oehealth_base.group_oehealth_lab_test_user" model="res.groups">
+            <field name="name">Health Lab Test User</field>
+        </record>
+        
+        <record id="oehealth_base.group_oehealth_lab_test_manager" model="res.groups">
+            <field name="name">Health Lab Test Manager</field>
+            <field name="implied_ids" eval="[(4, ref('oehealth_base.group_oehealth_lab_test_user'))]"/>
+        </record>
+        
+    </data>
+</openerp>

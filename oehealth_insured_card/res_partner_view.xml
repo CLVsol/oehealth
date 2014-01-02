@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        
+        <record id="view_oehealth_res_partner_form" model="ir.ui.view">
+            <field name="name">res.partner.form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="oehealth_partner.view_oehealth_res_partner_form"/>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <field name="is_health_partner" position="after">
+                    <field name="is_insured_card" readonly="True"/>
+                    <field name="insured_card_ids" colspan="4" nolabel="1" />
+                </field>
+            </field>
+        </record>
+
+        <record id="view_oehealth_res_partner_filter" model="ir.ui.view">
+            <field name="name">oehealth.res.partner.filter</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="oehealth_partner.view_oehealth_res_partner_filter" />
+            <field name="arch" type="xml">
+                <filter name="health_partner" position="after">
+                    <filter string="Insured Cards" name="insured_cards" domain="[('is_insured_card','=',1)]" help="Insured Card Partners"/>
+                </filter>
+            </field>
+        </record>
+
+    </data>
+</openerp>

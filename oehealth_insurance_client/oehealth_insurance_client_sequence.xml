@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<openerp>
+    <data noupdate="1">
+
+        <record id="seq_type_oehealth_insurance_client" model="ir.sequence.type">
+            <field name="name">Health Insurance Client Sequence</field>
+            <field name="code">oehealth.insurance_client.code</field>
+        </record>
+        
+        <record id="seq_oehealth_insurance_client" model="ir.sequence">
+            <field name="name">Health Insurance Client Sequence</field>
+            <field name="code">oehealth.insurance_client.code</field>
+            <field name="padding" eval="9"/>
+            <field name="prefix">00000</field>
+        </record>
+
+    </data>
+</openerp>

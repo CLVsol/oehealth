@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        
+        <!-- Lab Test units -->
+        
+        <record model="ir.ui.view" id="oehealth_lab_unit_form">
+            <field name="name">Lab Test Units</field>
+            <field name="model">oehealth.lab_test.unit</field>
+            <field name="arch" type="xml">
+                <form string="Test Unit">
+                    <group>
+                        <field name="name" required="1"/>
+                        <field name="code"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+    
+        <record model="ir.ui.view" id="oehealth_lab_unit_tree">
+            <field name="name">Lab Test Units</field>
+            <field name="model">oehealth.lab_test.unit</field>
+            <field name="arch" type="xml">
+                <tree string="Lab Test Unit">
+                    <field name="name"/>
+                    <field name="code"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record model="ir.actions.act_window" id="oehealth_action_lab_test_unit">
+            <field name="name">Lab Test Units</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">oehealth.lab_test.unit</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    
+        <record id="view_oehealth_lab_test_unit_search" model="ir.ui.view">
+            <field name="name">oehealth.lab_test.units.select</field>
+            <field name="model">oehealth.lab_test.unit</field>
+            <field name="arch" type="xml">
+                <search string="Search Lab Test Units">
+                    <separator orientation="vertical"/>
+                        <field name="name" select="1"/>
+                        <field name="code" select="1"/>
+                <newline/>
+                </search>
+            </field>
+        </record>
+    
+        <menuitem name="Units" id="menu_health_config_health_lab_test_units"
+            parent="oehealth_base.menu_health_config_health_lab_test"
+            groups="oehealth_base.group_oehealth_lab_test_user"
+            sequence="10"
+            action="oehealth_action_lab_test_unit" />
+    
+    </data>
+</openerp>

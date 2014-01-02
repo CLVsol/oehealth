@@ -1,0 +1,382 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#   * oehealth_group
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-22 21:46+0000\n"
+"PO-Revision-Date: 2013-10-22 21:46+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: oehealth_group
+#: view:oehealth.group.category:0
+#: field:oehealth.group.category,complete_name:0
+#: field:oehealth.group.category,name:0
+msgid "Category"
+msgstr "Categoria"
+
+#. module: oehealth_group
+#: field:oehealth.group,group_info:0
+msgid "Group Info"
+msgstr "Informações"
+
+#. module: oehealth_group
+#: field:oehealth.group.category,parent_left:0
+msgid "Left parent"
+msgstr "Pai anterior"
+
+#. module: oehealth_group
+#: view:oehealth.group:0
+#: selection:oehealth.group,state:0
+msgid "Revised"
+msgstr "Revisado"
+
+#. module: oehealth_group
+#: field:oehealth.annotation,group_id:0
+#: view:oehealth.group:0
+#: view:oehealth.group.participant:0
+#: field:oehealth.group.participant,group_id:0
+#: help:oehealth.group.participant,group_id:0
+msgid "Group"
+msgstr "Grupo"
+
+#. module: oehealth_group
+#: view:oehealth.group:0
+msgid "Inactive Groups"
+msgstr "Grupos Inativos"
+
+#. module: oehealth_group
+#: view:oehealth.group:0
+#: view:oehealth.group.category:0
+#: view:oehealth.group.participant:0
+#: view:oehealth.group.participant.role:0
+msgid "Information"
+msgstr "Informações"
+
+#. module: oehealth_group
+#: model:ir.actions.act_window,name:oehealth_group.act_open_oehealth_group_participant_role_view
+#: view:oehealth.group.participant.role:0
+msgid "Group Participant Roles"
+msgstr "Papeis dos Participantes do Grupo"
+
+#. module: oehealth_group
+#: model:ir.model,name:oehealth_group.model_oehealth_group
+msgid "Health Group"
+msgstr "Grupo (Saúde)"
+
+#. module: oehealth_group
+#: view:oehealth.group:0
+msgid "Group Categories..."
+msgstr "Categorias do Grupo..."
+
+#. module: oehealth_group
+#: field:oehealth.group.category,child_ids:0
+msgid "Child Categories"
+msgstr "Categorias Filhas"
+
+#. module: oehealth_group
+#: view:oehealth.group:0
+#: view:oehealth.group.participant:0
+msgid "Group By..."
+msgstr "Agrupar por..."
+
+#. module: oehealth_group
+#: model:ir.model,name:oehealth_group.model_oehealth_tag
+msgid "Health Tags"
+msgstr "Etiquetas (Saúde)"
+
+#. module: oehealth_group
+#: sql_constraint:oehealth.group:0
+msgid "The group name must be unique!"
+msgstr "A referência do grupo deve ser única!"
+
+#. module: oehealth_group
+#: field:oehealth.group.participant,role:0
+#: field:oehealth.group.participant.role,name:0
+msgid "Role"
+msgstr "Role"
+
+#. module: oehealth_group
+#: model:ir.model,name:oehealth_group.model_oehealth_group_participant_role
+msgid "oehealth.group.participant.role"
+msgstr "oehealth.group.participant.role"
+
+#. module: oehealth_group
+#: selection:oehealth.group,state:0
+msgid "New"
+msgstr "Novo"
+
+#. module: oehealth_group
+#: help:oehealth.group,active:0
+msgid "If unchecked, it will allow you to hide the group without removing it."
+msgstr "Se desmarcado, será possível esconder o grupo sem removê-lo."
+
+#. module: oehealth_group
+#: view:oehealth.group:0
+msgid "Annotations"
+msgstr "Anotações"
+
+#. module: oehealth_group
+#: view:oehealth.group:0
+msgid "Group Tags..."
+msgstr "Etiquetas do Grupo..."
+
+#. module: oehealth_group
+#: view:oehealth.group:0
+#: selection:oehealth.group,state:0
+msgid "Okay"
+msgstr "Ok"
+
+#. module: oehealth_group
+#: field:oehealth.group.category,description:0
+#: field:oehealth.group.participant.role,description:0
+msgid "Description"
+msgstr "Descrição"
+
+#. module: oehealth_group
+#: view:oehealth.group.category:0
+msgid "Inactive Categories"
+msgstr "Categorias Inativas"
+
+#. module: oehealth_group
+#: view:oehealth.group:0
+#: selection:oehealth.group,state:0
+msgid "Waiting"
+msgstr "Aguardando"
+
+#. module: oehealth_group
+#: view:oehealth.group:0
+#: view:oehealth.group.category:0
+#: view:oehealth.group.participant.role:0
+#: view:oehealth.tag:0
+msgid "Settings"
+msgstr "Configurações"
+
+#. module: oehealth_group
+#: field:oehealth.group,write_date:0
+#: field:oehealth.group.category,write_date:0
+#: field:oehealth.group.participant,write_date:0
+#: field:oehealth.group.participant.role,write_date:0
+msgid "Write Date"
+msgstr "Data da Edição"
+
+#. module: oehealth_group
+#: model:ir.actions.act_window,name:oehealth_group.act_open_oehealth_group_category_view
+#: model:ir.model,name:oehealth_group.model_oehealth_group_category
+#: field:oehealth.group,group_category_ids:0
+#: view:oehealth.group.category:0
+msgid "Group Categories"
+msgstr "Categorias de Grupos"
+
+#. module: oehealth_group
+#: help:oehealth.group.participant.role,name:0
+msgid "Role of a Participant in a Group"
+msgstr "Papel do Participanto em um Grupo"
+
+#. module: oehealth_group
+#: model:ir.actions.act_window,name:oehealth_group.act_open_oehealth_group_view
+#: model:ir.ui.menu,name:oehealth_group.menu_health_config_base_groups
+#: model:ir.ui.menu,name:oehealth_group.menu_health_health_base_groups
+#: model:ir.ui.menu,name:oehealth_group.menu_health_health_base_groups_groups
+#: view:oehealth.group:0
+#: view:oehealth.group.category:0
+#: field:oehealth.group.category,group_ids:0
+#: view:oehealth.tag:0
+#: field:oehealth.tag,group_ids:0
+msgid "Groups"
+msgstr "Grupos"
+
+#. module: oehealth_group
+#: view:oehealth.group:0
+#: view:oehealth.group.category:0
+#: view:oehealth.group.participant:0
+#: view:oehealth.group.participant.role:0
+msgid "Date"
+msgstr "Data"
+
+#. module: oehealth_group
+#: view:oehealth.group.participant.role:0
+msgid "Inactive Participant Roles"
+msgstr "Papeis de Participantes Inativos"
+
+#. module: oehealth_group
+#: model:ir.ui.menu,name:oehealth_group.menu_health_config_base_groups_categorys
+msgid "Categories"
+msgstr "Categorias"
+
+#. module: oehealth_group
+#: view:oehealth.group:0
+#: field:oehealth.group,state:0
+msgid "Stage"
+msgstr "Estágio"
+
+#. module: oehealth_group
+#: field:oehealth.group.category,info:0
+#: field:oehealth.group.participant,info:0
+#: field:oehealth.group.participant.role,info:0
+msgid "Info"
+msgstr "Informações"
+
+#. module: oehealth_group
+#: view:oehealth.group.participant:0
+msgid "Participant Role"
+msgstr "Papel do Participante"
+
+#. module: oehealth_group
+#: model:ir.model,name:oehealth_group.model_oehealth_group_participant
+msgid "oehealth.group.participant"
+msgstr "oehealth.group.participant"
+
+#. module: oehealth_group
+#: view:oehealth.group:0
+#: field:oehealth.group,responsible:0
+msgid "Responsible"
+msgstr "Responsável"
+
+#. module: oehealth_group
+#: field:oehealth.group.category,parent_id:0
+msgid "Parent Category"
+msgstr "Categoria Pai"
+
+#. module: oehealth_group
+#: model:ir.model,name:oehealth_group.model_oehealth_annotation
+msgid "Health Annotation"
+msgstr "Anotação (Saúde)"
+
+#. module: oehealth_group
+#: help:oehealth.group.participant.role,active:0
+msgid "If unchecked, it will allow you to hide the role without removing it.."
+msgstr "Se desmarcado, será possível esconder o papel sem removê-lo."
+
+#. module: oehealth_group
+#: view:oehealth.group:0
+#: view:oehealth.group.category:0
+#: view:oehealth.group.participant:0
+#: field:oehealth.group.participant,user_id:0
+#: view:oehealth.group.participant.role:0
+msgid "User"
+msgstr "Usuário"
+
+#. module: oehealth_group
+#: field:oehealth.group,active:0
+#: field:oehealth.group.category,active:0
+#: field:oehealth.group.participant.role,active:0
+msgid "Active"
+msgstr "Ativo"
+
+#. module: oehealth_group
+#: field:oehealth.group,write_uid:0
+#: field:oehealth.group.category,write_uid:0
+#: field:oehealth.group.participant,write_uid:0
+#: field:oehealth.group.participant.role,write_uid:0
+msgid "Write User"
+msgstr "Editado em"
+
+#. module: oehealth_group
+#: field:oehealth.group,group_tag_ids:0
+msgid "Group Tags"
+msgstr "Etiquetas do Grupo"
+
+#. module: oehealth_group
+#: help:oehealth.group.category,active:0
+msgid "If unchecked, it will allow you to hide the category without removing it."
+msgstr "Se desmarcado, será possível esconder a categoria sem removê-la."
+
+#. module: oehealth_group
+#: view:oehealth.group:0
+#: view:oehealth.group.category:0
+#: view:oehealth.group.participant:0
+#: view:oehealth.group.participant.role:0
+msgid "Last Update"
+msgstr "Última Atualização"
+
+#. module: oehealth_group
+#: field:oehealth.group,create_uid:0
+#: field:oehealth.group.category,create_uid:0
+#: field:oehealth.group.participant,create_uid:0
+#: field:oehealth.group.participant.role,create_uid:0
+msgid "Create User"
+msgstr "Criado por"
+
+#. module: oehealth_group
+#: constraint:oehealth.group.category:0
+msgid "Error! You can not create recursive categories."
+msgstr "Erro! Não é permitido criar categorias recursivas."
+
+#. module: oehealth_group
+#: model:ir.actions.act_window,name:oehealth_group.act_open_oehealth_group_participant_view
+#: view:oehealth.group.participant:0
+msgid "Group Participants"
+msgstr "Participantes do Grupos"
+
+#. module: oehealth_group
+#: field:oehealth.group,name:0
+msgid "Reference"
+msgstr "Referência"
+
+#. module: oehealth_group
+#: view:oehealth.group:0
+#: field:oehealth.group,date_group_inclusion:0
+msgid "Group Inclusion Date"
+msgstr "Data da Inclusão do Grupo"
+
+#. module: oehealth_group
+#: view:oehealth.group:0
+#: view:oehealth.group.category:0
+#: view:oehealth.group.participant:0
+#: view:oehealth.group.participant.role:0
+msgid "Creation"
+msgstr "Criação"
+
+#. module: oehealth_group
+#: view:oehealth.group.participant.role:0
+msgid "Group Participant Role"
+msgstr "Papel do Participante do Grupo"
+
+#. module: oehealth_group
+#: model:ir.ui.menu,name:oehealth_group.menu_health_health_base_groups_participants
+#: view:oehealth.group:0
+#: field:oehealth.group,participant_ids:0
+msgid "Participants"
+msgstr "Participantes"
+
+#. module: oehealth_group
+#: help:oehealth.group,name:0
+msgid "Use \"/\" to get an automatic new Reference."
+msgstr "Usar \"/\" para obter automaticamente uma nova Referência."
+
+#. module: oehealth_group
+#: field:oehealth.group,create_date:0
+#: field:oehealth.group.category,create_date:0
+#: field:oehealth.group.participant,create_date:0
+#: field:oehealth.group.participant.role,create_date:0
+msgid "Create Date"
+msgstr "Data da Criação"
+
+#. module: oehealth_group
+#: field:oehealth.group.category,parent_right:0
+msgid "Right parent"
+msgstr "Pai seguinte"
+
+#. module: oehealth_group
+#: field:oehealth.group,group_annotation_ids:0
+msgid "Group Annotations"
+msgstr "Anotações"
+
+#. module: oehealth_group
+#: model:ir.ui.menu,name:oehealth_group.menu_health_config_base_groups_participant_roles
+msgid "Participant Roles"
+msgstr "Papeis dos Participantes"
+
+#. module: oehealth_group
+#: field:oehealth.group,subject:0
+msgid "Subject"
+msgstr "Assunto"
+

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="view_oehealth_insured_form" model="ir.ui.view">
+            <field name="name">oehealth.insured.form</field>
+            <field name="model">oehealth.insured</field>
+            <field name="inherit_id" ref="oehealth_insured.view_oehealth_insured_form"/>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <group string="Status" position="after">
+                    <group string="Insured Cards">
+                        <field name="insured_card_ids" colspan="4" nolabel="1" />
+                    </group>
+                </group>
+            </field>
+        </record>
+
+    </data>
+</openerp>

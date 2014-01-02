@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        
+        <!-- Lab Requests -->
+    
+        <record model="ir.ui.view" id="oehealth_lab_test_request_form">
+            <field name="name">Lab Test Requests</field>
+            <field name="model">oehealth.lab_test.patient</field>
+            <field name="arch" type="xml">
+                <form string="Lab Test Requests">
+                    <field name="name" required="1"/>
+                    <field name="date"/>
+                    <field name="patient_id" required="1"/>
+                    <field name="professional_id"/>
+                    <field name="state"/>
+                    <field name="lab_test_id"></field>
+                </form>
+            </field>
+        </record>
+    
+        <record model="ir.ui.view" id="oehealth_lab_test_request_tree">
+            <field name="name">Lab Test Requests</field>
+            <field name="model">oehealth.lab_test.patient</field>
+            <field name="arch" type="xml">
+                <tree string="Test Requests">
+                    <field name="name"/>
+                    <field name="date"/>
+                    <field name="patient_id"/>
+                    <field name="professional_id"/>
+                    <field name="state" readonly="1"/>
+                    <field name="lab_test_id"></field>
+                </tree>
+            </field>
+        </record>
+        
+        <record model="ir.actions.act_window" id="oehealth_action_lab_test_request">
+            <field name="name">Lab Test Requests</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">oehealth.lab_test.patient</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    
+        <menuitem name="Requests" id="menu_health_health_lab_test_requests"
+            parent="oehealth_base.menu_health_health_lab_test"
+            groups="oehealth_base.group_oehealth_lab_test_user"
+            sequence="10"
+            action="oehealth_action_lab_test_request" />
+    
+        <record model="ir.actions.act_window" id="oehealth_action_draft_lab_test_request">
+            <field name="name">Draft Lab Test Requests</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">oehealth.lab_test.patient</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('state','=','draft')]</field>
+        </record>
+    
+        <menuitem name="Draft Requests" id="menu_health_health_lab_test_requests_draft_requests"
+            parent="menu_health_health_lab_test_requests"
+            groups="oehealth_base.group_oehealth_lab_test_user"
+            sequence="10"
+            action="oehealth_action_draft_lab_test_request" />
+    
+        <record model="ir.actions.act_window" id="oehealth_action_today_draft_lab_test_request">
+            <field name="name">Today's Draft Lab Test Requests</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">oehealth.lab_test.patient</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('state','=','draft'),('date','&gt;=',time.strftime('%Y-%m-%d 00:00:01')),('date','&lt;=',time.strftime('%Y-%m-%d 23:59:59'))]</field>
+        </record>
+    
+        <menuitem name="Today's Draft Requests" id="menu_health_health_lab_test_requests_today"
+            parent="menu_health_health_lab_test_requests"
+            groups="oehealth_base.group_oehealth_lab_test_user"
+            sequence="20"
+            action="oehealth_action_today_draft_lab_test_request" />
+    
+        <record id="view_oehealth_lab_test_filter" model="ir.ui.view">
+            <field name="name">Lab Tests Requests</field>
+            <field name="model">oehealth.lab_test.patient</field>
+            <field name="arch" type="xml">
+                <search string="Search Lab Tests Requests">
+                    <separator orientation="vertical"/>
+                        <field name="name" select="1"/>
+                        <field name="date" select="1"/>
+                        <field name="patient_id" select="1"/>
+                        <field name="professional_id" select="1"/>
+                        <field name="state" select="1"/>
+                    <newline/>
+                </search>
+            </field>
+        </record>
+       
+    </data>
+</openerp>

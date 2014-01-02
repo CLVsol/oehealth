@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<openerp>
+    <data>
+
+        <record model="ir.ui.view" id="view_product_form">
+            <field name="name">product.normal.form</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_normal_form_view" />
+            <field name="arch" type="xml">
+                <div name="options" position="after">
+                    <div name="options" groups="base.group_user">
+                        <field name="is_medicament"/>
+                        <label for="is_medicament"/>
+                    </div>
+                </div>
+            </field>
+        </record>
+
+    </data>
+</openerp>

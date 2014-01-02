@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <record id="view_oehealth_medicament_group_member_tree" model="ir.ui.view">
+            <field name="name">oehealth.medicament.group.member.tree</field>
+            <field name="model">oehealth.medicament.group.member</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <tree string="Medicament Group Members">
+                    <field name="group_id" />
+                    <field name="medicament_id" />
+                    <field name="level" />
+                    <field name="order" />
+                    <field name="category" />
+                    <field name="info" />
+                </tree>
+            </field>
+        </record>
+        
+        <record id="view_oehealth_medicament_group_member_form" model="ir.ui.view">
+            <field name="name">oehealth.medicament.group.member.form</field>
+            <field name="model">oehealth.medicament.group.member</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <form string="Medicament Group Members" version="7.0">
+                    <header>
+                        <button name="oehealth_medicament_group_member_revised" string="Revised" states="new,okay" type="workflow" groups="oehealth_base.group_oehealth_medicament_group_manager"/>
+                        <button name="oehealth_medicament_group_member_waiting" string="Waiting" states="new,revised" type="workflow" groups="oehealth_base.group_oehealth_medicament_group_manager"/>
+                        <button name="oehealth_medicament_group_member_okay" string="Okay" states="new,revised,waiting" type="workflow" groups="oehealth_base.group_oehealth_medicament_group_manager"/>
+                        <field name="state" widget="statusbar" statusbar_visible="new,revised,waiting,okay" 
+                               statusbar_colors='{"new":"blue","revised":"blue","waiting":"blue","okay":"blue"}' />
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <div class="oe_edit_only">
+                                <label for="group_id"/>
+                            </div>
+                            <h2>
+                                <field name="group_id" placeholder="Group Name..."/>
+                            </h2>
+                            <div class="oe_edit_only">
+                                <label for="medicament_id"/>
+                            </div>
+                            <h3>
+                                <field name="medicament_id" placeholder="Group Name..."/>
+                            </h3>
+                            <div class="oe_edit_only">
+                                <label for="level"/>
+                            </div>
+                            <h3>
+                                <field name="level" placeholder="Level..."/>
+                            </h3>
+                            <div class="oe_edit_only">
+                                <label for="order"/>
+                            </div>
+                            <h3>
+                                <field name="order" placeholder="Order..."/>
+                            </h3>
+                            <div class="oe_edit_only">
+                                <label for="category"/>
+                            </div>
+                            <h3>
+                                <field name="category" placeholder="Group Name..."/>
+                            </h3>
+                        </div>
+                        <notebook>
+                            <page string="Information">
+                                <group string="Information" />
+                                <div class="oe_edit_only">
+                                    <label for="info"/>
+                                </div>
+                                <field name="info" colspan="4"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record id="view_oehealth_medicament_group_member_search" model="ir.ui.view">
+            <field name="name">oehealth.medicament.group.member.search</field>
+            <field name="model">oehealth.medicament.group.member</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <search string="Medicament Group Members">
+                    <field name="group_id" />
+                    <!--field name="comm_person_id" /-->
+                    <field name="category" />
+                    <newline />
+                    <group expand="0" string="Medicament Group By...">
+                        <filter string="Medicament Group" domain="[]" context="{'group_by':'group_id'}" />
+                        <!--filter string="Medicament Group Participant" domain="[]" context="{'group_by':'comm_person_id'}" /-->
+                        <filter string="Member Category" domain="[]" context="{'group_by':'category'}" />
+                    </group>
+                </search>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="act_open_oehealth_medicament_group_member_view">
+            <field name="name">Medicament Group Members</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">oehealth.medicament.group.member</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_oehealth_medicament_group_member_search" />
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+        
+        <record model="ir.actions.act_window.view" id="act_open_oehealth_medicament_group_member_view_form">
+            <field name="act_window_id" ref="act_open_oehealth_medicament_group_member_view" />
+            <field name="sequence" eval="20" />
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_oehealth_medicament_group_member_form" />
+        </record>
+        
+        <record model="ir.actions.act_window.view" id="act_open_oehealth_medicament_group_member_view_tree">
+            <field name="act_window_id" ref="act_open_oehealth_medicament_group_member_view" />
+            <field name="sequence" eval="10" />
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_oehealth_medicament_group_member_tree" />
+        </record>
+        
+        <menuitem name="Group Members" id="menu_health_medication_medicament_groups_group_members"  
+            parent="menu_health_medication_medicament_groups"
+            groups="oehealth_base.group_oehealth_medicament_group_user"
+            sequence="20" 
+            action="act_open_oehealth_medicament_group_member_view" />
+
+    </data>
+</openerp>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <record id="view_oehealth_specialty_form" model="ir.ui.view">
+            <field name="name">oehealth.specialty.form</field>
+            <field name="model">oehealth.specialty</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <form string="Health Specialty" version="7.0">
+                    <sheet>
+                        <div class="oe_title">
+                            <div class="oe_edit_only">
+                                <label for="parent_id"/>
+                            </div>
+                            <h2>
+                                <field name="parent_id" placeholder="Parent Specialty..." />
+                            </h2>
+                            <div class="oe_edit_only">
+                                <label for="name"/>
+                            </div>
+                            <h1>
+                                <field name="name" default_focus="1" placeholder="Health Specialty..." />
+                            </h1>
+                            <div class="oe_edit_only">
+                                <label for="code"/>
+                            </div>
+                            <h2>
+                                <field name="code" placeholder="Code..." />
+                            </h2>
+                            <div class="oe_edit_only">
+                                <label for="description"/>
+                            </div>
+                            <h3>
+                                <field name="description" placeholder="Description..." />
+                            </h3>
+                            <div class="oe_edit_only">
+                                <label for="tag_ids" groups="oehealth_base.group_oehealth_suser"/>
+                            </div>
+                            <field name="tag_ids" widget="many2many_tags" placeholder="Tags..." groups="oehealth_base.group_oehealth_suser"/>
+                        </div>
+                        <notebook>
+                            <page string="Information" groups="oehealth_base.group_oehealth_suser">
+                                <group string="Information"/>
+                                <div class="oe_edit_only">
+                                    <label for="info"/>
+                                </div>
+                                <field name="info" />
+                                <group groups="oehealth_base.group_oehealth_rmanager">
+                                    <group string="Creation" >
+                                        <field name="create_uid" string="User" />
+                                        <field name="create_date" string="Date" />
+                                    </group>
+                                    <group string="Last Update" >
+                                        <field name="write_uid" string="User" />
+                                        <field name="write_date" string="Date"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Settings" groups="oehealth_base.group_oehealth_manager">
+                                <group>
+                                    <field name="active"/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record id="view_oehealth_specialty_tree" model="ir.ui.view">
+            <field name="name">oehealth.specialty.tree</field>
+            <field name="model">oehealth.specialty</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <tree string="Health Specialties">
+                    <field name="complete_name" />
+                    <field name="code" />
+                    <field name="description" colspan="4"/>
+                    <field name="tag_ids" groups="oehealth_base.group_oehealth_suser"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record id="view_oehealth_specialty_search" model="ir.ui.view">
+            <field name="name">oehealth.specialty.search</field>
+            <field name="model">oehealth.specialty</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <search string="Specialties">
+                    <field name="name" />
+                    <field name="complete_name" />
+                    <field name="code" />
+                    <field name="description" />
+                    <field name="info" />
+                    <!--filter string="Active" name="active" domain="[('active','=',1)]" help="Active Specialties" invisible="1"/-->
+                    <filter string="Inactive Specialties" name="active" domain="[('active','=',0)]" help="Inactive Specialties"/>
+                </search>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="act_open_oehealth_specialty_view">
+            <field name="name">Health Specialties</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">oehealth.specialty</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_oehealth_specialty_search" />
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+        
+        <record model="ir.actions.act_window.view" id="act_open_oehealth_specialty_view_form">
+            <field name="act_window_id" ref="act_open_oehealth_specialty_view" />
+            <field name="sequence" eval="20" />
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_oehealth_specialty_form" />
+        </record>
+        
+        <record model="ir.actions.act_window.view" id="act_open_oehealth_specialty_view_tree">
+            <field name="act_window_id" ref="act_open_oehealth_specialty_view" />
+            <field name="sequence" eval="10" />
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_oehealth_specialty_tree" />
+        </record>
+        
+        <menuitem name="Health Specialties" id="menu_health_config_health_base_specialties"
+            parent="oehealth_base.menu_health_config_health_base"
+            groups="oehealth_base.group_oehealth_user"
+            sequence="30"
+            action="act_open_oehealth_specialty_view" />
+
+    </data>
+</openerp>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <record id="view_oehealth_lab_test_outcome_form" model="ir.ui.view">
+            <field name="name">Outcome</field>
+            <field name="model">oehealth.lab_test.outcome</field>
+            <field name="arch" type="xml">
+                <form string="Lab Test Outcomes" version="7.0">
+                    <sheet>
+                        <group>
+                            <field name="name" default_focus="1"/>
+                            <field name="description"/>
+                        </group>
+                        <notebook>
+                            <page string="Information" groups="oehealth_base.group_oehealth_suser">
+                                <group string="Information" />
+                                <div class="oe_edit_only">
+                                    <label for="info"/>
+                                </div>
+                                <field name="info" colspan="4"/>
+                            </page>
+                            <page string="Settings" groups="oehealth_base.group_oehealth_manager">
+                                <group>
+                                    <field name="active"/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record id="view_oehealth_lab_test_outcome_tree" model="ir.ui.view">
+            <field name="name">oehealth.lab_test.outcome.tree</field>
+            <field name="model">oehealth.lab_test.outcome</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <tree string="Lab Test Outcomes">
+                    <field name="name" />
+                    <field name="description" />
+                    <field name="info" />
+                </tree>
+            </field>
+        </record>
+        
+        <record id="view_oehealth_lab_test_outcome_search" model="ir.ui.view">
+            <field name="name">oehealth.lab_test.outcome.search</field>
+            <field name="model">oehealth.lab_test.outcome</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <search string="Category">
+                    <field name="name" />
+                    <field name="description" />
+                    <separator/>
+                    <!--filter string="Active" name="active" domain="[('active','=',1)]" help="Active Outcomes" invisible="1"/-->
+                    <filter string="Inactive Outcomes" name="active" domain="[('active','=',0)]" help="Inactive Outcomes"/>
+                </search>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="act_open_oehealth_lab_test_outcome_view">
+            <field name="name">Lab Test Outcomes</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">oehealth.lab_test.outcome</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_oehealth_lab_test_outcome_search" />
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+        
+        <record model="ir.actions.act_window.view" id="act_open_oehealth_lab_test_outcome_view_form">
+            <field name="act_window_id" ref="act_open_oehealth_lab_test_outcome_view" />
+            <field name="sequence" eval="20" />
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_oehealth_lab_test_outcome_form" />
+        </record>
+        
+        <record model="ir.actions.act_window.view" id="act_open_oehealth_lab_test_outcome_view_tree">
+            <field name="act_window_id" ref="act_open_oehealth_lab_test_outcome_view" />
+            <field name="sequence" eval="10" />
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_oehealth_lab_test_outcome_tree" />
+        </record>
+        
+        <menuitem name="Outcomes" id="menu_health_config_health_lab_test_outcomes" 
+            parent="oehealth_base.menu_health_config_health_lab_test"
+            groups="oehealth_base.group_oehealth_suser"
+            sequence="20"
+            action="act_open_oehealth_lab_test_outcome_view" />
+
+    </data>
+</openerp>

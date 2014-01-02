@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+
+        <record id="survey_0" model="survey">
+            <field eval="&quot;&quot;&quot;OpenERP Feedback&quot;&quot;&quot;" name="title"/>
+            <!--field name="responsible_id" ref="base.user_demo"/-->
+            <field name="responsible_id" ref="base.user_root"/>
+            <field name="color">4</field>
+            <field name="max_response_limit">20</field>
+            <field name="type" ref="survey_type2"/>
+            <field name="state">open</field>
+            <field name="response_user">5</field>
+        </record>
+        <record id="survey_page_0" model="survey.page">
+            <field eval="&quot;&quot;&quot;About your OpenERP usage&quot;&quot;&quot;" name="title"/>
+            <field name="survey_id" ref="survey_0"/>
+            <field eval="1" name="sequence"/>
+        </record>
+        <record id="survey_page_1" model="survey.page">
+            <field eval="&quot;&quot;&quot;These questions relates to the ergonomy and ease of use of OpenERP. Try to remind your firsts days on OpenERP and what have been your difficulties.&quot;&quot;&quot;" name="note"/>
+            <field eval="&quot;&quot;&quot;Ergonomy and ease of use - 1&quot;&quot;&quot;" name="title"/>
+            <field name="survey_id" ref="survey_0"/>
+            <field eval="2" name="sequence"/>
+        </record>
+        <record id="survey_page_4" model="survey.page">
+            <field eval="&quot;&quot;&quot;Ergonomy of the clients&quot;&quot;&quot;" name="title"/>
+            <field name="survey_id" ref="survey_0"/>
+            <field eval="3" name="sequence"/>
+        </record>
+        <record id="survey_page_5" model="survey.page">
+            <field eval="&quot;&quot;&quot;Features&quot;&quot;&quot;" name="title"/>
+            <field name="survey_id" ref="survey_0"/>
+            <field eval="4" name="sequence"/>
+        </record>
+        <record id="survey_page_6" model="survey.page">
+            <field eval="&quot;&quot;&quot;Community and contributors&quot;&quot;&quot;" name="title"/>
+            <field name="survey_id" ref="survey_0"/>
+            <field eval="5" name="sequence"/>
+        </record>
+        <record id="survey_page_7" model="survey.page">
+            <field eval="&quot;&quot;&quot;If you do not contribute and develop in OpenERP, skip this page.&quot;&quot;&quot;" name="note"/>
+            <field eval="&quot;&quot;&quot;Questions for developers&quot;&quot;&quot;" name="title"/>
+            <field name="survey_id" ref="survey_0"/>
+            <field eval="6" name="sequence"/>
+        </record>
+        <record id="survey_question_0" model="survey.question">
+            <field name="in_visible_answer_type">1</field>
+            <field eval="&quot;&quot;&quot;do_not_validate&quot;&quot;&quot;" name="comment_valid_type"/>
+            <field eval="1" name="sequence"/>
+            <field eval="&quot;&quot;&quot;The choices need to add up to [enter sum here].&quot;&quot;&quot;" name="numeric_required_sum_err_msg"/>
+            <field eval="&quot;&quot;&quot;The comment you entered is in an invalid format.&quot;&quot;&quot;" name="validation_valid_err_msg"/>
+            <field eval="0" name="rating_allow_one_column_require"/>
+            <field eval="&quot;&quot;&quot;This question requires an answer.&quot;&quot;&quot;" name="req_error_msg"/>
+            <field eval="&quot;&quot;&quot;What do you think about the documentation available on doc.openerp.com ?&quot;&quot;&quot;" name="question"/>
+            <field eval="0" name="is_require_answer"/>
+            <field eval="&quot;&quot;&quot;matrix_of_choices_only_one_ans&quot;&quot;&quot;" name="type"/>
+            <field eval="&quot;&quot;&quot;The comment you entered is in an invalid format.&quot;&quot;&quot;" name="comment_valid_err_msg"/>
+            <field name="page_id" ref="survey_page_1"/>
+            <field eval="&quot;&quot;&quot;do_not_validate&quot;&quot;&quot;" name="validation_type"/>
+            <field eval="&quot;&quot;&quot;Other&quot;&quot;&quot;" name="comment_label"/>
+            <field eval="0" name="allow_comment"/>
+        </record>
+        <record id="survey_question_1" model="survey.question">
+            <field name="in_visible_answer_type">1</field>
+            <field eval="&quot;&quot;&quot;do_not_validate&quot;&quot;&quot;" name="comment_valid_type"/>
+            <field eval="2" name="sequence"/>
+            <field eval="&quot;&quot;&quot;The choices need to add up to [enter sum here].&quot;&quot;&quot;" name="numeric_required_sum_err_msg"/>
+            <field eval="&quot;&quot;&quot;The comment you entered is in an invalid format.&quot;&quot;&quot;" name="validation_valid_err_msg"/>
+            <field eval="0" name="rating_allow_one_column_require"/>
+            <field eval="&quot;&quot;&quot;This question requires an answer.&quot;&quot;&quot;" name="req_error_msg"/>
+            <field eval="&quot;&quot;&quot;What do you think about the process views of OpenERP, available in the web client ?&quot;&quot;&quot;" name="question"/>
+            <field eval="0" name="is_require_answer"/>
+            <field eval="&quot;&quot;&quot;matrix_of_choices_only_one_ans&quot;&quot;&quot;" name="type"/>
+            <field eval="&quot;&quot;&quot;The comment you entered is in an invalid format.&quot;&quot;&quot;" name="comment_valid_err_msg"/>
+            <field name="page_id" ref="survey_page_1"/>
+            <field eval="&quot;&quot;&quot;do_not_validate&quot;&quot;&quot;" name="validation_type"/>
+            <field eval="&quot;&quot;&quot;Other&quot;&quot;&quot;" name="comment_label"/>
+            <field eval="0" name="allow_comment"/>
+        </record>
+        <record id="survey_question_2" model="survey.question">
+            <field name="in_visible_answer_type">1</field>
+            <field eval="&quot;&quot;&quot;do_not_validate&quot;&quot;&quot;" name="comment_valid_type"/>
+            <field eval="1" name="sequence"/>
+            <field eval="&quot;&quot;&quot;The choices need to add up to [enter sum here].&quot;&quot;&quot;" name="numeric_required_sum_err_msg"/>
+            <field eval="&quot;&quot;&quot;The comment you entered is in an invalid format.&quot;&quot;&quot;" name="validation_valid_err_msg"/>
+            <field eval="0" name="rating_allow_one_column_require"/>
+            <field eval="&quot;&quot;&quot;This question requires an answer.&quot;&quot;&quot;" name="req_error_msg"/>
+            <field eval="&quot;&quot;&quot;Are you using OpenERP on a daily basis ?&quot;&quot;&quot;" name="question"/>
+            <field eval="0" name="is_require_answer"/>
+            <field eval="&quot;&quot;&quot;multiple_choice_only_one_ans&quot;&quot;&quot;" name="type"/>
+            <field eval="&quot;&quot;&quot;The comment you entered is in an invalid format.&quot;&quot;&quot;" name="comment_valid_err_msg"/>
+            <field name="page_id" ref="survey_page_0"/>
+            <field eval="&quot;&quot;&quot;do_not_validate&quot;&quot;&quot;" name="validation_type"/>
+            <field eval="&quot;&quot;&quot;Other&quot;&quot;&quot;" name="comment_label"/>
+            <field eval="0" name="allow_comment"/>
+        </record>
+
+        <record id="survey_question_3" model="survey.question">
+            <field name="in_visible_answer_type">1</field>
+            <field eval="&quot;&quot;&quot;do_not_validate&quot;&quot;&quot;" name="comment_valid_type"/>
+            <field eval="3" name="sequence"/>
+            <field eval="&quot;&quot;&quot;The choices need to add up to [enter sum here].&quot;&quot;&quot;" name="numeric_required_sum_err_msg"/>
+            <field eval="&quot;&quot;&quot;The comment you entered is in an invalid format.&quot;&quot;&quot;" name="validation_valid_err_msg"/>
+            <field eval="0" name="rating_allow_one_column_require"/>
+            <field eval="&quot;&quot;&quot;This question requires an answer.&quot;&quot;&quot;" name="req_error_msg"/>
+            <field eval="&quot;&quot;&quot;Do you have suggestions on how to improve the process view ?&quot;&quot;&quot;" name="question"/>
+            <field eval="0" name="is_require_answer"/>
+            <field eval="&quot;&quot;&quot;single_textbox&quot;&quot;&quot;" name="type"/>
+            <field eval="&quot;&quot;&quot;The comment you entered is in an invalid format.&quot;&quot;&quot;" name="comment_valid_err_msg"/>
+            <field name="page_id" ref="survey_page_1"/>
+            <field eval="&quot;&quot;&quot;do_not_validate&quot;&quot;&quot;" name="validation_type"/>
+            <field eval="&quot;&quot;&quot;Other&quot;&quot;&quot;" name="comment_label"/>
+            <field eval="0" name="allow_comment"/>
+            <field name="in_visible_rating_weight">1</field>
+        </record>
+        <record id="survey_question_4" model="survey.question">
+            <field name="in_visible_answer_type">1</field>
+            <field eval="&quot;&quot;&quot;do_not_validate&quot;&quot;&quot;" name="comment_valid_type"/>
+            <field eval="4" name="sequence"/>
+            <field eval="&quot;&quot;&quot;The choices need to add up to [enter sum here].&quot;&quot;&quot;" name="numeric_required_sum_err_msg"/>
+            <field eval="&quot;&quot;&quot;The comment you entered is in an invalid format.&quot;&quot;&quot;" name="validation_valid_err_msg"/>
+            <field eval="0" name="rating_allow_one_column_require"/>
+            <field eval="&quot;&quot;&quot;This question requires an answer.&quot;&quot;&quot;" name="req_error_msg"/>
+            <field eval="&quot;&quot;&quot;What do you think about the structure of the menus (multiple answers allowed) ?&quot;&quot;&quot;" name="question"/>
+            <field eval="0" name="is_require_answer"/>
+            <field eval="&quot;&quot;&quot;multiple_choice_multiple_ans&quot;&quot;&quot;" name="type"/>
+            <field eval="&quot;&quot;&quot;The comment you entered is in an invalid format.&quot;&quot;&quot;" name="comment_valid_err_msg"/>
+            <field name="page_id" ref="survey_page_1"/>
+            <field eval="&quot;&quot;&quot;do_not_validate&quot;&quot;&quot;" name="validation_type"/>
+            <field eval="&quot;&quot;&quot;Other&quot;&quot;&quot;" name="comment_label"/>
+            <field eval="0" name="allow_comment"/>
+        </record>
+        <record id="survey_question_5" model="survey.question">
+            <field name="in_visible_answer_type">1</field>
+            <field eval="&quot;&quot;&quot;do_not_validate&quot;&quot;&quot;" name="comment_valid_type"/>
+            <field eval="2" name="sequence"/>
+            <field eval="&quot;&quot;&quot;The choices need to add up to [enter sum here].&quot;&quot;&quot;" name="numeric_required_sum_err_msg"/>
+            <field eval="&quot;&quot;&quot;The comment you entered is in an invalid format.&quot;&quot;&quot;" name="validation_valid_err_msg"/>
+            <field eval="0" name="rating_allow_one_column_require"/>
+            <field eval="&quot;&quot;&quot;This question requires an answer.&quot;&quot;&quot;" name="req_error_msg"/>
+            <field eval="&quot;&quot;&quot;If yes, which interface are you using ?&quot;&quot;&quot;" name="question"/>
+            <field eval="0" name="is_require_answer"/>
+            <field eval="&quot;&quot;&quot;multiple_choice_only_one_ans&quot;&quot;&quot;" name="type"/>
+            <field eval="&quot;&quot;&quot;The comment you entered is in an invalid format.&quot;&quot;&quot;" name="comment_valid_err_msg"/>
+            <field name="page_id" ref="survey_page_0"/>
+            <field eval="&quot;&quot;&quot;do_not_validate&quot;&quot;&quot;" name="validation_type"/>
+            <field eval="&quot;&quot;&quot;Other&quot;&quot;&quot;" name="comment_label"/>
+            <field eval="0" name="allow_comment"/>
+        </record>
+        <record id="survey_question_6" model="survey.question">
+            <field name="in_visible_answer_type">1</field>
+            <field eval="&quot;&quot;&quot;do_not_validate&quot;&quot;&quot;" name="comment_valid_type"/>
+            <field eval="3" name="sequence"/>
+            <field eval="&quot;&quot;&quot;The choices need to add up to [enter sum here].&quot;&quot;&quot;" name="numeric_required_sum_err_msg"/>
+            <field eval="&quot;&quot;&quot;The comment you entered is in an invalid format.&quot;&quot;&quot;" name="validation_valid_err_msg"/>
+            <field eval="0" name="rating_allow_one_column_require"/>
+            <field eval="&quot;&quot;&quot;This question requires an answer.&quot;&quot;&quot;" name="req_error_msg"/>
+            <field eval="&quot;&quot;&quot;Which modules are you using/testing?&quot;&quot;&quot;" name="question"/>
+            <field eval="0" name="is_require_answer"/>
+            <field eval="&quot;&quot;&quot;multiple_choice_multiple_ans&quot;&quot;&quot;" name="type"/>
+            <field eval="&quot;&quot;&quot;The comment you entered is in an invalid format.&quot;&quot;&quot;" name="comment_valid_err_msg"/>
+            <field name="page_id" ref="survey_page_0"/>
+            <field eval="&quot;&quot;&quot;do_not_validate&quot;&quot;&quot;" name="validation_type"/>
+            <field eval="&quot;&quot;&quot;Other&quot;&quot;&quot;" name="comment_label"/>
+            <field eval="0" name="allow_comment"/>
+        </record>
+        <record id="survey_question_7" model="survey.question">
+            <field name="in_visible_answer_type">1</field>
+            <field eval="&quot;&quot;&quot;do_not_validate&quot;&quot;&quot;" name="comment_valid_type"/>
+            <field eval="1" name="sequence"/>
+            <field eval="&quot;&quot;&quot;The choices need to add up to [enter sum here].&quot;&quot;&quot;" name="numeric_required_sum_err_msg"/>
+            <field eval="&quot;&quot;&quot;The comment you entered is in an invalid format.&quot;&quot;&quot;" name="validation_valid_err_msg"/>
+            <field eval="0" name="rating_allow_one_column_require"/>
+            <field eval="&quot;&quot;&quot;This question requires an answer.&quot;&quot;&quot;" name="req_error_msg"/>
+            <field eval="&quot;&quot;&quot;How do you develop your new features ?&quot;&quot;&quot;" name="question"/>
+            <field eval="0" name="is_require_answer"/>
+            <field eval="&quot;&quot;&quot;multiple_choice_only_one_ans&quot;&quot;&quot;" name="type"/>
+            <field eval="&quot;&quot;&quot;The comment you entered is in an invalid format.&quot;&quot;&quot;" name="comment_valid_err_msg"/>
+            <field name="page_id" ref="survey_page_7"/>
+            <field eval="&quot;&quot;&quot;do_not_validate&quot;&quot;&quot;" name="validation_type"/>
+            <field eval="&quot;&quot;&quot;Other&quot;&quot;&quot;" name="comment_label"/>
+            <field eval="0" name="allow_comment"/>
+        </record>
+        <record id="survey_question_8" model="survey.question">
+            <field name="in_visible_answer_type">1</field>
+            <field eval="&quot;&quot;&quot;do_not_validate&quot;&quot;&quot;" name="comment_valid_type"/>
+            <field eval="1" name="sequence"/>
+            <field eval="&quot;&quot;&quot;The choices need to add up to [enter sum here].&quot;&quot;&quot;" name="numeric_required_sum_err_msg"/>
+            <field eval="&quot;&quot;&quot;The comment you entered is in an invalid format.&quot;&quot;&quot;" name="validation_valid_err_msg"/>
+            <field eval="0" name="rating_allow_one_column_require"/>
+            <field eval="&quot;&quot;&quot;This question requires an answer.&quot;&quot;&quot;" name="req_error_msg"/>
+            <field eval="&quot;&quot;&quot;How do you contribute or plan to contribute to OpenERP ?&quot;&quot;&quot;" name="question"/>
+            <field eval="0" name="is_require_answer"/>
+            <field eval="&quot;&quot;&quot;multiple_choice_multiple_ans&quot;&quot;&quot;" name="type"/>
+            <field eval="&quot;&quot;&quot;The comment you entered is in an invalid format.&quot;&quot;&quot;" name="comment_valid_err_msg"/>
+            <field name="page_id" ref="survey_page_6"/>
+            <field eval="&quot;&quot;&quot;do_not_validate&quot;&quot;&quot;" name="validation_type"/>
+            <field eval="&quot;&quot;&quot;Other&quot;&quot;&quot;" name="comment_label"/>
+            <field eval="0" name="allow_comment"/>
+        </record>
+        <record id="survey_question_9" model="survey.question">
+            <field name="in_visible_answer_type">1</field>
+            <field eval="&quot;&quot;&quot;do_not_validate&quot;&quot;&quot;" name="comment_valid_type"/>
+            <field eval="5" name="sequence"/>
+            <field eval="&quot;&quot;&quot;The choices need to add up to [enter sum here].&quot;&quot;&quot;" name="numeric_required_sum_err_msg"/>
+            <field eval="&quot;&quot;&quot;The comment you entered is in an invalid format.&quot;&quot;&quot;" name="validation_valid_err_msg"/>
+            <field eval="0" name="rating_allow_one_column_require"/>
+            <field eval="&quot;&quot;&quot;This question requires an answer.&quot;&quot;&quot;" name="req_error_msg"/>
+            <field eval="&quot;&quot;&quot;What do you think about the groups of users?&quot;&quot;&quot;" name="question"/>
+            <field eval="0" name="is_require_answer"/>
+            <field eval="&quot;&quot;&quot;matrix_of_choices_only_one_ans&quot;&quot;&quot;" name="type"/>
+            <field eval="&quot;&quot;&quot;The comment you entered is in an invalid format.&quot;&quot;&quot;" name="comment_valid_err_msg"/>
+            <field name="page_id" ref="survey_page_1"/>
+            <field eval="&quot;&quot;&quot;do_not_validate&quot;&quot;&quot;" name="validation_type"/>
+            <field eval="&quot;&quot;&quot;Other&quot;&quot;&quot;" name="comment_label"/>
+            <field eval="0" name="allow_comment"/>
+        </record>
+        <record id="survey_question_10" model="survey.question">
+            <field name="in_visible_answer_type">1</field>
+            <field eval="&quot;&quot;&quot;do_not_validate&quot;&quot;&quot;" name="comment_valid_type"/>
+            <field eval="2" name="sequence"/>
+            <field eval="&quot;&quot;&quot;The choices need to add up to [enter sum here].&quot;&quot;&quot;" name="numeric_required_sum_err_msg"/>
+            <field eval="&quot;&quot;&quot;The comment you entered is in an invalid format.&quot;&quot;&quot;" name="validation_valid_err_msg"/>
+            <field eval="0" name="rating_allow_one_column_require"/>
+            <field eval="&quot;&quot;&quot;This question requires an answer.&quot;&quot;&quot;" name="req_error_msg"/>
+            <field eval="&quot;&quot;&quot;Do you have a proposition to help people to contribute ?&quot;&quot;&quot;" name="question"/>
+            <field eval="0" name="is_require_answer"/>
+            <field eval="&quot;&quot;&quot;single_textbox&quot;&quot;&quot;" name="type"/>
+            <field eval="&quot;&quot;&quot;The comment you entered is in an invalid format.&quot;&quot;&quot;" name="comment_valid_err_msg"/>
+            <field name="page_id" ref="survey_page_6"/>
+            <field eval="&quot;&quot;&quot;do_not_validate&quot;&quot;&quot;" name="validation_type"/>
+            <field eval="&quot;&quot;&quot;Other&quot;&quot;&quot;" name="comment_label"/>
+            <field eval="0" name="allow_comment"/>
+            <field name="in_visible_rating_weight">1</field>
+        </record>
+        <record id="survey_question_11" model="survey.question">
+            <field name="in_visible_answer_type">1</field>
+            <field eval="&quot;&quot;&quot;do_not_validate&quot;&quot;&quot;" name="comment_valid_type"/>
+            <field eval="3" name="sequence"/>
+            <field eval="&quot;&quot;&quot;The choices need to add up to [enter sum here].&quot;&quot;&quot;" name="numeric_required_sum_err_msg"/>
+            <field eval="&quot;&quot;&quot;The comment you entered is in an invalid format.&quot;&quot;&quot;" name="validation_valid_err_msg"/>
+            <field eval="0" name="rating_allow_one_column_require"/>
+            <field eval="&quot;&quot;&quot;This question requires an answer.&quot;&quot;&quot;" name="req_error_msg"/>
+            <field eval="&quot;&quot;&quot;Do you have a proposition to attract new contributors ?&quot;&quot;&quot;" name="question"/>
+            <field eval="0" name="is_require_answer"/>
+            <field eval="&quot;&quot;&quot;single_textbox&quot;&quot;&quot;" name="type"/>
+            <field eval="&quot;&quot;&quot;The comment you entered is in an invalid format.&quot;&quot;&quot;" name="comment_valid_err_msg"/>
+            <field name="page_id" ref="survey_page_6"/>
+            <field eval="&quot;&quot;&quot;do_not_validate&quot;&quot;&quot;" name="validation_type"/>
+            <field eval="&quot;&quot;&quot;Other&quot;&quot;&quot;" name="comment_label"/>
+            <field eval="0" name="allow_comment"/>
+            <field name="in_visible_rating_weight">1</field>
+        </record>
+        <record id="survey_question_12" model="survey.question">
+            <field name="in_visible_answer_type">1</field>
+            <field eval="&quot;&quot;&quot;do_not_validate&quot;&quot;&quot;" name="comment_valid_type"/>
+            <field eval="6" name="sequence"/>
+            <field eval="&quot;&quot;&quot;The choices need to add up to [enter sum here].&quot;&quot;&quot;" name="numeric_required_sum_err_msg"/>
+            <field eval="&quot;&quot;&quot;The comment you entered is in an invalid format.&quot;&quot;&quot;" name="validation_valid_err_msg"/>
+            <field eval="0" name="rating_allow_one_column_require"/>
+            <field eval="&quot;&quot;&quot;This question requires an answer.&quot;&quot;&quot;" name="req_error_msg"/>
+            <field eval="&quot;&quot;&quot;About the groups of users installed by default&quot;&quot;&quot;" name="question"/>
+            <field eval="0" name="is_require_answer"/>
+            <field eval="&quot;&quot;&quot;multiple_choice_only_one_ans&quot;&quot;&quot;" name="type"/>
+            <field eval="&quot;&quot;&quot;The comment you entered is in an invalid format.&quot;&quot;&quot;" name="comment_valid_err_msg"/>
+            <field name="page_id" ref="survey_page_1"/>
+            <field eval="&quot;&quot;&quot;do_not_validate&quot;&quot;&quot;" name="validation_type"/>
+            <field eval="&quot;&quot;&quot;Other&quot;&quot;&quot;" name="comment_label"/>
+            <field eval="0" name="allow_comment"/>
+        </record>
+        <record id="survey_question_13" model="survey.question">
+            <field name="in_visible_answer_type">1</field>
+            <field eval="&quot;&quot;&quot;do_not_validate&quot;&quot;&quot;" name="comment_valid_type"/>
+            <field eval="7" name="sequence"/>
+            <field eval="&quot;&quot;&quot;The choices need to add up to [enter sum here].&quot;&quot;&quot;" name="numeric_required_sum_err_msg"/>
+            <field eval="&quot;&quot;&quot;The comment you entered is in an invalid format.&quot;&quot;&quot;" name="validation_valid_err_msg"/>
+            <field eval="0" name="rating_allow_one_column_require"/>
+            <field eval="&quot;&quot;&quot;This question requires an answer.&quot;&quot;&quot;" name="req_error_msg"/>
+            <field eval="&quot;&quot;&quot;What do you think about configuration wizards?&quot;&quot;&quot;" name="question"/>
+            <field eval="0" name="is_require_answer"/>
+            <field eval="&quot;&quot;&quot;matrix_of_choices_only_one_ans&quot;&quot;&quot;" name="type"/>
+            <field eval="&quot;&quot;&quot;The comment you entered is in an invalid format.&quot;&quot;&quot;" name="comment_valid_err_msg"/>
+            <field name="page_id" ref="survey_page_1"/>
+            <field eval="&quot;&quot;&quot;do_not_validate&quot;&quot;&quot;" name="validation_type"/>
+            <field eval="&quot;&quot;&quot;Other&quot;&quot;&quot;" name="comment_label"/>
+            <field eval="0" name="allow_comment"/>
+        </record>
+        <record id="survey_question_column_heading_0" model="survey.question.column.heading">
+            <field eval="&quot;&quot;&quot;Totally Disagree&quot;&quot;&quot;" name="title"/>
+            <field name="question_id" ref="survey_question_0"/>
+            <field name="in_visible_rating_weight">1</field>
+            <field name="in_visible_menu_choice">1</field>
+        </record>
+        <record id="survey_question_column_heading_1" model="survey.question.column.heading">
+            <field eval="&quot;&quot;&quot;Disagree&quot;&quot;&quot;" name="title"/>
+            <field name="question_id" ref="survey_question_0"/>
+            <field name="in_visible_rating_weight">1</field>
+            <field name="in_visible_menu_choice">1</field>
+        </record>
+        <record id="survey_question_column_heading_2" model="survey.question.column.heading">
+            <field eval="&quot;&quot;&quot;Agree&quot;&quot;&quot;" name="title"/>
+            <field name="question_id" ref="survey_question_0"/>
+            <field name="in_visible_rating_weight">1</field>
+            <field name="in_visible_menu_choice">1</field>
+        </record>
+        <record id="survey_question_column_heading_3" model="survey.question.column.heading">
+            <field eval="&quot;&quot;&quot;Totally Agree&quot;&quot;&quot;" name="title"/>
+            <field name="question_id" ref="survey_question_0"/>
+            <field name="in_visible_rating_weight">1</field>
+            <field name="in_visible_menu_choice">1</field>
+        </record>
+        <record id="survey_question_column_heading_4" model="survey.question.column.heading">
+            <field eval="&quot;&quot;&quot;Totally Disagree&quot;&quot;&quot;" name="title"/>
+            <field name="question_id" ref="survey_question_1"/>
+            <field name="in_visible_rating_weight">1</field>
+            <field name="in_visible_menu_choice">1</field>
+        </record>
+        <record id="survey_question_column_heading_5" model="survey.question.column.heading">
+            <field eval="&quot;&quot;&quot;Disagree&quot;&quot;&quot;" name="title"/>
+            <field name="question_id" ref="survey_question_1"/>
+            <field name="in_visible_rating_weight">1</field>
+            <field name="in_visible_menu_choice">1</field>
+        </record>
+        <record id="survey_question_column_heading_6" model="survey.question.column.heading">
+            <field eval="&quot;&quot;&quot;Agree&quot;&quot;&quot;" name="title"/>
+            <field name="question_id" ref="survey_question_1"/>
+            <field name="in_visible_rating_weight">1</field>
+            <field name="in_visible_menu_choice">1</field>
+        </record>
+        <record id="survey_question_column_heading_7" model="survey.question.column.heading">
+            <field eval="&quot;&quot;&quot;Totally Agree&quot;&quot;&quot;" name="title"/>
+            <field name="question_id" ref="survey_question_1"/>
+            <field name="in_visible_rating_weight">1</field>
+            <field name="in_visible_menu_choice">1</field>
+        </record>
+        <record id="survey_question_column_heading_8" model="survey.question.column.heading">
+            <field eval="&quot;&quot;&quot;Totally Disagree    &quot;&quot;&quot;" name="title"/>
+            <field name="question_id" ref="survey_question_9"/>
+            <field name="in_visible_rating_weight">1</field>
+            <field name="in_visible_menu_choice">1</field>
+        </record>
+        <record id="survey_question_column_heading_9" model="survey.question.column.heading">
+            <field eval="&quot;&quot;&quot;Disagree&quot;&quot;&quot;" name="title"/>
+            <field name="question_id" ref="survey_question_9"/>
+            <field name="in_visible_rating_weight">1</field>
+            <field name="in_visible_menu_choice">1</field>
+        </record>
+        <record id="survey_question_column_heading_10" model="survey.question.column.heading">
+            <field eval="&quot;&quot;&quot;Agree&quot;&quot;&quot;" name="title"/>
+            <field name="question_id" ref="survey_question_9"/>
+            <field name="in_visible_rating_weight">1</field>
+            <field name="in_visible_menu_choice">1</field>
+        </record>
+        <record id="survey_question_column_heading_11" model="survey.question.column.heading">
+            <field eval="&quot;&quot;&quot;Totally Agree&quot;&quot;&quot;" name="title"/>
+            <field name="question_id" ref="survey_question_9"/>
+            <field name="in_visible_rating_weight">1</field>
+            <field name="in_visible_menu_choice">1</field>
+        </record>
+        <record id="survey_question_column_heading_12" model="survey.question.column.heading">
+            <field eval="&quot;&quot;&quot;Totally Disagree&quot;&quot;&quot;" name="title"/>
+            <field name="question_id" ref="survey_question_13"/>
+            <field name="in_visible_rating_weight">1</field>
+            <field name="in_visible_menu_choice">1</field>
+        </record>
+        <record id="survey_question_column_heading_13" model="survey.question.column.heading">
+            <field eval="&quot;&quot;&quot;Disagree&quot;&quot;&quot;" name="title"/>
+            <field name="question_id" ref="survey_question_13"/>
+            <field name="in_visible_rating_weight">1</field>
+            <field name="in_visible_menu_choice">1</field>
+        </record>
+        <record id="survey_question_column_heading_14" model="survey.question.column.heading">
+            <field eval="&quot;&quot;&quot;Agree&quot;&quot;&quot;" name="title"/>
+            <field name="question_id" ref="survey_question_13"/>
+            <field name="in_visible_rating_weight">1</field>
+            <field name="in_visible_menu_choice">1</field>
+        </record>
+        <record id="survey_question_column_heading_15" model="survey.question.column.heading">
+            <field eval="&quot;&quot;&quot;Totally Agree&quot;&quot;&quot;" name="title"/>
+            <field name="question_id" ref="survey_question_13"/>
+            <field name="in_visible_rating_weight">1</field>
+            <field name="in_visible_menu_choice">1</field>
+        </record>
+        <record id="survey_answer_0" model="survey.answer">
+            <field name="in_visible_answer_type">1</field>
+            <field eval="&quot;&quot;&quot;I participate to discussion and forums&quot;&quot;&quot;" name="answer"/>
+            <field name="question_id" ref="survey_question_8"/>
+            <field eval="1" name="sequence"/>
+        </record>
+        <record id="survey_answer_1" model="survey.answer">
+            <field name="in_visible_answer_type">1</field>
+            <field eval="&quot;&quot;&quot;I'd like to contribute but I don't know how ?&quot;&quot;&quot;" name="answer"/>
+            <field name="question_id" ref="survey_question_8"/>
+            <field eval="2" name="sequence"/>
+        </record>
+        <record id="survey_answer_2" model="survey.answer">
+            <field name="in_visible_answer_type">1</field>
+            <field eval="&quot;&quot;&quot;There is too many groups defined, security is too complex to set&quot;&quot;&quot;" name="answer"/>
+            <field name="question_id" ref="survey_question_12"/>
+            <field eval="1" name="sequence"/>
+        </record>
+        <record id="survey_answer_3" model="survey.answer">
+            <field name="in_visible_answer_type">1</field>
+            <field eval="&quot;&quot;&quot;There is too few groups defined, security isn't accurate enough&quot;&quot;&quot;" name="answer"/>
+            <field name="question_id" ref="survey_question_12"/>
+            <field eval="2" name="sequence"/>
+        </record>
+        <record id="survey_answer_4" model="survey.answer">
+            <field name="in_visible_answer_type">1</field>
+            <field eval="&quot;&quot;&quot;The number of groups is good&quot;&quot;&quot;" name="answer"/>
+            <field name="question_id" ref="survey_question_12"/>
+            <field eval="3" name="sequence"/>
+        </record>
+        <record id="survey_answer_5" model="survey.answer">
+            <field name="in_visible_answer_type">1</field>
+            <field eval="&quot;&quot;&quot;The GTK client&quot;&quot;&quot;" name="answer"/>
+            <field name="question_id" ref="survey_question_5"/>
+            <field eval="1" name="sequence"/>
+        </record>
+        <record id="survey_answer_6" model="survey.answer">
+            <field name="in_visible_answer_type">1</field>
+            <field eval="&quot;&quot;&quot;The web interface&quot;&quot;&quot;" name="answer"/>
+            <field name="question_id" ref="survey_question_5"/>
+            <field eval="2" name="sequence"/>
+        </record>
+        <record id="survey_answer_7" model="survey.answer">
+            <field name="in_visible_answer_type">1</field>
+            <field eval="&quot;&quot;&quot;The KDE client&quot;&quot;&quot;" name="answer"/>
+            <field name="question_id" ref="survey_question_5"/>
+            <field eval="3" name="sequence"/>
+        </record>
+        <record id="survey_answer_8" model="survey.answer">
+            <field name="in_visible_answer_type">1</field>
+            <field eval="&quot;&quot;&quot;At least two of them&quot;&quot;&quot;" name="answer"/>
+            <field name="question_id" ref="survey_question_5"/>
+            <field eval="4" name="sequence"/>
+        </record>
+        <record id="survey_answer_9" model="survey.answer">
+            <field name="in_visible_answer_type">1</field>
+            <field eval="&quot;&quot;&quot;Yes, I use a version &lt; 5.0&quot;&quot;&quot;" name="answer"/>
+            <field name="question_id" ref="survey_question_2"/>
+            <field eval="1" name="sequence"/>
+        </record>
+        <record id="survey_answer_10" model="survey.answer">
+            <field name="in_visible_answer_type">1</field>
+            <field eval="&quot;&quot;&quot;Yes, I use the 5.0 version, installed locally&quot;&quot;&quot;" name="answer"/>
+            <field name="question_id" ref="survey_question_2"/>
+            <field eval="2" name="sequence"/>
+        </record>
+        <record id="survey_answer_11" model="survey.answer">
+            <field name="in_visible_answer_type">1</field>
+            <field eval="&quot;&quot;&quot;Yes, I use the latest version on Odoo&quot;&quot;&quot;" name="answer"/>
+            <field name="question_id" ref="survey_question_2"/>
+            <field eval="3" name="sequence"/>
+        </record>
+        <record id="survey_answer_12" model="survey.answer">
+            <field name="in_visible_answer_type">1</field>
+            <field eval="&quot;&quot;&quot;No, I just tested it&quot;&quot;&quot;" name="answer"/>
+            <field name="question_id" ref="survey_question_2"/>
+            <field eval="4" name="sequence"/>
+        </record>
+        <record id="survey_answer_13" model="survey.answer">
+            <field name="in_visible_answer_type">1</field>
+            <field eval="&quot;&quot;&quot;Sales Management&quot;&quot;&quot;" name="answer"/>
+            <field name="question_id" ref="survey_question_6"/>
+            <field eval="1" name="sequence"/>
+        </record>
+        <record id="survey_answer_14" model="survey.answer">
+            <field name="in_visible_answer_type">1</field>
+            <field eval="&quot;&quot;&quot;Purchases Management&quot;&quot;&quot;" name="answer"/>
+            <field name="question_id" ref="survey_question_6"/>
+            <field eval="2" name="sequence"/>
+        </record>
+        <record id="survey_answer_15" model="survey.answer">
+            <field name="in_visible_answer_type">1</field>
+            <field eval="&quot;&quot;&quot;Financial Management&quot;&quot;&quot;" name="answer"/>
+            <field name="question_id" ref="survey_question_6"/>
+            <field eval="3" name="sequence"/>
+        </record>
+        <record id="survey_answer_16" model="survey.answer">
+            <field name="in_visible_answer_type">1</field>
+            <field eval="&quot;&quot;&quot;CRM / SRM&quot;&quot;&quot;" name="answer"/>
+            <field name="question_id" ref="survey_question_6"/>
+            <field eval="4" name="sequence"/>
+        </record>
+        <record id="survey_answer_17" model="survey.answer">
+            <field name="in_visible_answer_type">1</field>
+            <field eval="&quot;&quot;&quot;Project Management&quot;&quot;&quot;" name="answer"/>
+            <field name="question_id" ref="survey_question_6"/>
+            <field eval="5" name="sequence"/>
+        </record>
+        <record id="survey_answer_18" model="survey.answer">
+            <field name="in_visible_answer_type">1</field>
+            <field eval="&quot;&quot;&quot;Human Ressources&quot;&quot;&quot;" name="answer"/>
+            <field name="question_id" ref="survey_question_6"/>
+            <field eval="6" name="sequence"/>
+        </record>
+        <record id="survey_answer_19" model="survey.answer">
+            <field name="in_visible_answer_type">1</field>
+            <field eval="&quot;&quot;&quot;Descriptions and help tooltips are clear enough&quot;&quot;&quot;" name="answer"/>
+            <field name="question_id" ref="survey_question_13"/>
+            <field eval="1" name="sequence"/>
+        </record>
+        <record id="survey_answer_20" model="survey.answer">
+            <field name="in_visible_answer_type">1</field>
+            <field eval="&quot;&quot;&quot;Configuration wizard exists for each important setting&quot;&quot;&quot;" name="answer"/>
+            <field name="question_id" ref="survey_question_13"/>
+            <field eval="2" name="sequence"/>
+        </record>
+        <record id="survey_answer_21" model="survey.answer">
+            <field name="in_visible_answer_type">1</field>
+            <field eval="&quot;&quot;&quot;Extra modules proposed are relevant&quot;&quot;&quot;" name="answer"/>
+            <field name="question_id" ref="survey_question_13"/>
+            <field eval="3" name="sequence"/>
+        </record>
+        <record id="survey_answer_22" model="survey.answer">
+            <field name="in_visible_answer_type">1</field>
+            <field eval="&quot;&quot;&quot;The current menu structure is good&quot;&quot;&quot;" name="answer"/>
+            <field name="question_id" ref="survey_question_4"/>
+            <field eval="1" name="sequence"/>
+        </record>
+        <record id="survey_answer_23" model="survey.answer">
+            <field name="in_visible_answer_type">1</field>
+            <field eval="&quot;&quot;&quot;It can be improved&quot;&quot;&quot;" name="answer"/>
+            <field name="question_id" ref="survey_question_4"/>
+            <field eval="2" name="sequence"/>
+        </record>
+        <record id="survey_answer_24" model="survey.answer">
+            <field name="in_visible_answer_type">1</field>
+            <field eval="&quot;&quot;&quot;They are too much menus, it's complex to understand&quot;&quot;&quot;" name="answer"/>
+            <field name="question_id" ref="survey_question_4"/>
+            <field eval="3" name="sequence"/>
+        </record>
+        <record id="survey_answer_25" model="survey.answer">
+            <field name="in_visible_answer_type">1</field>
+            <field eval="&quot;&quot;&quot;I develop new features&quot;&quot;&quot;" name="answer"/>
+            <field name="question_id" ref="survey_question_8"/>
+            <field eval="3" name="sequence"/>
+        </record>
+        <record id="survey_answer_26" model="survey.answer">
+            <field name="in_visible_answer_type">1</field>
+            <field eval="&quot;&quot;&quot;I help to translate&quot;&quot;&quot;" name="answer"/>
+            <field name="question_id" ref="survey_question_8"/>
+            <field eval="4" name="sequence"/>
+        </record>
+        <record id="survey_answer_27" model="survey.answer">
+            <field name="in_visible_answer_type">1</field>
+            <field eval="&quot;&quot;&quot;I write documentations&quot;&quot;&quot;" name="answer"/>
+            <field name="question_id" ref="survey_question_8"/>
+            <field eval="5" name="sequence"/>
+        </record>
+        <record id="survey_answer_28" model="survey.answer">
+            <field name="in_visible_answer_type">1</field>
+            <field eval="&quot;&quot;&quot;Running the configuration wizards is a good way to spare time&quot;&quot;&quot;" name="answer"/>
+            <field name="question_id" ref="survey_question_13"/>
+            <field eval="4" name="sequence"/>
+        </record>
+        <record id="survey_answer_29" model="survey.answer">
+            <field name="in_visible_answer_type">1</field>
+            <field eval="&quot;&quot;&quot;I use Launchpad, like all official OpenERP projects&quot;&quot;&quot;" name="answer"/>
+            <field name="question_id" ref="survey_question_7"/>
+            <field eval="1" name="sequence"/>
+        </record>
+        <record id="survey_answer_30" model="survey.answer">
+            <field name="in_visible_answer_type">1</field>
+            <field eval="&quot;&quot;&quot;The security rules defined on groups are helpfull&quot;&quot;&quot;" name="answer"/>
+            <field name="question_id" ref="survey_question_9"/>
+            <field eval="1" name="sequence"/>
+        </record>
+        <record id="survey_answer_31" model="survey.answer">
+            <field name="in_visible_answer_type">1</field>
+            <field eval="&quot;&quot;&quot;They are covering all objects&quot;&quot;&quot;" name="answer"/>
+            <field name="question_id" ref="survey_question_9"/>
+            <field eval="2" name="sequence"/>
+        </record>
+        <record id="survey_answer_32" model="survey.answer">
+            <field name="in_visible_answer_type">1</field>
+            <field eval="&quot;&quot;&quot;Those security rules are standard and can be used out-of-the-box in most cases&quot;&quot;&quot;" name="answer"/>
+            <field name="question_id" ref="survey_question_9"/>
+            <field eval="3" name="sequence"/>
+        </record>
+        <record id="survey_answer_33" model="survey.answer">
+            <field name="in_visible_answer_type">1</field>
+            <field eval="&quot;&quot;&quot;The 'Usability/Extended View' group helps in daily work&quot;&quot;&quot;" name="answer"/>
+            <field name="question_id" ref="survey_question_9"/>
+            <field eval="4" name="sequence"/>
+        </record>
+        <record id="survey_answer_34" model="survey.answer">
+            <field name="in_visible_answer_type">1</field>
+            <field eval="&quot;&quot;&quot;The 'Usability/Extended View' group hides only optional fields&quot;&quot;&quot;" name="answer"/>
+            <field name="question_id" ref="survey_question_9"/>
+            <field eval="5" name="sequence"/>
+        </record>
+        <record id="survey_answer_35" model="survey.answer">
+            <field name="in_visible_answer_type">1</field>
+            <field eval="&quot;&quot;&quot;The groups set on menu items are relevant&quot;&quot;&quot;" name="answer"/>
+            <field name="question_id" ref="survey_question_9"/>
+            <field eval="6" name="sequence"/>
+        </record>
+        <record id="survey_answer_36" model="survey.answer">
+            <field name="in_visible_answer_type">1</field>
+            <field eval="&quot;&quot;&quot;It is up-to-date&quot;&quot;&quot;" name="answer"/>
+            <field name="question_id" ref="survey_question_0"/>
+            <field eval="1" name="sequence"/>
+        </record>
+        <record id="survey_answer_37" model="survey.answer">
+            <field name="in_visible_answer_type">1</field>
+            <field eval="&quot;&quot;&quot;It helps in the beginning&quot;&quot;&quot;" name="answer"/>
+            <field name="question_id" ref="survey_question_0"/>
+            <field eval="2" name="sequence"/>
+        </record>
+        <record id="survey_answer_38" model="survey.answer">
+            <field name="in_visible_answer_type">1</field>
+            <field eval="&quot;&quot;&quot;I use the contextual help in OpenERP&quot;&quot;&quot;" name="answer"/>
+            <field name="question_id" ref="survey_question_0"/>
+            <field eval="3" name="sequence"/>
+        </record>
+        <record id="survey_answer_39" model="survey.answer">
+            <field name="in_visible_answer_type">1</field>
+            <field eval="&quot;&quot;&quot;It is complete&quot;&quot;&quot;" name="answer"/>
+            <field name="question_id" ref="survey_question_0"/>
+            <field eval="4" name="sequence"/>
+        </record>
+        <record id="survey_answer_40" model="survey.answer">
+            <field name="in_visible_answer_type">1</field>
+            <field eval="&quot;&quot;&quot;It is clear&quot;&quot;&quot;" name="answer"/>
+            <field name="question_id" ref="survey_question_0"/>
+            <field eval="5" name="sequence"/>
+        </record>
+        <record id="survey_answer_41" model="survey.answer">
+            <field name="in_visible_answer_type">1</field>
+            <field eval="&quot;&quot;&quot;They help new users to understand OpenERP&quot;&quot;&quot;" name="answer"/>
+            <field name="question_id" ref="survey_question_1"/>
+            <field eval="1" name="sequence"/>
+        </record>
+        <record id="survey_answer_42" model="survey.answer">
+            <field name="in_visible_answer_type">1</field>
+            <field eval="&quot;&quot;&quot;They are clean and correct&quot;&quot;&quot;" name="answer"/>
+            <field name="question_id" ref="survey_question_1"/>
+            <field eval="2" name="sequence"/>
+        </record>
+        <record id="survey_answer_43" model="survey.answer">
+            <field name="in_visible_answer_type">1</field>
+            <field eval="&quot;&quot;&quot;They are useful on a daily usage&quot;&quot;&quot;" name="answer"/>
+            <field name="question_id" ref="survey_question_1"/>
+            <field eval="3" name="sequence"/>
+        </record>
+        <record id="survey_answer_44" model="survey.answer">
+            <field name="in_visible_answer_type">1</field>
+            <field eval="&quot;&quot;&quot;A process is defined for all enterprise flows&quot;&quot;&quot;" name="answer"/>
+            <field name="question_id" ref="survey_question_1"/>
+            <field eval="4" name="sequence"/>
+        </record>
+        <record id="survey_answer_45" model="survey.answer">
+            <field name="in_visible_answer_type">1</field>
+            <field eval="&quot;&quot;&quot;It's easy to find the process you need&quot;&quot;&quot;" name="answer"/>
+            <field name="question_id" ref="survey_question_1"/>
+            <field eval="5" name="sequence"/>
+        </record>
+        <record id="survey_answer_46" model="survey.answer">
+            <field name="in_visible_answer_type">1</field>
+            <field eval="&quot;&quot;&quot;I use another repository system (sourceforge, ...)&quot;&quot;&quot;" name="answer"/>
+            <field name="question_id" ref="survey_question_7"/>
+            <field eval="2" name="sequence"/>
+        </record>
+        <record id="survey_answer_47" model="survey.answer">
+            <field name="in_visible_answer_type">1</field>
+            <field eval="&quot;&quot;&quot;I host on my own website&quot;&quot;&quot;" name="answer"/>
+            <field name="question_id" ref="survey_question_7"/>
+            <field eval="3" name="sequence"/>
+        </record>
+        <record id="survey_answer_48" model="survey.answer">
+            <field name="in_visible_answer_type">1</field>
+            <field eval="&quot;&quot;&quot;I don't publish my developments&quot;&quot;&quot;" name="answer"/>
+            <field name="question_id" ref="survey_question_7"/>
+            <field eval="4" name="sequence"/>
+        </record>
+
+   </data>
+ </openerp>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <record id="view_oehealth_annotation_tree" model="ir.ui.view">
+            <field name="name">oehealth.annotation.tree</field>
+            <field name="model">oehealth.annotation</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <tree string="Annotations">
+                    <field name="subject" />
+                    <field name="category_ids" />
+                    <field name="tag_ids" />
+                    <field name="from_user" />
+                    <field name="to_user" />
+                    <field name="date" />
+                    <field name="complete_name" />
+                </tree>
+            </field>
+        </record>
+        
+        <record id="view_oehealth_annotation_form" model="ir.ui.view">
+            <field name="name">oehealth.annotation.form</field>
+            <field name="model">oehealth.annotation</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <form string="Annotation" version="7.0">
+                    <sheet>
+                        <group>
+                            <field name="category_ids" widget="many2many_tags" placeholder="Categories..." groups="oehealth_base.group_oehealth_suser"/>
+                            <field name="tag_ids" widget="many2many_tags" placeholder="Tags..." groups="oehealth_base.group_oehealth_suser"/>
+                            <field name="subject" default_focus="1" />
+                            <field name="date" />
+                        </group>
+                        <div class="oe_edit_only">
+                            <label for="body"/>
+                        </div>
+                        <h2>
+                            <field name="body" colspan="4" nolabel="1"/>
+                        </h2>
+                        <group>
+                            <field name="from_user" />
+                            <field name="to_user" />
+                            <field name="name" />
+                            <field name="parent_id"/>
+                        </group>
+                        <notebook>
+                            <page string="Child Annotations" groups="oehealth_base.group_oehealth_suser">
+                                <group>
+                                    <field name="child_ids" colspan="4" nolabel="1" />
+                                </group>
+                            </page>
+                            <page string="Settings" groups="oehealth_base.group_oehealth_manager">
+                                <group>
+                                    <field name="active"/>
+                                </group>
+                                <group groups="oehealth_base.group_oehealth_rmanager">
+                                    <group string="Creation" >
+                                        <field name="create_uid" string="User" />
+                                        <field name="create_date" string="Date" />
+                                    </group>
+                                    <group string="Last Update" >
+                                        <field name="write_uid" string="User" />
+                                        <field name="write_date" string="Date"/>
+                                    </group>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record id="view_oehealth_annotation_search" model="ir.ui.view">
+            <field name="name">oehealth.annotation.search</field>
+            <field name="model">oehealth.annotation</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <search string="Annotation">
+                    <field name="name" />
+                    <field name="subject" />
+                    <field name="from_user" />
+                    <field name="to_user" />
+                    <field name="date" />
+                    <field name="body" />
+                    <separator/>
+                    <!--filter string="Active" name="active" domain="[('active','=',1)]" help="Active Annotations" invisible="1"/-->
+                    <filter string="Inactive Annotations" name="active" domain="[('active','=',0)]" help="Inactive Annotations"/>
+                    <group expand="0" string="Group By...">
+                        <filter string="From" domain="[]" context="{'group_by':'from_user'}" />
+                        <filter string="To" domain="[]" context="{'group_by':'to_user'}" />
+                        <filter string="Date" domain="[]" context="{'group_by':'date'}" />
+                    </group>
+                </search>
+            </field>
+        </record>
+        
+        <record model="ir.actions.act_window" id="act_open_oehealth_annotation_view">
+            <field name="name">Annotations</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">oehealth.annotation</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_oehealth_annotation_search" />
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+        
+        <record model="ir.actions.act_window.view"
+        id="act_open_oehealth_annotation_view_form">
+            <field name="act_window_id" ref="act_open_oehealth_annotation_view" />
+            <field name="sequence" eval="20" />
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_oehealth_annotation_form" />
+        </record>
+        
+        <record model="ir.actions.act_window.view"
+        id="act_open_oehealth_annotation_view_tree">
+            <field name="act_window_id" ref="act_open_oehealth_annotation_view" />
+            <field name="sequence" eval="10" />
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_oehealth_annotation_tree" />
+        </record>
+        
+        <menuitem name=" Annotations" id="menu_health_health_base_annotations"
+            parent="oehealth_base.menu_health_health_base"
+            groups="oehealth_base.group_oehealth_suser"
+            sequence="10"
+            action="act_open_oehealth_annotation_view" />
+
+    </data>
+</openerp>

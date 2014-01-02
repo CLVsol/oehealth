@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <record id="view_oehealth_community_person_member_tree" model="ir.ui.view">
+            <field name="name">oehealth.community.person.member.tree</field>
+            <field name="model">oehealth.community.person.member</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <tree string="Community Person Members">
+                    <field name="community_id" />
+                    <field name="person_id" />
+                    <field name="info" />
+                </tree>
+            </field>
+        </record>
+        
+        <record id="view_oehealth_community_person_member_form" model="ir.ui.view">
+            <field name="name">oehealth.community.person.member.form</field>
+            <field name="model">oehealth.community.person.member</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <form string="Community Person Members" version="7.0">
+                    <sheet>
+                        <group>
+                            <field name="community_id" />
+                            <field name="person_id" />
+                        </group>
+                        <notebook>
+                            <page string="Information">
+                                <group string="Information" />
+                                <div class="oe_edit_only">
+                                    <label for="info"/>
+                                </div>
+                                <field name="info" colspan="4"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record id="view_oehealth_community_person_member_search" model="ir.ui.view">
+            <field name="name">oehealth.community.person.member.search</field>
+            <field name="model">oehealth.community.person.member</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <search string="Community Person Members">
+                    <field name="community_id" />
+                    <field name="person_id" />
+                    <field name="info" />
+                    <newline />
+                    <group expand="0" string="Group By...">
+                        <filter string="Community Person" domain="[]" context="{'group_by':'community_id'}" />
+                        <filter string="Community Person Member" domain="[]" context="{'group_by':'person_id'}" />
+                    </group>
+                </search>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="act_open_oehealth_community_person_member_view">
+            <field name="name">Community Person Members</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">oehealth.community.person.member</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_oehealth_community_person_member_search" />
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+        
+        <record model="ir.actions.act_window.view" id="act_open_oehealth_community_person_member_view_form">
+            <field name="act_window_id" ref="act_open_oehealth_community_person_member_view" />
+            <field name="sequence" eval="20" />
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_oehealth_community_person_member_form" />
+        </record>
+        
+        <record model="ir.actions.act_window.view" id="act_open_oehealth_community_person_member_view_tree">
+            <field name="act_window_id" ref="act_open_oehealth_community_person_member_view" />
+            <field name="sequence" eval="10" />
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_oehealth_community_person_member_tree" />
+        </record>
+        
+        <menuitem name="Person Members" id="menu_health_health_community_communities_person_members"  
+            parent="menu_health_health_community_communities"
+            groups="oehealth_base.group_oehealth_community_user"
+            sequence="20" 
+            action="act_open_oehealth_community_person_member_view" />
+
+    </data>
+</openerp>

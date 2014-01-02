@@ -1,0 +1,443 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#   * oehealth_professional
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-22 23:04+0000\n"
+"PO-Revision-Date: 2013-10-26 22:33-0300\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 1.5.7\n"
+
+#. module: oehealth_professional
+#: view:oehealth.professional.category:0
+#: field:oehealth.professional.category,complete_name:0
+#: field:oehealth.professional.category,name:0
+msgid "Category"
+msgstr "Categoria"
+
+#. module: oehealth_professional
+#: view:oehealth.professional:0
+msgid "City"
+msgstr "Cidade"
+
+#. module: oehealth_professional
+#: field:oehealth.professional.category,parent_left:0
+msgid "Left parent"
+msgstr "Pai anterior"
+
+#. module: oehealth_professional
+#: view:oehealth.professional:0 selection:oehealth.professional,state:0
+msgid "Revised"
+msgstr "Revisado"
+
+#. module: oehealth_professional
+#: view:oehealth.professional:0 view:oehealth.professional.category:0
+msgid "Information"
+msgstr "Informações"
+
+#. module: oehealth_professional
+#: field:res.partner,is_health_professional:0
+msgid "Is a Health Professional"
+msgstr "É um Profissional de Saúde"
+
+#. module: oehealth_professional
+#: help:res.partner,is_health_professional:0
+msgid "Check if the partner is a health professional"
+msgstr "Marcar quando o parceiro for um profissional de saúde"
+
+#. module: oehealth_professional
+#: field:oehealth.professional.category,child_ids:0
+msgid "Child Categories"
+msgstr "Categorias Filhas"
+
+#. module: oehealth_professional
+#: view:oehealth.professional:0
+msgid "Street..."
+msgstr "Logradouro..."
+
+#. module: oehealth_professional
+#: view:oehealth.professional:0
+msgid "Group By..."
+msgstr "Agrupar por..."
+
+#. module: oehealth_professional
+#: model:ir.model,name:oehealth_professional.model_oehealth_tag
+msgid "Health Tags"
+msgstr "Etiquetas (Saúde)"
+
+#. module: oehealth_professional
+#: view:oehealth.professional:0
+msgid "Contact Information"
+msgstr "Informações de Contato"
+
+#. module: oehealth_professional
+#: field:oehealth.professional.category,info:0
+msgid "Info"
+msgstr "Informações"
+
+#. module: oehealth_professional
+#: selection:oehealth.professional,professional_status:0
+msgid "Inactivated"
+msgstr "Inativado"
+
+#. module: oehealth_professional
+#: selection:oehealth.professional,state:0
+msgid "New"
+msgstr "Novo"
+
+#. module: oehealth_professional
+#: field:oehealth.professional,date_professional_inclusion:0
+msgid "Professional Inclusion Date"
+msgstr "Data de Inclusão"
+
+#. module: oehealth_professional
+#: model:ir.actions.act_window,name:oehealth_professional.act_open_oehealth_professional_category_view
+#: model:ir.model,name:oehealth_professional.model_oehealth_professional_category
+#: view:oehealth.professional.category:0
+msgid "Health Professional Categories"
+msgstr "Categorias do Profissional"
+
+#. module: oehealth_professional
+#: view:oehealth.professional:0 field:oehealth.professional,events_ids:0
+msgid "Events"
+msgstr "Eventos"
+
+#. module: oehealth_professional
+#: selection:oehealth.professional,professional_status:0
+msgid "Undefined"
+msgstr "Indefinido"
+
+#. module: oehealth_professional
+#: help:oehealth.professional,partner:0
+msgid "Partner-related data of the professional"
+msgstr "Dados do parceiro relacionado ao profissional"
+
+#. module: oehealth_professional
+#: model:ir.actions.act_window,name:oehealth_professional.act_open_oehealth_professional_view
+#: view:oehealth.professional:0 view:oehealth.professional.category:0
+#: field:oehealth.professional.category,professional_ids:0 view:oehealth.tag:0
+#: field:oehealth.tag,professional_ids:0 view:res.partner:0
+#: field:res.partner,health_professional_ids:0
+msgid "Health Professionals"
+msgstr "Profissionais de Saúde"
+
+#. module: oehealth_professional
+#: field:oehealth.professional,professional_annotation_ids:0
+msgid "Professional Annotations"
+msgstr "Anotações de Profissionais"
+
+#. module: oehealth_professional
+#: view:oehealth.professional:0 selection:oehealth.professional,state:0
+msgid "Okay"
+msgstr "Ok"
+
+#. module: oehealth_professional
+#: field:oehealth.professional.category,description:0
+msgid "Description"
+msgstr "Descrição"
+
+#. module: oehealth_professional
+#: field:oehealth.professional,write_date:0
+#: field:oehealth.professional.category,write_date:0
+msgid "Write Date"
+msgstr "Editado em"
+
+#. module: oehealth_professional
+#: view:oehealth.professional:0 view:oehealth.professional.category:0
+#: view:oehealth.tag:0
+msgid "Settings"
+msgstr "Configurações"
+
+#. module: oehealth_professional
+#: view:res.partner:0
+msgid "Health Professional Partners"
+msgstr "Parceiros Profissionais (Saúde)"
+
+#. module: oehealth_professional
+#: view:oehealth.professional:0
+msgid "Alias..."
+msgstr "Apelido..."
+
+#. module: oehealth_professional
+#: view:oehealth.professional:0
+msgid "Annotations"
+msgstr "Anotações"
+
+#. module: oehealth_professional
+#: field:oehealth.professional,professional_info2:0
+msgid "Professional Info-2"
+msgstr "Informações-2"
+
+#. module: oehealth_professional
+#: view:oehealth.professional:0
+msgid "Professional Code..."
+msgstr "Código do Profissional..."
+
+#. module: oehealth_professional
+#: field:oehealth.professional,date_professional_inactivation:0
+msgid "Professional Inactivation Date"
+msgstr "Data de Inativação"
+
+#. module: oehealth_professional
+#: view:oehealth.professional:0
+msgid "Specialties..."
+msgstr "Especialidades..."
+
+#. module: oehealth_professional
+#: field:oehealth.professional,date_professional_activation:0
+msgid "Professional Activation Date"
+msgstr "Data de Ativação"
+
+#. module: oehealth_professional
+#: view:oehealth.professional:0 selection:oehealth.professional,state:0
+msgid "Waiting"
+msgstr "Aguardando"
+
+#. module: oehealth_professional
+#: view:oehealth.professional:0
+msgid "Address"
+msgstr "Endereço"
+
+#. module: oehealth_professional
+#: view:oehealth.professional:0 view:oehealth.professional.category:0
+msgid "Date"
+msgstr "Data"
+
+#. module: oehealth_professional
+#: field:oehealth.professional,country_id:0
+msgid "Nationality"
+msgstr "Nacionalidade"
+
+#. module: oehealth_professional
+#: view:oehealth.professional:0
+msgid "Professional Tags..."
+msgstr "Etiquetas do Profissional..."
+
+#. module: oehealth_professional
+#: view:oehealth.professional:0 field:oehealth.professional,state:0
+msgid "Stage"
+msgstr "Estágio"
+
+#. module: oehealth_professional
+#: model:ir.model,name:oehealth_professional.model_oehealth_specialty
+msgid "Health Specialty"
+msgstr "Especialidade (Saúde)"
+
+#. module: oehealth_professional
+#: model:ir.ui.menu,name:oehealth_professional.menu_health_health_base_professionals
+#: field:oehealth.specialty,professional_ids:0
+msgid "Professionals"
+msgstr "Profissionais"
+
+#. module: oehealth_professional
+#: view:oehealth.professional:0
+msgid "e.g. +32.81.81.37.00"
+msgstr "e.g. +32.81.81.37.00"
+
+#. module: oehealth_professional
+#: model:ir.model,name:oehealth_professional.model_oehealth_professional
+#: field:oehealth.annotation,professional_id:0 view:oehealth.professional:0
+msgid "Health Professional"
+msgstr "Profissional de Saúde"
+
+#. module: oehealth_professional
+#: field:oehealth.professional,professional_code:0
+msgid "Professional Code"
+msgstr "Código do Profissional"
+
+#. module: oehealth_professional
+#: view:oehealth.professional:0
+msgid "ZIP"
+msgstr "CEP"
+
+#. module: oehealth_professional
+#: field:oehealth.professional.category,parent_id:0
+msgid "Parent Category"
+msgstr "Categoria Pai"
+
+#. module: oehealth_professional
+#: view:oehealth.professional:0
+msgid "Country"
+msgstr "Pais"
+
+#. module: oehealth_professional
+#: model:ir.model,name:oehealth_professional.model_oehealth_annotation
+msgid "Health Annotation"
+msgstr "Anotação (Saúde)"
+
+#. module: oehealth_professional
+#: help:oehealth.professional,alias:0
+msgid "Common name that the Professional is referred"
+msgstr "Nome comum com o qual o Profissional é referenciado"
+
+#. module: oehealth_professional
+#: view:oehealth.professional:0
+#: field:oehealth.professional,professional_status:0
+msgid "Professional Status"
+msgstr "Status do Profissional"
+
+#. module: oehealth_professional
+#: view:oehealth.professional:0
+msgid "Health Entity Code..."
+msgstr "Código da Entidade (Saúde)..."
+
+#. module: oehealth_professional
+#: model:ir.ui.menu,name:oehealth_professional.menu_health_config_base_professional_categorys
+#: field:oehealth.professional,professional_category_ids:0
+msgid "Professional Categories"
+msgstr "Categorias de Profissionais"
+
+#. module: oehealth_professional
+#: field:oehealth.professional,alias:0
+msgid "Alias"
+msgstr "Apelido"
+
+#. module: oehealth_professional
+#: view:oehealth.professional:0
+msgid "Name..."
+msgstr "Nome..."
+
+#. module: oehealth_professional
+#: field:oehealth.professional,specialty_ids:0
+msgid "Specialties"
+msgstr "Especialidades"
+
+#. module: oehealth_professional
+#: field:oehealth.professional,write_uid:0
+#: field:oehealth.professional.category,write_uid:0
+msgid "Write User"
+msgstr "Editado por"
+
+#. module: oehealth_professional
+#: field:oehealth.professional,professional_info:0
+msgid "Professional Info"
+msgstr "Informações do Profissional"
+
+#. module: oehealth_professional
+#: field:oehealth.professional,professional_tag_ids:0
+msgid "Professional Tags"
+msgstr "Etiquetas do Profissional"
+
+#. module: oehealth_professional
+#: view:oehealth.professional:0
+msgid "Professional"
+msgstr "Profissional"
+
+#. module: oehealth_professional
+#: field:oehealth.event.participant,professional_id:0
+msgid "Helth Professional"
+msgstr "Profissional de Saúde"
+
+#. module: oehealth_professional
+#: help:oehealth.professional.category,active:0
+msgid ""
+"If unchecked, it will allow you to hide the category without removing it."
+msgstr "Se desmarcado, será possível esconder a categoria sem removê-la."
+
+#. module: oehealth_professional
+#: view:oehealth.professional:0 view:oehealth.professional.category:0
+msgid "Last Update"
+msgstr "Útima Atualização"
+
+#. module: oehealth_professional
+#: field:oehealth.professional,create_uid:0
+#: field:oehealth.professional.category,create_uid:0
+msgid "Create User"
+msgstr "Criado por"
+
+#. module: oehealth_professional
+#: constraint:oehealth.professional.category:0
+msgid "Error! You can not create recursive categories."
+msgstr "Erro! Não é permitido criar categorias recursivas."
+
+#. module: oehealth_professional
+#: view:oehealth.professional:0
+msgid "e.g. http://mostlyopen.org"
+msgstr "e.g. http://mostlyopen.org"
+
+#. module: oehealth_professional
+#: field:oehealth.professional,name_related:0
+#: field:oehealth.professional,partner:0
+msgid "Related Partner"
+msgstr "Parceiro Relacionado"
+
+#. module: oehealth_professional
+#: view:oehealth.professional:0
+msgid "Inactive Professionals"
+msgstr "Profissionais Inativos"
+
+#. module: oehealth_professional
+#: view:oehealth.professional:0 view:oehealth.professional.category:0
+msgid "Creation"
+msgstr "Criação"
+
+#. module: oehealth_professional
+#: selection:oehealth.professional,professional_status:0
+msgid "Activated"
+msgstr "Ativado"
+
+#. module: oehealth_professional
+#: view:oehealth.professional:0
+msgid "State"
+msgstr "Estado"
+
+#. module: oehealth_professional
+#: field:oehealth.professional,create_date:0
+#: field:oehealth.professional.category,create_date:0
+msgid "Create Date"
+msgstr "Data da Criação"
+
+#. module: oehealth_professional
+#: field:oehealth.professional.category,parent_right:0
+msgid "Right parent"
+msgstr "Próximo pai"
+
+#. module: oehealth_professional
+#: view:oehealth.professional:0
+msgid "Professional Categories..."
+msgstr "Categorias do Profissional..."
+
+#. module: oehealth_professional
+#: view:oehealth.professional:0 view:oehealth.professional.category:0
+msgid "User"
+msgstr "Usuário"
+
+#. module: oehealth_professional
+#: model:ir.model,name:oehealth_professional.model_res_partner
+msgid "Partner"
+msgstr "Parceiro"
+
+#. module: oehealth_professional
+#: sql_constraint:oehealth.professional:0
+msgid "Duplicated Professional Code!"
+msgstr "Código do Profissional Duplicado!"
+
+#. module: oehealth_professional
+#: help:oehealth.professional,active:0
+msgid ""
+"If unchecked, it will allow you to hide the professional without removing it."
+msgstr "Se desmarcado, será possível esconder o profissional sem removê-lo."
+
+#. module: oehealth_professional
+#: model:ir.model,name:oehealth_professional.model_oehealth_event_participant
+msgid "oehealth.event.participant"
+msgstr "oehealth.event.participant"
+
+#. module: oehealth_professional
+#: view:oehealth.professional:0
+msgid "Personal Information"
+msgstr "Informações Pessoais"
+
+#. module: oehealth_professional
+#: field:oehealth.professional,active:0
+#: field:oehealth.professional.category,active:0
+msgid "Active"
+msgstr "Ativo"

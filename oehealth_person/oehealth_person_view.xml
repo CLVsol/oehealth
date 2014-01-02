@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <record id="view_oehealth_person_tree" model="ir.ui.view">
+            <field name="name">oehealth.person.tree</field>
+            <field name="model">oehealth.person</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <tree string="Person">
+                    <field name="name"/>
+                    <field name="person_code" />
+                    <field name="state" />
+                    <field name="person_category_ids" groups="oehealth_base.group_oehealth_suser"/>
+                    <field name="person_tag_ids" groups="oehealth_base.group_oehealth_suser"/>
+                    <field name="person_status" />
+                    <field name="person_info" colspan="4"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record id="view_oehealth_person_form" model="ir.ui.view">
+            <field name="name">oehealth.person.form</field>
+            <field name="model">oehealth.person</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <form string="Persons" version="7.0">
+                    <header>
+                        <button name="oehealth_person_revised" string="Revised" states="new,okay" type="workflow" groups="oehealth_base.group_oehealth_person_manager"/>
+                        <button name="oehealth_person_waiting" string="Waiting" states="new,revised" type="workflow" groups="oehealth_base.group_oehealth_person_manager"/>
+                        <button name="oehealth_person_okay" string="Okay" states="new,revised,waiting" type="workflow" groups="oehealth_base.group_oehealth_person_manager"/>
+                        <field name="state" widget="statusbar" statusbar_visible="new,revised,waiting,okay"
+                        statusbar_colors='{"new":"blue","revised":"blue","waiting":"blue","okay":"blue"}' />
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <div class="oe_edit_only">
+                                <label for="partner"/>
+                            </div>
+                            <h1>
+                                <field name="partner" default_focus="1" placeholder="Name..."/>
+                            </h1>
+                            <div class="oe_edit_only">
+                                <label for="alias"/>
+                            </div>
+                            <h2>
+                                <field name="alias" placeholder="Alias..."/>
+                            </h2>
+                            <div class="oe_edit_only">
+                                <label for="person_code"/>
+                            </div>
+                            <h2>
+                                <field name="person_code" placeholder="Person Code..."/>
+                            </h2>
+                            <div class="oe_edit_only">
+                                <label for="person_category_ids" groups="oehealth_base.group_oehealth_suser"/>
+                            </div>
+                            <h2>
+                                <field name="person_category_ids" widget="many2many_tags" placeholder="Categories..." groups="oehealth_base.group_oehealth_suser"/>
+                            </h2>
+                            <div class="oe_edit_only">
+                                <label for="person_tag_ids" groups="oehealth_base.group_oehealth_suser"/>
+                            </div>
+                            <h2>
+                                <field name="person_tag_ids" widget="many2many_tags" placeholder="Tags..." groups="oehealth_base.group_oehealth_suser"/>
+                            </h2>
+                        </div>
+                        <notebook>
+                            <page string="Information">
+                                <group>
+                                    <field name="health_partner_code" readonly='True'/>
+                                    <field name="person_status" />
+                                    <field name="date_person_inclusion" />
+                                    <field name="date_person_activation" />
+                                    <field name="date_person_inactivation" />
+                                </group>
+                                <group string="Information" />
+                                <div class="oe_edit_only">
+                                    <label for="person_info"/>
+                                </div>
+                                <field name="person_info" colspan="4" nolabel="1"/>
+                                <group groups="oehealth_base.group_oehealth_rmanager">
+                                    <group string="Creation" >
+                                        <field name="create_uid" string="User" />
+                                        <field name="create_date" string="Date" />
+                                    </group>
+                                    <group string="Last Update" >
+                                        <field name="write_uid" string="User" />
+                                        <field name="write_date" string="Date"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Personal Information" groups="oehealth_base.group_oehealth_suser">
+                                <group>
+                                    <group string="Citizenship &amp; Other Info">
+                                        <field name="country_id" options='{"no_open": True}'/>
+                                        <field name="identification_id" />
+                                        <field name="otherid" groups="base.group_comm_user"/>
+                                    </group>
+                                    <group string="Status">
+                                        <field name="gender"/>
+                                        <field name="marital"/>
+                                    </group>
+                                    <group string="Birth">
+                                        <field name="birthday"/>
+                                        <field name="age"/>
+                                    </group>
+                                    <group string="Family">
+                                        <field name="spouse_id" />
+                                        <field name="father_id" />
+                                        <field name="mother_id" />
+                                        <field name="responsible_id" />
+                                    </group>
+                                </group>
+                                <group string="Contact Information">
+                                    <group>
+                                        <label for="street" string="Address" />
+                                        <div>
+                                            <field name="street" placeholder="Street..." readonly="True"/>
+                                            <field name="street2"  readonly="True"/>
+                                            <div class="address_format">
+                                                <field name="city" placeholder="City" style="width: 40%%" readonly="True"/>
+                                                <field name="state_id" class="oe_no_button" placeholder="State" style="width: 37%%" on_change="onchange_state(state_id)" readonly="True"/>
+                                                <field name="zip" placeholder="ZIP" style="width: 20%%" readonly="True"/>
+                                            </div>
+                                            <field name="country_id" placeholder="Country" class="oe_no_button" options='{"no_open": True}' readonly="True"/>
+                                        </div>
+                                        <field name="website" widget="url" placeholder="e.g. http://mostlyopen.org" readonly="True"/>
+                                    </group>
+                                    <group>
+                                        <field name="phone" placeholder="e.g. +32.81.81.37.00" readonly="True"/>
+                                        <field name="mobile" readonly="True"/>
+                                        <field name="fax" readonly="True"/>
+                                        <field name="email" widget="email" readonly="True"/>
+                                    </group>
+                                </group>
+                                <group>
+                                    <div class="oe_edit_only">
+                                        <label for="comment"/>
+                                    </div>
+                                    <field name="comment" colspan="4" nolabel="1" readonly="True"/>
+                                </group>
+                                <group>
+                                    <newline/>
+                                    <div class="oe_edit_only">
+                                        <label for="person_info2"/>
+                                    </div>
+                                    <field name="person_info2" colspan="4" nolabel="1"/>
+                                </group>
+                            </page>
+                            <page string="Events" groups="oehealth_base.group_oehealth_suser">
+                                <group string="Events">
+                                    <field name="events_ids" colspan="4" nolabel="1">
+                                        <tree string="Events">
+                                            <field name="event_id"/>
+                                            <field name="role"/>
+                                            <field name="info"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
+                            <page string="Annotations" groups="oehealth_base.group_oehealth_suser">
+                                <group>
+                                    <field name="person_annotation_ids" colspan="4" nolabel="1" />
+                                </group>
+                            </page>
+                            <page string="Settings" groups="oehealth_base.group_oehealth_manager">
+                                <group>
+                                    <field name="active"/>
+                                    <field name="is_company" />
+                                    <field name="customer" />
+                                    <field name="is_health_partner" />
+                                    <field name="is_person" />
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record id="view_oehealth_person_search" model="ir.ui.view">
+            <field name="name">oehealth.person.search</field>
+            <field name="model">oehealth.person</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <search string="Person">
+                    <field name="name" />
+                    <field name="person_code" />
+                    <field name="health_partner_code" />
+                    <field name="person_category_ids" />
+                    <field name="person_tag_ids" />
+                    <field name="person_status" />
+                    <field name="person_info" />
+                    <newline />
+                    <group expand="0" string="Group By...">
+                        <filter string="Stage" domain="[]" context="{'group_by': 'state'}"/>
+                        <filter string="Person Status" domain="[]" context="{'group_by':'person_status'}" />
+                    </group>
+                </search>
+            </field>
+        </record>
+        
+        <record model="ir.actions.act_window" id="act_open_oehealth_person_view">
+            <field name="name">Persons</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">oehealth.person</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_oehealth_person_search" />
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+        
+        <record model="ir.actions.act_window.view" id="act_open_oehealth_person_view_form">
+            <field name="act_window_id" ref="act_open_oehealth_person_view" />
+            <field name="sequence" eval="20" />
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_oehealth_person_form" />
+        </record>
+        
+        <record model="ir.actions.act_window.view" id="act_open_oehealth_person_view_tree">
+            <field name="act_window_id" ref="act_open_oehealth_person_view" />
+            <field name="sequence" eval="10" />
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_oehealth_person_tree" />
+        </record>
+        
+        <menuitem name="Persons" id="menu_health_health_community_persons"
+            parent="oehealth_base.menu_health_health_community"
+            groups="oehealth_base.group_oehealth_person_user"
+            sequence="10"
+            action="act_open_oehealth_person_view" />
+
+    </data>
+</openerp>

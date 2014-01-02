@@ -1,0 +1,179 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* oehealth_specialty
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-30 11:12+0000\n"
+"PO-Revision-Date: 2013-10-30 11:12+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: oehealth_specialty
+#: view:oehealth.specialty:0
+msgid "Information"
+msgstr "Informações"
+
+#. module: oehealth_specialty
+#: field:oehealth.specialty,parent_left:0
+msgid "Left parent"
+msgstr "Pai anterior"
+
+#. module: oehealth_specialty
+#: help:oehealth.specialty,active:0
+msgid "If unchecked, it will allow you to hide the specialty without removing it."
+msgstr "Se desmarcado, será possível esconder a especialidade sem removê-la."
+
+#. module: oehealth_specialty
+#: constraint:oehealth.specialty:0
+msgid "Error! You can not create recursive specialties."
+msgstr "Erro! Não é permitido criar especialidades recursivas."
+
+#. module: oehealth_specialty
+#: view:oehealth.specialty:0
+msgid "Health Specialty..."
+msgstr "Especialidade (Saúde)..."
+
+#. module: oehealth_specialty
+#: model:ir.model,name:oehealth_specialty.model_oehealth_tag
+msgid "Health Tags"
+msgstr "Etiquetas (Saúde)"
+
+#. module: oehealth_specialty
+#: view:oehealth.specialty:0
+msgid "Code..."
+msgstr "Código..."
+
+#. module: oehealth_specialty
+#: view:oehealth.specialty:0
+msgid "Tags..."
+msgstr "Etiquetas..."
+
+#. module: oehealth_specialty
+#: field:oehealth.specialty,description:0
+msgid "Description"
+msgstr "Descrição"
+
+#. module: oehealth_specialty
+#: field:oehealth.specialty,tag_ids:0
+msgid "Tags"
+msgstr "Etiquetas"
+
+#. module: oehealth_specialty
+#: model:ir.model,name:oehealth_specialty.model_oehealth_specialty
+#: view:oehealth.specialty:0
+#: field:oehealth.specialty,complete_name:0
+#: field:oehealth.specialty,name:0
+msgid "Health Specialty"
+msgstr "Especialide (Saúde)"
+
+#. module: oehealth_specialty
+#: field:oehealth.specialty,write_date:0
+msgid "Write Date"
+msgstr "Data da Edição"
+
+#. module: oehealth_specialty
+#: view:oehealth.specialty:0
+msgid "Inactive Specialties"
+msgstr "Especialidades Inativas"
+
+#. module: oehealth_specialty
+#: view:oehealth.specialty:0
+msgid "User"
+msgstr "Usuário"
+
+#. module: oehealth_specialty
+#: view:oehealth.specialty:0
+msgid "Date"
+msgstr "Data"
+
+#. module: oehealth_specialty
+#: field:oehealth.specialty,info:0
+msgid "Info"
+msgstr "Informações"
+
+#. module: oehealth_specialty
+#: view:oehealth.specialty:0
+msgid "Parent Specialty..."
+msgstr "Especialidade Pai..."
+
+#. module: oehealth_specialty
+#: view:oehealth.specialty:0
+#: view:oehealth.tag:0
+msgid "Settings"
+msgstr "Configurações"
+
+#. module: oehealth_specialty
+#: field:oehealth.specialty,child_ids:0
+msgid "Child Specialties"
+msgstr "Especialidades Filhas"
+
+#. module: oehealth_specialty
+#: field:oehealth.specialty,active:0
+msgid "Active"
+msgstr "Ativo"
+
+#. module: oehealth_specialty
+#: view:oehealth.specialty:0
+#: view:oehealth.tag:0
+msgid "Specialties"
+msgstr "Especialidades"
+
+#. module: oehealth_specialty
+#: field:oehealth.specialty,write_uid:0
+msgid "Write User"
+msgstr "Atualizado por"
+
+#. module: oehealth_specialty
+#: view:oehealth.specialty:0
+msgid "Last Update"
+msgstr "Última Atualização"
+
+#. module: oehealth_specialty
+#: field:oehealth.specialty,create_uid:0
+msgid "Create User"
+msgstr "Criado por"
+
+#. module: oehealth_specialty
+#: field:oehealth.specialty,code:0
+msgid "Code"
+msgstr "Código"
+
+#. module: oehealth_specialty
+#: view:oehealth.specialty:0
+msgid "Description..."
+msgstr "Descrição..."
+
+#. module: oehealth_specialty
+#: view:oehealth.specialty:0
+msgid "Creation"
+msgstr "Criação"
+
+#. module: oehealth_specialty
+#: model:ir.actions.act_window,name:oehealth_specialty.act_open_oehealth_specialty_view
+#: model:ir.ui.menu,name:oehealth_specialty.menu_health_config_base_specialties
+#: view:oehealth.specialty:0
+#: field:oehealth.tag,specialty_ids:0
+msgid "Health Specialties"
+msgstr "Especialidades (Saúde)"
+
+#. module: oehealth_specialty
+#: field:oehealth.specialty,create_date:0
+msgid "Create Date"
+msgstr "Data da Criação"
+
+#. module: oehealth_specialty
+#: field:oehealth.specialty,parent_id:0
+msgid "Parent Specialty"
+msgstr "Especialidade Pai"
+
+#. module: oehealth_specialty
+#: field:oehealth.specialty,parent_right:0
+msgid "Right parent"
+msgstr "Próximo pai"

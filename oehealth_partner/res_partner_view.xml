@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <record model="ir.ui.view" id="view_l10n_br_base_partner_tree">
+            <field name="name">l10n_br_base.partner.tree</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_tree" />
+            <field name="arch" type="xml">
+                <field name="name" position="after">
+                    <field name="health_partner_code" />
+                </field>
+            </field>
+        </record>
+
+        <record id="view_oehealth_res_partner_form" model="ir.ui.view">
+            <field name="name">res.partner.form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <field name="comment" position="after">
+                    <group groups="oehealth_base.group_oehealth_rmanager">
+                        <group string="Creation" >
+                            <field name="create_uid" string="User" />
+                            <field name="create_date" string="Date" />
+                        </group>
+                        <group string="Last Update" >
+                            <field name="write_uid" string="User" />
+                            <field name="write_date" string="Date"/>
+                        </group>
+                    </group>
+                </field>
+                <notebook position="inside">
+                    <page string="Health" groups="oehealth_base.group_oehealth_manager">
+                        <group>
+                            <field name="health_tag_ids" widget="many2many_tags" placeholder="Health Tags..." groups="oehealth_base.group_oehealth_suser"/>
+                            <!--field name="health_partner_code" placeholder="Health Partner Code..." readonly="True"/-->
+                            <field name="health_partner_code" placeholder="Health Partner Code..."/>
+                            <!--field name="is_health_partner" readonly="True"/-->
+                            <field name="is_health_partner"/>
+                        </group>
+                    </page>
+                    <page string="Annotations" groups="oehealth_base.group_oehealth_suser">
+                        <group>
+                            <field name="annotation_ids" colspan="4" nolabel="1" />
+                        </group>
+                    </page>
+                </notebook>
+            </field>
+        </record>
+
+        <record id="view_oehealth_res_partner_filter" model="ir.ui.view">
+            <field name="name">oehealth.res.partner.filter</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_res_partner_filter" />
+            <field name="arch" type="xml">
+                <filter name="supplier" position="after">
+                    <separator/>
+                    <filter string="Inactive Partners" name="active" domain="[('active','=',0)]" help="Inactive Partners"/>
+                    <filter string="Health Partners" name="health_partner" domain="[('is_health_partner','=',1)]" help="Health Partners"/>
+                </filter>
+            </field>
+        </record>
+
+        <menuitem name="Partners" id="menu_health_health_base_partners"
+            parent="oehealth_base.menu_health_health_base"
+            groups="oehealth_base.group_oehealth_suser"
+            sequence="15"
+            action="base.action_partner_form" />
+
+    </data>
+</openerp>

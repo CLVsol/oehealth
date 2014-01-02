@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<openerp>
+    <data noupdate="1">
+
+        <record id="seq_type_oehealth_person" model="ir.sequence.type">
+            <field name="name">Health Person Sequence</field>
+            <field name="code">oehealth.person.code</field>
+        </record>
+        
+        <record id="seq_oehealth_person" model="ir.sequence">
+            <field name="name">Health Person Sequence</field>
+            <field name="code">oehealth.person.code</field>
+            <field name="padding" eval="9"/>
+            <field name="prefix">00000</field>
+        </record>
+
+    </data>
+</openerp>

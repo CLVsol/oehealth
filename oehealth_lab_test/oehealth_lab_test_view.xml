@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        
+        <!-- Lab Test -->
+        <record model="ir.ui.view" id="oehealth_lab_test_view">
+            <field name="name">Lab Test</field>
+            <field name="model">oehealth.lab_test</field>
+            <field name="arch" type="xml">
+                <form string="Laboratory Test" version="7.0">
+                    <header>
+                        <button name="oehealth_lab_test_revised" string="Revised" states="new,okay" type="workflow" groups="oehealth_base.group_oehealth_lab_test_manager"/>
+                        <button name="oehealth_lab_test_waiting" string="Waiting" states="new,revised" type="workflow" groups="oehealth_base.group_oehealth_lab_test_manager"/>
+                        <button name="oehealth_lab_test_okay" string="Okay" states="new,revised,waiting" type="workflow" groups="oehealth_base.group_oehealth_lab_test_manager"/>
+                        <field name="state" widget="statusbar" statusbar_visible="new,revised,waiting,okay"
+                        statusbar_colors='{"new":"blue","revised":"blue","waiting":"blue","okay":"blue"}' />
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <div class="oe_edit_only">
+                                <label for="name"/>
+                            </div>
+                            <h1>
+                                <field name="name" default_focus="1" placeholder="Name..."/>
+                            </h1>
+                            <div class="oe_edit_only">
+                                <label for="test"/>
+                            </div>
+                            <h2>
+                                <field name="test" placeholder="Test..." />
+                            </h2>
+                            <div class="oe_edit_only">
+                                <label for="date_analysis"/>
+                            </div>
+                            <h3>
+                                <field name="date_analysis" placeholder="Date..."/>
+                            </h3>
+                            <div class="oe_edit_only">
+                                <label for="patient"/>
+                            </div>
+                            <h2>
+                                <field name="patient" placeholder="Patient..."/>
+                            </h2>
+                            <div class="oe_edit_only">
+                                <label for="pathologist"/>
+                            </div>
+                            <h2>
+                                <field name="pathologist" placeholder="Patologist..."/>
+                            </h2>
+                        </div>
+	                    <notebook>
+	                        <page string="Main Info">
+	                            <field name="date_requested"></field>
+	                            <field name="requester"></field>
+	                            <field name="criteria" colspan="4" nolabel="1">
+	                                <tree editable="top" string="Test Cases">
+	                                    <field name="sequence"/>
+	                                    <field name="name"/>
+	                                    <field name="result"/>
+	                                    <field name="normal_range"/>
+	                                    <field name="unit"/>
+	                                </tree>
+	                                <form string="Test Cases">
+	                                    <field name="name"/>
+	                                    <field name="result"/>
+	                                    <field name="unit"/>
+	                                    <field name="normal_range"/>
+	                                </form>
+	                            </field>
+	                        </page>
+	                        <page string="Extra Info">
+	                            <field name="results"></field>
+	                            <newline/>
+	                            <field name="diagnosis"></field>
+	                        </page>
+	                    </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    
+        <record model="ir.ui.view" id="oehealth_lab_test_tree">
+            <field name="name">Lab test type</field>
+            <field name="model">oehealth.lab_test</field>
+            <field name="arch" type="xml">
+                <tree string='Lab test type'>
+                    <field name="name"></field>
+                    <field name="test"></field>
+                    <field name="patient"></field>
+                    <field name="date_analysis"></field>
+                </tree>
+            </field>
+        </record>
+         
+        <record model="ir.actions.act_window" id="oehealth_action_tree_lab_test">
+            <field name="name">Lab Tests Results</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">oehealth.lab_test</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="oehealth_lab_test_tree"/>
+        </record>
+        
+        <!--menuitem name="Lab Tests" id="menu_health_health_lab_test_lab_tests" 
+            parent="oehealth_base.menu_health_health_lab_test"
+            sequence="10"/-->
+            
+        <!--menuitem name="Lab Tests" id="menu_health_config_health_lab_test_lab_tests" 
+            parent="oehealth_base.menu_health_config_health_lab_test"
+            sequence="10"/-->
+            
+        <menuitem name="Results" id="menu_health_health_lab_test_results"
+            parent="oehealth_base.menu_health_health_lab_test"
+            groups="oehealth_base.group_oehealth_lab_test_user"
+            sequence="20"
+            action="oehealth_action_tree_lab_test" />
+
+    </data>
+</openerp>

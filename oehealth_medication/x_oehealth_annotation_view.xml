@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        
+        <record id="view_oehealth_annotation_form" model="ir.ui.view">
+            <field name="name">oehealth.annotation.form</field>
+            <field name="model">oehealth.annotation</field>
+            <field name="inherit_id" ref="oehealth_base.view_oehealth_annotation_form"/>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <field name="active" position="after">
+                    <!--field name="is_oehealth_patient_annotation" readonly="True"/-->
+                    <field name="medication_id"/>
+                </field>
+            </field>
+        </record>
+
+        <!--record id="view_oehealth_annotation_search" model="ir.ui.view">
+            <field name="name">oehealth.annotation.search</field>
+            <field name="model">oehealth.annotation</field>
+            <field name="inherit_id" ref="oehealth_base.view_oehealth_annotation_search" />
+            <field name="arch" type="xml">
+                <filter name="active" position="after">
+                    <filter string="Patient Annotations" name="patient_annotations" 
+                            domain="[('is_patient_annotation','=',1)]" help="Patient Annotations"/>
+                </filter>
+            </field>
+        </record-->
+
+    </data>
+</openerp>

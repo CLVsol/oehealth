@@ -1,0 +1,530 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#   * oehealth_comm_person
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-09-11 00:33+0000\n"
+"PO-Revision-Date: 2013-09-11 00:33+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: oehealth_comm_person
+#: view:res.partner:0
+msgid "Community Person Partners"
+msgstr "Parceiros Pessoas da Comunidade"
+
+#. module: oehealth_comm_person
+#: view:oehealth.comm.person:0
+msgid "e.g. http://mostlyopen.org"
+msgstr "e.g. http://mostlyopen.org"
+
+#. module: oehealth_comm_person
+#: view:oehealth.comm.person:0
+msgid "Group By..."
+msgstr "Agrupar por..."
+
+#. module: oehealth_comm_person
+#: model:ir.ui.menu,name:oehealth_comm_person.menu_base_persons_persons
+#: view:oehealth.tag:0
+msgid "Persons"
+msgstr "Pessoas"
+
+#. module: oehealth_comm_person
+#: view:oehealth.comm.person:0
+msgid "Alias..."
+msgstr "Apelido..."
+
+#. module: oehealth_comm_person
+#: view:oehealth.comm.person:0
+msgid "Birth"
+msgstr "Nascimento"
+
+#. module: oehealth_comm_person
+#: field:oehealth.comm.person,spouse_id:0
+msgid "Spouse"
+msgstr "Cônjuge"
+
+#. module: oehealth_comm_person
+#: view:oehealth.comm.person:0
+msgid "ZIP"
+msgstr "CEP"
+
+#. module: oehealth_comm_person
+#: selection:oehealth.comm.person,marital:0
+msgid "Married"
+msgstr "Casado"
+
+#. module: oehealth_comm_person
+#: field:oehealth.comm.person,mother_id:0
+msgid "Mother"
+msgstr "Mãe"
+
+#. module: oehealth_comm_person
+#: field:oehealth.comm.person,create_uid:0
+#: field:oehealth.comm.person.category,create_uid:0
+msgid "Create User"
+msgstr "Criado por"
+
+#. module: oehealth_comm_person
+#: view:oehealth.comm.person:0
+#: selection:oehealth.comm.person,state:0
+msgid "Revised"
+msgstr "Revisado"
+
+#. module: oehealth_comm_person
+#: field:oehealth.comm.person,date_person_inclusion:0
+msgid "Person Inclusion Date"
+msgstr "Data de Inclusão"
+
+#. module: oehealth_comm_person
+#: view:oehealth.comm.person:0
+msgid "Person Information"
+msgstr "Informações Pessoais"
+
+#. module: oehealth_comm_person
+#: selection:oehealth.comm.person,gender:0
+msgid "Female"
+msgstr "Feminino"
+
+#. module: oehealth_comm_person
+#: model:ir.model,name:oehealth_comm_person.model_res_partner
+msgid "Partner"
+msgstr "Parceiro"
+
+#. module: oehealth_comm_person
+#: view:oehealth.comm.person:0
+#: view:oehealth.comm.person.category:0
+msgid "Last Update"
+msgstr "Última Atualização"
+
+#. module: oehealth_comm_person
+#: field:oehealth.comm.person.category,parent_left:0
+msgid "Left parent"
+msgstr "Left parent"
+
+#. module: oehealth_comm_person
+#: field:oehealth.annotation,person_id:0
+#: view:oehealth.comm.person:0
+#: field:oehealth.event.participant,comm_person_id:0
+msgid "Community Person"
+msgstr "Pessoa da Comunidade"
+
+#. module: oehealth_comm_person
+#: field:oehealth.comm.person.category,child_ids:0
+msgid "Child Categories"
+msgstr "Tipos Filhos"
+
+#. module: oehealth_comm_person
+#: model:ir.model,name:oehealth_comm_person.model_oehealth_tag
+msgid "Health Tags"
+msgstr "Etiquetas em Saúde"
+
+#. module: oehealth_comm_person
+#: selection:oehealth.comm.person,state:0
+msgid "New"
+msgstr "Novo"
+
+#. module: oehealth_comm_person
+#: model:ir.model,name:oehealth_comm_person.model_oehealth_event_participant
+msgid "oehealth.event.participant"
+msgstr "oehealth.event.participant"
+
+#. module: oehealth_comm_person
+#: model:ir.model,name:oehealth_comm_person.model_oehealth_comm_person_category
+msgid "Community Person Categories"
+msgstr "Tipos de Pessoas da Comunidade"
+
+#. module: oehealth_comm_person
+#: field:oehealth.comm.person.category,parent_id:0
+msgid "Parent Category"
+msgstr "Tipo Pai"
+
+#. module: oehealth_comm_person
+#: field:oehealth.comm.person,gender:0
+msgid "Gender"
+msgstr "Gênero"
+
+#. module: oehealth_comm_person
+#: model:ir.model,name:oehealth_comm_person.model_oehealth_annotation
+msgid "Health Annotation"
+msgstr "Anotação em Saúde"
+
+#. module: oehealth_comm_person
+#: view:oehealth.comm.person:0
+msgid "Person Tags..."
+msgstr "Etiquetas de Pessoas..."
+
+#. module: oehealth_comm_person
+#: view:oehealth.comm.person:0
+#: field:oehealth.comm.person,state:0
+msgid "Stage"
+msgstr "Estágio"
+
+#. module: oehealth_comm_person
+#: field:oehealth.comm.person.category,info:0
+msgid "Info"
+msgstr "Informações"
+
+#. module: oehealth_comm_person
+#: model:ir.actions.act_window,name:oehealth_comm_person.act_open_oehealth_comm_person_view
+#: view:oehealth.comm.person:0
+#: view:oehealth.comm.person.category:0
+#: field:oehealth.comm.person.category,person_ids:0
+#: field:oehealth.tag,person_ids:0
+#: view:res.partner:0
+#: field:res.partner,comm_person_ids:0
+msgid "Community Persons"
+msgstr "Pessoas da Comunidade"
+
+#. module: oehealth_comm_person
+#: selection:oehealth.comm.person,person_status:0
+msgid "Undefined"
+msgstr "Indefinido"
+
+#. module: oehealth_comm_person
+#: selection:oehealth.comm.person,marital:0
+msgid "Divorced"
+msgstr "Divorciado"
+
+#. module: oehealth_comm_person
+#: view:oehealth.comm.person:0
+#: view:oehealth.comm.person.category:0
+#: view:oehealth.tag:0
+msgid "Settings"
+msgstr "Configurações"
+
+#. module: oehealth_comm_person
+#: field:oehealth.comm.person,age:0
+msgid "Age"
+msgstr "Idade"
+
+#. module: oehealth_comm_person
+#: view:oehealth.comm.person:0
+msgid "Health Entity Code..."
+msgstr "Código da Entidade de Saúde..."
+
+#. module: oehealth_comm_person
+#: selection:oehealth.comm.person,gender:0
+msgid "Male"
+msgstr "Masculino"
+
+#. module: oehealth_comm_person
+#: field:oehealth.comm.person,alias:0
+msgid "Alias"
+msgstr "Apelido"
+
+#. module: oehealth_comm_person
+#: field:oehealth.comm.person,date_person_inactivation:0
+msgid "Person Inactivation Date"
+msgstr "Data de Inativação"
+
+#. module: oehealth_comm_person
+#: selection:oehealth.comm.person,person_status:0
+msgid "Activated"
+msgstr "Ativado"
+
+#. module: oehealth_comm_person
+#: field:res.partner,is_comm_person:0
+msgid "Is a Community Person"
+msgstr "É uma Pessoa da Comunidade"
+
+#. module: oehealth_comm_person
+#: view:oehealth.comm.person.category:0
+#: field:oehealth.comm.person.category,complete_name:0
+#: field:oehealth.comm.person.category,name:0
+msgid "Category"
+msgstr "Tipo"
+
+#. module: oehealth_comm_person
+#: field:oehealth.comm.person,person_code:0
+msgid "Person Code"
+msgstr "Código da Pessoa"
+
+#. module: oehealth_comm_person
+#: view:oehealth.comm.person:0
+#: view:oehealth.comm.person.category:0
+msgid "Information"
+msgstr "Informações"
+
+#. module: oehealth_comm_person
+#: view:oehealth.comm.person:0
+msgid "Street..."
+msgstr "Logradouro..."
+
+#. module: oehealth_comm_person
+#: view:oehealth.comm.person:0
+msgid "Contact Information"
+msgstr "Informações de Contado"
+
+#. module: oehealth_comm_person
+#: view:oehealth.comm.person:0
+msgid "Person Code..."
+msgstr "Código da Pessoa..."
+
+#. module: oehealth_comm_person
+#: view:oehealth.comm.person:0
+#: field:oehealth.comm.person,events_ids:0
+msgid "Events"
+msgstr "Eventos"
+
+#. module: oehealth_comm_person
+#: view:oehealth.comm.person:0
+msgid "Status"
+msgstr "Status"
+
+#. module: oehealth_comm_person
+#: view:oehealth.comm.person:0
+#: selection:oehealth.comm.person,state:0
+msgid "Okay"
+msgstr "Okay"
+
+#. module: oehealth_comm_person
+#: field:oehealth.comm.person,person_info2:0
+msgid "Person Info-2"
+msgstr "Infornações Pesoais 2"
+
+#. module: oehealth_comm_person
+#: field:oehealth.comm.person,write_date:0
+#: field:oehealth.comm.person.category,write_date:0
+msgid "Write Date"
+msgstr "Data da Atualização"
+
+#. module: oehealth_comm_person
+#: view:oehealth.comm.person:0
+#: view:oehealth.comm.person.category:0
+msgid "User"
+msgstr "Usuário"
+
+#. module: oehealth_comm_person
+#: field:oehealth.comm.person.category,active:0
+msgid "Active"
+msgstr "Ativo"
+
+#. module: oehealth_comm_person
+#: field:oehealth.comm.person,person_tag_ids:0
+msgid "Person Tags"
+msgstr "Etiquetas de Pessoas"
+
+#. module: oehealth_comm_person
+#: field:oehealth.comm.person,identification_id:0
+msgid "Person ID"
+msgstr "Identificação da Pessoa"
+
+#. module: oehealth_comm_person
+#: field:oehealth.comm.person,date_person_activation:0
+msgid "Person Activation Date"
+msgstr "Data da Ativação"
+
+#. module: oehealth_comm_person
+#: view:oehealth.comm.person:0
+msgid "Person"
+msgstr "Pessoa"
+
+#. module: oehealth_comm_person
+#: view:oehealth.comm.person:0
+msgid "Name..."
+msgstr "Nome..."
+
+#. module: oehealth_comm_person
+#: field:oehealth.comm.person,write_uid:0
+#: field:oehealth.comm.person.category,write_uid:0
+msgid "Write User"
+msgstr "Atualizado por"
+
+#. module: oehealth_comm_person
+#: help:oehealth.comm.person,partner:0
+msgid "Partner-related data of the person"
+msgstr "Dados do Parceiro relacionado"
+
+#. module: oehealth_comm_person
+#: constraint:oehealth.comm.person.category:0
+msgid "Error! You can not create recursive categories."
+msgstr "Erro! Não é possível criar tipos recursivos."
+
+#. module: oehealth_comm_person
+#: view:oehealth.comm.person:0
+msgid "Citizenship & Other Info"
+msgstr "Dados de Cidadania & Outros"
+
+#. module: oehealth_comm_person
+#: view:oehealth.comm.person:0
+msgid "Family"
+msgstr "Família"
+
+#. module: oehealth_comm_person
+#: field:oehealth.comm.person,name_related:0
+#: field:oehealth.comm.person,partner:0
+msgid "Related Partner"
+msgstr "Parceiro Relacionado"
+
+#. module: oehealth_comm_person
+#: view:oehealth.comm.person:0
+msgid "State"
+msgstr "Estado"
+
+#. module: oehealth_comm_person
+#: view:oehealth.comm.person:0
+#: field:oehealth.comm.person,person_status:0
+msgid "Person Status"
+msgstr "Status da Pessoa"
+
+#. module: oehealth_comm_person
+#: field:oehealth.comm.person,marital:0
+msgid "Marital Status"
+msgstr "Estado Civil"
+
+#. module: oehealth_comm_person
+#: field:oehealth.comm.person,person_info:0
+msgid "Person Info"
+msgstr "Informações da Pessoa"
+
+#. module: oehealth_comm_person
+#: view:oehealth.comm.person:0
+msgid "Personal Information"
+msgstr "Informações Pessoais"
+
+#. module: oehealth_comm_person
+#: view:oehealth.comm.person:0
+msgid "City"
+msgstr "Município"
+
+#. module: oehealth_comm_person
+#: field:oehealth.comm.person,responsible_id:0
+msgid "Responsible"
+msgstr "Responsável"
+
+#. module: oehealth_comm_person
+#: field:oehealth.comm.person,father_id:0
+msgid "Father"
+msgstr "Pai"
+
+#. module: oehealth_comm_person
+#: help:oehealth.comm.person,alias:0
+msgid "Common name that the Person is referred"
+msgstr "Nome comum com o qual a Pessoa é referenciada"
+
+#. module: oehealth_comm_person
+#: selection:oehealth.comm.person,person_status:0
+msgid "Inactivated"
+msgstr "Inativo"
+
+#. module: oehealth_comm_person
+#: model:ir.model,name:oehealth_comm_person.model_oehealth_comm_person
+msgid "Health Community Person"
+msgstr "Pessoa da Comunidade"
+
+#. module: oehealth_comm_person
+#: field:oehealth.comm.person.category,description:0
+msgid "Description"
+msgstr "Descrição"
+
+#. module: oehealth_comm_person
+#: view:oehealth.comm.person:0
+msgid "Person Categories..."
+msgstr "Tipos da Pessoa..."
+
+#. module: oehealth_comm_person
+#: view:oehealth.comm.person:0
+#: selection:oehealth.comm.person,state:0
+msgid "Waiting"
+msgstr "Aguardando"
+
+#. module: oehealth_comm_person
+#: view:oehealth.comm.person:0
+msgid "Address"
+msgstr "Endereço"
+
+#. module: oehealth_comm_person
+#: field:oehealth.comm.person,country_id:0
+msgid "Nationality"
+msgstr "Nacionalidade"
+
+#. module: oehealth_comm_person
+#: field:oehealth.comm.person,otherid:0
+msgid "Other ID"
+msgstr "Outra Identificação"
+
+#. module: oehealth_comm_person
+#: view:oehealth.comm.person:0
+msgid "e.g. +32.81.81.37.00"
+msgstr "número"
+
+#. module: oehealth_comm_person
+#: view:oehealth.comm.person:0
+msgid "Country"
+msgstr "País"
+
+#. module: oehealth_comm_person
+#: sql_constraint:oehealth.comm.person:0
+msgid "Duplicated Community Person Code!"
+msgstr "Código da Pessoa duplicado!"
+
+#. module: oehealth_comm_person
+#: help:res.partner,is_comm_person:0
+msgid "Check if the partner is a community person"
+msgstr "Marcar quando o parceiro for uma pessoa da comlunidade"
+
+#. module: oehealth_comm_person
+#: field:oehealth.comm.person,birthday:0
+msgid "Date of Birth"
+msgstr "Data de Nascimento"
+
+#. module: oehealth_comm_person
+#: view:oehealth.comm.person:0
+#: field:oehealth.comm.person,person_annotation_ids:0
+msgid "Person Annotations"
+msgstr "Anotações da Pessoa"
+
+#. module: oehealth_comm_person
+#: view:oehealth.comm.person:0
+#: view:oehealth.comm.person.category:0
+msgid "Creation"
+msgstr "Criação"
+
+#. module: oehealth_comm_person
+#: view:oehealth.comm.person:0
+#: view:oehealth.comm.person.category:0
+msgid "Date"
+msgstr "Data"
+
+#. module: oehealth_comm_person
+#: selection:oehealth.comm.person,marital:0
+msgid "Single"
+msgstr "Solteiro(a)"
+
+#. module: oehealth_comm_person
+#: field:oehealth.comm.person,create_date:0
+#: field:oehealth.comm.person.category,create_date:0
+msgid "Create Date"
+msgstr "Data de Criação"
+
+#. module: oehealth_comm_person
+#: selection:oehealth.comm.person,marital:0
+msgid "Widower"
+msgstr "Viúvo(a)"
+
+#. module: oehealth_comm_person
+#: help:oehealth.comm.person.category,active:0
+msgid "The active field allows you to hide the category without removing it."
+msgstr "O campo 'ativo' pwemite esconder o tipo sem removê-lo."
+
+#. module: oehealth_comm_person
+#: field:oehealth.comm.person.category,parent_right:0
+msgid "Right parent"
+msgstr "Right parent"
+
+#. module: oehealth_comm_person
+#: model:ir.actions.act_window,name:oehealth_comm_person.act_open_oehealth_comm_person_category_view
+#: model:ir.ui.menu,name:oehealth_comm_person.omenu_base_config_person_categorys
+#: field:oehealth.comm.person,person_category_ids:0
+#: view:oehealth.comm.person.category:0
+msgid "Person Categories"
+msgstr "Tipos de Pessoas"
+

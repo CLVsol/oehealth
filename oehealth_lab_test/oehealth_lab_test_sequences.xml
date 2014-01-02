@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+      
+        <record id="seq_type_oehealth_lab_test" model="ir.sequence.type">
+            <field name="name">Health Lab Test Sequence</field>
+            <field name="code">oehealth.lab_test.code</field>
+        </record>
+        
+        <record id="seq_oehealth_lab_test" model="ir.sequence">
+            <field name="name">Health Lab Test Sequence</field>
+            <field name="code">oehealth.lab_test.code</field>
+            <field name="padding" eval="9"/>
+            <field name="prefix">00000</field>
+        </record>
+
+    </data>
+</openerp>

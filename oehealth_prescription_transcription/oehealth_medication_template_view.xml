@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <record id="view_oehealth_medication_template_tree" model="ir.ui.view">
+            <field name="name">oehealth.medication.template.tree</field>
+            <field name="model">oehealth.medication.template</field>
+            <field name="inherit_id" ref="oehealth_medication.view_oehealth_medication_template_tree"/>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <field name="name" position="replace">
+                    <field name="transcription_id" />
+                    <field name="name" />
+                </field>
+            </field>
+        </record>
+
+        <record id="view_oehealth_medication_template_form" model="ir.ui.view">
+            <field name="name">oehealth.medication.template.form</field>
+            <field name="model">oehealth.medication.template</field>
+            <field name="inherit_id" ref="oehealth_medication.view_oehealth_medication_template_form"/>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <field name="name" position="replace">
+                    <field name="transcription_id" />
+                    <field name="name" />
+                </field>
+            </field>
+        </record>
+
+    </data>
+</openerp>

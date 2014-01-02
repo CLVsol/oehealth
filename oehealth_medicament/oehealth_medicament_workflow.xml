@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="workflow_oehealth_medicament" model="workflow">
+            <field name="name">oehealth.medicament.wkf</field>
+            <field name="osv">oehealth.medicament</field>
+            <field name="on_create" eval='True' />
+        </record>
+
+         <record id="act_new" model="workflow.activity">
+            <field name="wkf_id" ref="workflow_oehealth_medicament" />
+            <field name="flow_start" eval='True' />
+            <field name="name">medicament_new</field>
+            <field name="kind">function</field>
+            <field name="action">oehealth_medicament_new()</field>
+        </record>
+
+        <record id="act_revised" model="workflow.activity">
+            <field name="wkf_id" ref="workflow_oehealth_medicament" />
+            <field name="name">medicament_revised</field>
+            <field name="kind">function</field>
+            <field name="action">oehealth_medicament_revised()</field>
+        </record>
+
+        <record id="act_waiting" model="workflow.activity">
+            <field name="wkf_id" ref="workflow_oehealth_medicament" />
+            <field name="name">medicament_waiting</field>
+            <field name="kind">function</field>
+            <field name="action">oehealth_medicament_waiting()</field>
+        </record>
+
+        <record id="act_okay" model="workflow.activity">
+            <field name="wkf_id" ref="workflow_oehealth_medicament" />
+            <field name="name">medicament_okay</field>
+            <field name="kind">function</field>
+            <field name="action">oehealth_medicament_okay()</field>
+        </record>
+
+        <record id="t1" model="workflow.transition">
+            <field name="act_from" ref="act_new" />
+            <field name="act_to" ref="act_revised" />
+            <field name="signal">oehealth_medicament_revised</field>
+        </record>
+
+        <record id="t2" model="workflow.transition">
+            <field name="act_from" ref="act_new" />
+            <field name="act_to" ref="act_waiting" />
+            <field name="signal">oehealth_medicament_waiting</field>
+        </record>
+
+        <record id="t3" model="workflow.transition">
+            <field name="act_from" ref="act_new" />
+            <field name="act_to" ref="act_okay" />
+            <field name="signal">oehealth_medicament_okay</field>
+        </record>
+
+        <record id="t4" model="workflow.transition">
+            <field name="act_from" ref="act_revised" />
+            <field name="act_to" ref="act_waiting" />
+            <field name="signal">oehealth_medicament_waiting</field>
+        </record>
+
+        <record id="t5" model="workflow.transition">
+            <field name="act_from" ref="act_revised" />
+            <field name="act_to" ref="act_okay" />
+            <field name="signal">oehealth_medicament_okay</field>
+        </record>
+
+        <record id="t6" model="workflow.transition">
+            <field name="act_from" ref="act_waiting" />
+            <field name="act_to" ref="act_revised" />
+            <field name="signal">oehealth_medicament_revised</field>
+        </record>
+
+        <record id="t7" model="workflow.transition">
+            <field name="act_from" ref="act_waiting" />
+            <field name="act_to" ref="act_okay" />
+            <field name="signal">oehealth_medicament_okay</field>
+        </record>
+
+        <record id="t8" model="workflow.transition">
+            <field name="act_from" ref="act_okay" />
+            <field name="act_to" ref="act_revised" />
+            <field name="signal">oehealth_medicament_revised</field>
+        </record>
+
+    </data>
+</openerp>

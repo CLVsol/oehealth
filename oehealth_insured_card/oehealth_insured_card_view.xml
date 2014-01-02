@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="view_oehealth_insured_card_tree" model="ir.ui.view">
+            <field name="name">oehealth.insured.card.tree</field>
+            <field name="model">oehealth.insured.card</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <tree string="Insured Card">
+                    <field name="card_number" />
+                    <field name="insured_card_code" />
+                    <field name="printed_name" />
+                    <field name="insurance_id" />
+                    <field name="state" />
+                    <field name="insured_card_category_ids" groups="oehealth_base.group_oehealth_suser"/>
+                    <field name="insured_card_tag_ids" groups="oehealth_base.group_oehealth_suser"/>
+                    <field name="insured_card_status" />
+                    <field name="insured_card_info" colspan="4"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_oehealth_insured_card_form" model="ir.ui.view">
+            <field name="name">oehealth.insured.card.form</field>
+            <field name="model">oehealth.insured.card</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <form string="Insured Cards" version="7.0">
+                    <header>
+                        <button name="oehealth_insured_card_revised" string="Revised" states="new,okay" type="workflow" groups="oehealth_base.group_oehealth_insured_card_manager"/>
+                        <button name="oehealth_insured_card_waiting" string="Waiting" states="new,revised" type="workflow" groups="oehealth_base.group_oehealth_insured_card_manager"/>
+                        <button name="oehealth_insured_card_okay" string="Okay" states="new,revised,waiting" type="workflow" groups="oehealth_base.group_oehealth_insured_card_manager"/>
+                        <field name="state" widget="statusbar" statusbar_visible="new,revised,waiting,okay" 
+                               statusbar_colors='{"new":"blue","revised":"blue","waiting":"blue","okay":"blue"}' />
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <!--div class="oe_edit_only"-->
+                            <div>
+                                <label for="card_number"/>
+                            </div>
+                            <h2>
+                                <field name="card_number" placeholder="Card Number..." />
+                            </h2>
+                            <!--div class="oe_edit_only"-->
+                            <div>
+                                <label for="printed_name"/>
+                            </div>
+                            <h2>
+                                <field name="printed_name" placeholder="Printed Name..." />
+                            </h2>
+                            <!--div class="oe_edit_only"-->
+                            <div>
+                                <label for="insured_card_code"/>
+                            </div>
+                            <h3>
+                                <field name="insured_card_code" placeholder="Insured Card Code..." />
+                            </h3>
+                            <!--div class="oe_edit_only"-->
+                            <div>
+                                <label for="insured"/>
+                            </div>
+                            <h3>
+                                <field name="insured" default_focus="1" placeholder="Insured Name..." />
+                            </h3>
+                            <!--div class="oe_edit_only">
+                                <label for="alias"/>
+                            </div>
+                            <h3>
+                                <field name="alias" placeholder="Alias..." readonly="True"/>
+                            </h3-->
+                            <!--div class="oe_edit_only"-->
+                            <div>
+                                <label for="insurance_id"/>
+                            </div>
+                            <h3>
+                                <field name="insurance_id" placeholder="Ensurance..." readonly="True"/>
+                            </h3>
+                            <div class="oe_edit_only">
+                                <label for="insured_card_category_ids" groups="oehealth_base.group_oehealth_suser"/>
+                            </div>
+                            <h3>
+                                <field name="insured_card_category_ids" widget="many2many_tags" placeholder="Insured Card Categories..." groups="oehealth_base.group_oehealth_suser"/>
+                            </h3>
+                            <div class="oe_edit_only">
+                                <label for="insured_card_tag_ids" groups="oehealth_base.group_oehealth_suser"/>
+                            </div>
+                            <h3>
+                                <field name="insured_card_tag_ids" widget="many2many_tags" placeholder="Insured Card Tags..." groups="oehealth_base.group_oehealth_suser"/>
+                            </h3>
+                        </div>
+                        <notebook>
+                            <page string="Information">
+                                <group>
+                                    <group>
+                                        <field name="health_partner_code" string='Health Partner Code' readonly='True'/>
+                                        <field name="insured_code" string='Insured Code' readonly='True'/>
+                                        <field name="insured_card_status" string='Status'/>
+                                        <field name="date_insured_card_inclusion" string='Inclusion Date'/>
+                                        <field name="date_insured_card_activation" string='Activation Date'/>
+                                        <field name="date_insured_card_inactivation" string='Inctivation Date'/>
+                                        <field name="date_insured_card_suspension" string='Suspension Date'/>
+                                        <field name="date_insured_card_expiration" string='Expiration Date'/>
+                                        <newline/>
+                                    </group>
+                                </group>
+                                <group string="Information"/>
+                                <div class="oe_edit_only">
+                                    <label for="insured_card_info"/>
+                                </div>
+                                <field name="insured_card_info" colspan="4"/>
+                                <group groups="oehealth_base.group_oehealth_rmanager">
+                                    <group string="Creation" >
+                                        <field name="create_uid" string="User" />
+                                        <field name="create_date" string="Date" />
+                                    </group>
+                                    <group string="Last Update" >
+                                        <field name="write_uid" string="User" />
+                                        <field name="write_date" string="Date"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Annotations" groups="oehealth_base.group_oehealth_suser">
+                                <group>
+                                    <field name="annotation_ids" colspan="4" nolabel="1" />
+                                </group>
+                            </page>
+                            <page string="Settings" groups="oehealth_base.group_oehealth_insured_card_manager">
+                                <group>
+                                    <field name="active"/>
+                                    <field name="is_company" />
+                                    <field name="customer" />
+                                    <field name="is_health_partner" />
+                                     <field name="is_insured" />
+                                    <field name="is_insured_card" />
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_oehealth_insured_card_search" model="ir.ui.view">
+            <field name="name">oehealth.insured.card.search</field>
+            <field name="model">oehealth.insured.card</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <search string="Insured Card">
+                    <field name="name" />
+                    <field name="insured" />
+                    <field name="card_number" />
+                    <field name="insured_card_tag_ids" />
+                    <field name="insured_card_category_ids" />
+                    <field name="insured_card_status" />
+                    <separator/>
+                    <group expand="0" string="Group By...">
+                        <filter string="Stage" context="{'group_by': 'state'}"/>
+                        <filter string="Insured Card Status" context="{'group_by': 'insured_card_status'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="act_open_oehealth_insured_card_view">
+            <field name="name">Insured Cards</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">oehealth.insured.card</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_oehealth_insured_card_search" />
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="act_open_oehealth_insured_card_view_form">
+            <field name="act_window_id" ref="act_open_oehealth_insured_card_view" />
+            <field name="sequence" eval="20" />
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_oehealth_insured_card_form" />
+        </record>
+
+        <record model="ir.actions.act_window.view" id="act_open_oehealth_insured_card_view_tree">
+            <field name="act_window_id" ref="act_open_oehealth_insured_card_view" />
+            <field name="sequence" eval="10" />
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_oehealth_insured_card_tree" />
+        </record>
+
+        <menuitem name="Insured Cards" id="menu_health_insurance_insurance_insured_cards"  
+            parent="oehealth_base.menu_health_insurance_insurance"
+            groups="oehealth_base.group_oehealth_insured_card_user"
+            sequence="40" 
+            action="act_open_oehealth_insured_card_view" />
+
+    </data>
+</openerp>

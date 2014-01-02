@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="0">
+
+        <record id="oehealth_base.group_oehealth_medication_user" model="res.groups">
+            <field name="name">Health Medication User</field>
+        </record>
+        
+         <record id="oehealth_base.group_oehealth_medication_manager" model="res.groups">
+            <field name="name">Health Medication Manager</field>
+            <field name="implied_ids" eval="[(4, ref('oehealth_base.group_oehealth_medication_user'))]"/>
+        </record>
+        
+    </data>
+</openerp>

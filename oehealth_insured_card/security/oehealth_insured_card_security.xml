@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="0">
+
+        <record id="oehealth_base.group_oehealth_insured_card_user" model="res.groups">
+            <field name="name">Health Insured Card User</field>
+        </record>
+        
+        <record id="oehealth_base.group_oehealth_insured_card_manager" model="res.groups">
+            <field name="name">Health Insured Card Manager</field>
+            <field name="implied_ids" eval="[(4, ref('oehealth_base.group_oehealth_insured_card_user'))]"/>
+        </record>
+        
+    </data>
+</openerp>

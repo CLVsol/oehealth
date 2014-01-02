@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <record id="view_oehealth_medication_tree" model="ir.ui.view">
+            <field name="name">oehealth.medication.tree</field>
+            <field name="model">oehealth.medication</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <tree string="Medication">
+                    <field name="name" />
+                    <field name="medication_code" />
+                    <field name="active_component" />
+                    <field name="dosage" />
+                    <field name="form" />
+                    <field name="state" />
+                    <field name="medication_category_ids" />
+                    <field name="medication_tag_ids" />
+                    <field name="medication_info" colspan="4"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record id="view_oehealth_medication_form" model="ir.ui.view">
+            <field name="name">oehealth.medication.form</field>
+            <field name="model">oehealth.medication</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <form string="Medications" version="7.0">
+                    <header>
+                        <button name="oehealth_medication_revised" string="Revised" states="new,okay" type="workflow" groups="oehealth_base.group_oehealth_medication_manager"/>
+                        <button name="oehealth_medication_waiting" string="Waiting" states="new,revised" type="workflow" groups="oehealth_base.group_oehealth_medication_manager"/>
+                        <button name="oehealth_medication_okay" string="Okay" states="new,revised,waiting" type="workflow" groups="oehealth_base.group_oehealth_medication_manager"/>
+                        <field name="state" widget="statusbar" statusbar_visible="new,revised,waiting,okay"
+                        statusbar_colors='{"new":"blue","revised":"blue","waiting":"blue","okay":"blue"}' />
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <div class="oe_edit_only">
+                                <label for="name"/>
+                            </div>
+                            <h2>
+                                <field name="name" default_focus="1" placeholder="Name..."/>
+                            </h2>
+                            <div class="oe_edit_only">
+                                <label for="medication_code"/>
+                            </div>
+                            <h2>
+                                <field name="medication_code" placeholder="Medication Code..."/>
+                            </h2>
+                            <div class="oe_edit_only">
+                                <label for="active_component"/>
+                            </div>
+                            <h2>
+                                <field name="active_component" placeholder="Active Component..."/>
+                            </h2>
+                            <div class="oe_edit_only">
+                                <label for="dosage"/>
+                            </div>
+                            <h2>
+                                <field name="dosage" placeholder="Dosage..."/>
+                            </h2>
+                            <div class="oe_edit_only">
+                                <label for="form"/>
+                            </div>
+                            <h2>
+                                <field name="form" placeholder="Form..."/>
+                            </h2>
+                            <div class="oe_edit_only">
+                                <label for="medication_category_ids"/>
+                            </div>
+                            <h2>
+                                <field name="medication_category_ids" widget="many2many_tags" placeholder="Medication Categories..."/>
+                            </h2>
+                            <div class="oe_edit_only">
+                                <label for="medication_tag_ids"/>
+                            </div>
+                            <h2>
+                                <field name="medication_tag_ids" widget="many2many_tags" placeholder="Medication Tags..." groups="oehealth_base.group_oehealth_suser"/>
+                            </h2>
+                        </div>
+                        <notebook>
+                            <page string="Information">
+                                <group string="Information" />
+                                <div class="oe_edit_only">
+                                    <label for="medication_info"/>
+                                </div>
+                                <field name="medication_info" colspan="4" nolabel="1"/>
+                            </page>
+                            <page string="Medication_Annotations" groups="oehealth_base.group_oehealth_medication_suser">
+                                <group>
+                                    <field name="medication_annotation_ids" colspan="4" nolabel="1" />
+                                </group>
+                            </page>
+                            <page string="Settings" groups="oehealth_base.group_oehealth_manager">
+                                <group>
+                                    <field name="active"/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record id="view_oehealth_medication_search" model="ir.ui.view">
+            <field name="name">oehealth.medication.search</field>
+            <field name="model">oehealth.medication</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <search string="Medication">
+                    <field name="name" />
+                    <field name="active_component" />
+                    <field name="medication_code" />
+                    <field name="medication_category_ids" />
+                    <field name="medication_tag_ids" />
+                    <field name="medication_info" />
+                    <newline />
+                    <group expand="0" string="Group By...">
+                        <filter string="Stage" domain="[]" context="{'group_by': 'state'}"/>
+                        <filter string="Active Component" domain="[]" context="{'group_by':'active_component'}" />
+                    </group>
+                </search>
+            </field>
+        </record>
+        
+        <record model="ir.actions.act_window" id="act_open_oehealth_medication_view">
+            <field name="name">Medications</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">oehealth.medication</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_oehealth_medication_search" />
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+        
+        <record model="ir.actions.act_window.view" id="act_open_oehealth_medication_view_form">
+            <field name="act_window_id" ref="act_open_oehealth_medication_view" />
+            <field name="sequence" eval="20" />
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_oehealth_medication_form" />
+        </record>
+        
+        <record model="ir.actions.act_window.view" id="act_open_oehealth_medication_view_tree">
+            <field name="act_window_id" ref="act_open_oehealth_medication_view" />
+            <field name="sequence" eval="10" />
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_oehealth_medication_tree" />
+        </record>
+        
+        <menuitem name="Medications" id="menu_health_medications_medications"
+            parent="oehealth_base.menu_health_medications_main"
+            groups="oehealth_base.group_oehealth_medication_user"
+            sequence="10"
+            action="act_open_oehealth_medication_view" />
+
+    </data>
+</openerp>

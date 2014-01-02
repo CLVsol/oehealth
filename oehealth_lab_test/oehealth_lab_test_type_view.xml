@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        
+        <!-- Lab Test type -->
+        <record model="ir.ui.view" id="oehealth_lab_test_type_view">
+            <field name="name">Lab Test Type</field>
+            <field name="model">oehealth.lab_test.type</field>
+            <field name="arch" type="xml">
+                <form string="Lab Test Type">
+                    <notebook>
+                        <page string="Main Info">
+                            <field name="name" required="1"></field>
+                            <field name="code"></field>
+                            <field name="criteria" colspan="4" nolabel="1">
+                                <tree string="Test Cases">
+                                    <field name="sequence"/>
+                                    <field name="name"/>
+                                    <field name="normal_range"/>
+                                    <field name="unit"/>
+                                    <field name="outcome_ids" widget="many2many_tags"/>
+                                </tree>
+                                <form string="Test Cases">
+                                    <field name="name"/>
+                                    <field name="unit"/>
+                                    <field name="sequence"/>
+                                    <newline/>
+                                    <field name="normal_range"/>
+                                    <!--newline/-->
+                                    <field name="outcome_ids" widget="many2many_tags"/>
+                                </form>
+                            </field>
+                            <field name="product_id"/>
+                        </page>
+                        <page string="Extra Info">
+                            <field name="info"></field>
+                        </page>
+                    </notebook>
+                </form>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="oehealth_lab_test_type_tree">
+            <field name="name">Lab Test Types list</field>
+            <field name="model">oehealth.lab_test.type</field>
+            <field name="arch" type="xml">
+                <tree string='Lab Test Type'>
+                    <field name="name"></field>
+                    <field name="code"></field>
+                </tree>
+            </field>
+        </record>
+        
+        <record model="ir.actions.act_window" id="oehealth_action_form_lab_test_type">
+            <field name="name">Lab Test Types</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">oehealth.lab_test.type</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="oehealth_lab_test_type_tree"/>
+        </record>
+        
+        <record id="view_oehealth_lab_test_type_search" model="ir.ui.view">
+            <field name="name">oehealth.lab_test.type.select</field>
+            <field name="model">oehealth.lab_test.type</field>
+            <field name="arch" type="xml">
+                <search string="Search Lab Test Types">
+                    <separator orientation="vertical"/>
+                    <field name="name" select="1"/>
+                    <field name="code" select="1"/>
+                    <newline/>
+                </search>
+            </field>
+        </record>
+        
+        <menuitem name="Types" id="menu_health_config_health_lab_test_types"
+            parent="oehealth_base.menu_health_config_health_lab_test"
+            groups="oehealth_base.group_oehealth_lab_test_user"
+            sequence="20"
+            action="oehealth_action_form_lab_test_type" />
+    
+    </data>
+</openerp>

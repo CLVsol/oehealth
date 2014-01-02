@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <!-- Survey -->
+        <record model="ir.ui.view" id="survey_form">
+            <field name="name">comm_survey_form</field>
+            <field name="model">survey</field>
+            <field name="inherit_id" ref="survey.survey_form"/>
+            <field name="arch" type="xml">
+                <field name="responsible_id" position="replace">
+                    <field name="is_health_survey" />)
+                    <field name="responsible_id" class="oe_inline" attrs="{'readonly':[('state','=','close')]}"/>
+                </field>
+                <!--field name="response_user" position="replace">
+                    <field name="response_user" attrs="{'readonly':[('state','=','close')]}"/>
+                    <field name="response_patient" attrs="{'readonly':[('state','=','close')]}"/>
+                </field-->
+                <!--page string="Invited User" position="after">
+                    <page string="Invited Person">
+                        <field name="invited_person_ids" readonly="1"/>
+                    </page>
+                </page-->
+            </field>
+        </record>
+
+    </data>
+</openerp>

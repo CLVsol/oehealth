@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <record id="view_oehealth_authorization_tree" model="ir.ui.view">
+            <field name="name">oehealth.authorization.tree</field>
+            <field name="model">oehealth.authorization</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <tree string="Authorization">
+                    <field name="name" />
+                    <field name="description" />
+                    <field name="state" />
+                    <field name="category_ids" groups="oehealth_base.group_oehealth_suser"/>
+                    <field name="tag_ids" groups="oehealth_base.group_oehealth_suser"/>
+                    <field name="date_authorization" />
+                    <field name="authorization_info" colspan="4"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record id="view_oehealth_authorization_form" model="ir.ui.view">
+            <field name="name">oehealth.authorization.form</field>
+            <field name="model">oehealth.authorization</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <form string="Authorizations" version="7.0">
+                    <header>
+                        <button name="oehealth_authorization_revised" string="Revised" states="new,okay" type="workflow" groups="oehealth_base.group_oehealth_authorization_manager"/>
+                        <button name="oehealth_authorization_waiting" string="Waiting" states="new,revised" type="workflow" groups="oehealth_base.group_oehealth_authorization_manager"/>
+                        <button name="oehealth_authorization_okay" string="Okay" states="new,revised,waiting" type="workflow" groups="oehealth_base.group_oehealth_authorization_manager"/>
+                        <field name="state" widget="statusbar" statusbar_visible="new,revised,waiting,okay"
+                        statusbar_colors='{"new":"blue","revised":"blue","waiting":"blue","okay":"blue"}' />
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <div class="oe_edit_only">
+                                <label for="name"/>
+                            </div>
+                            <h1>
+                                <field name="name" default_focus="1" placeholder="Authorization Code..."/>
+                            </h1>
+                            <div class="oe_edit_only">
+                                <label for="category_ids" groups="oehealth_base.group_oehealth_suser"/>
+                            </div>
+                            <h2>
+                                <field name="category_ids" widget="many2many_tags" placeholder="Categories..." groups="oehealth_base.group_oehealth_suser"/>
+                            </h2>
+                            <div class="oe_edit_only">
+                                <label for="tag_ids" groups="oehealth_base.group_oehealth_suser"/>
+                            </div>
+                            <h2>
+                                <field name="tag_ids" widget="many2many_tags" placeholder="Tags..." groups="oehealth_base.group_oehealth_suser"/>
+                            </h2>
+                            <div class="oe_edit_only">
+                                <label for="date_authorization"/>
+                            </div>
+                            <field name="date_authorization" placeholder="Authorization Date..."/>
+                            <div class="oe_edit_only">
+                                <label for="description"/>
+                            </div>
+                            <field name="description" placeholder="Description..."/>
+                        </div>
+                        <notebook>
+                            <page string="Authorization Information">
+                                <group string="Information" />
+                                <div class="oe_edit_only">
+                                    <label for="authorization_info"/>
+                                </div>
+                                <field name="authorization_info" colspan="4" nolabel="1"/>
+                                <group groups="oehealth_base.group_oehealth_rmanager">
+                                    <group string="Creation" >
+                                        <field name="create_uid" string="User" />
+                                        <field name="create_date" string="Date" />
+                                    </group>
+                                    <group string="Last Update" >
+                                        <field name="write_uid" string="User" />
+                                        <field name="write_date" string="Date"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Annotations" groups="oehealth_base.group_oehealth_suser">
+                                <group>
+                                    <field name="annotation_ids" colspan="4" nolabel="1" />
+                                </group>
+                            </page>
+                            <page string="Settings" groups="oehealth_base.group_oehealth_manager">
+                                <group>
+                                    <field name="active"/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record id="view_oehealth_authorization_search" model="ir.ui.view">
+            <field name="name">oehealth.authorization.search</field>
+            <field name="model">oehealth.authorization</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <search string="Authorization">
+                    <field name="name" />
+                    <field name="category_ids" />
+                    <field name="authorization_info" />
+                    <newline />
+                    <group expand="0" string="Group By...">
+                        <filter string="Stage" domain="[]" context="{'group_by': 'state'}"/>
+                     </group>
+                </search>
+            </field>
+        </record>
+        
+        <record model="ir.actions.act_window" id="act_open_oehealth_authorization_view">
+            <field name="name">Authorizations</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">oehealth.authorization</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_oehealth_authorization_search" />
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+        
+        <record model="ir.actions.act_window.view" id="act_open_oehealth_authorization_view_form">
+            <field name="act_window_id" ref="act_open_oehealth_authorization_view" />
+            <field name="sequence" eval="20" />
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_oehealth_authorization_form" />
+        </record>
+        
+        <record model="ir.actions.act_window.view" id="act_open_oehealth_authorization_view_tree">
+            <field name="act_window_id" ref="act_open_oehealth_authorization_view" />
+            <field name="sequence" eval="10" />
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_oehealth_authorization_tree" />
+        </record>
+        
+        <menuitem name="Authorizations" id="menu_health_medication_authorization_authorizations"
+            parent="oehealth_base.menu_health_medication_authorization"
+            groups="oehealth_base.group_oehealth_authorization_user"
+            sequence="50"
+            action="act_open_oehealth_authorization_view" />
+
+    </data>
+</openerp>

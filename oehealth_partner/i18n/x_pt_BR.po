@@ -1,0 +1,136 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* oehealth_partner
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-30 16:38+0000\n"
+"PO-Revision-Date: 2013-10-30 16:38+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: oehealth_partner
+#: view:oehealth.tag:0
+msgid "Partners"
+msgstr "Parceiros"
+
+#. module: oehealth_partner
+#: field:res.partner,is_health_partner:0
+msgid "Is a Health Partner"
+msgstr "É um Parceiro (Saúde)"
+
+#. module: oehealth_partner
+#: field:oehealth.tag,health_tag_ids:0
+#: view:res.partner:0
+msgid "Health Partners"
+msgstr "Parceiros (Saúde)"
+
+#. module: oehealth_partner
+#: model:ir.model,name:oehealth_partner.model_oehealth_tag
+#: field:res.partner,health_tag_ids:0
+msgid "Health Tags"
+msgstr "Etiquetas (Saúde)"
+
+#. module: oehealth_partner
+#: view:res.partner:0
+msgid "Health"
+msgstr "Saúde"
+
+#. module: oehealth_partner
+#: view:res.partner:0
+#: field:res.partner,annotation_ids:0
+msgid "Annotations"
+msgstr "Anotações"
+
+#. module: oehealth_partner
+#: view:res.partner:0
+msgid "Inactive Partners"
+msgstr "Parceiros Inativos"
+
+#. module: oehealth_partner
+#: field:res.partner,write_date:0
+msgid "Write Date"
+msgstr "Data da Atualização"
+
+#. module: oehealth_partner
+#: view:res.partner:0
+msgid "User"
+msgstr "Usuário"
+
+#. module: oehealth_partner
+#: model:ir.model,name:oehealth_partner.model_oehealth_annotation
+msgid "Health Annotation"
+msgstr "Anotação (Saúde)"
+
+#. module: oehealth_partner
+#: view:res.partner:0
+msgid "Last Update"
+msgstr "Última Atualização"
+
+#. module: oehealth_partner
+#: view:res.partner:0
+msgid "Health Partner Code..."
+msgstr "Código (Parceiro)..."
+
+#. module: oehealth_partner
+#: view:oehealth.tag:0
+msgid "Settings"
+msgstr "Configurações"
+
+#. module: oehealth_partner
+#: field:res.partner,health_partner_code:0
+msgid "Health Partner Code"
+msgstr "Código (Parceiro)"
+
+#. module: oehealth_partner
+#: sql_constraint:res.partner:0
+msgid "Duplicated Health Partner Code!"
+msgstr "Código (Parceiro) duplicado!"
+
+#. module: oehealth_partner
+#: view:res.partner:0
+msgid "Date"
+msgstr "Data"
+
+#. module: oehealth_partner
+#: field:res.partner,write_uid:0
+msgid "Write User"
+msgstr "Atualizado por"
+
+#. module: oehealth_partner
+#: field:res.partner,create_uid:0
+msgid "Create User"
+msgstr "Criado por"
+
+#. module: oehealth_partner
+#: view:res.partner:0
+msgid "Health Tags..."
+msgstr "Etiquetas (Saúde)..."
+
+#. module: oehealth_partner
+#: view:res.partner:0
+msgid "Creation"
+msgstr "Creation"
+
+#. module: oehealth_partner
+#: help:res.partner,is_health_partner:0
+msgid "Check if the partner is a health partner."
+msgstr "Marcar quando for um parceiro (Saúde)."
+
+#. module: oehealth_partner
+#: field:res.partner,create_date:0
+msgid "Create Date"
+msgstr "Data da Criação"
+
+#. module: oehealth_partner
+#: model:ir.model,name:oehealth_partner.model_res_partner
+#: field:oehealth.annotation,partner_id:0
+msgid "Partner"
+msgstr "Parceiro"
+

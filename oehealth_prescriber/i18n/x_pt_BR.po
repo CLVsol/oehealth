@@ -1,0 +1,387 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* oehealth_prescriber
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-30 14:27+0000\n"
+"PO-Revision-Date: 2013-10-30 14:27+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: oehealth_prescriber
+#: view:oehealth.prescriber:0
+msgid "City"
+msgstr "Cidade"
+
+#. module: oehealth_prescriber
+#: view:oehealth.prescriber:0
+msgid "Last Update"
+msgstr "Última Atualização"
+
+#. module: oehealth_prescriber
+#: view:oehealth.prescriber:0
+#: field:oehealth.prescriber,prescriber_status:0
+msgid "Prescriber Status"
+msgstr "Status do Prescritor"
+
+#. module: oehealth_prescriber
+#: field:res.partner,is_prescriber:0
+msgid "Is a Prescriber"
+msgstr "É um Prescritor"
+
+#. module: oehealth_prescriber
+#: view:oehealth.prescriber:0
+msgid "Information"
+msgstr "Informações"
+
+#. module: oehealth_prescriber
+#: view:res.partner:0
+msgid "Prescriber Partners"
+msgstr "Prescritores"
+
+#. module: oehealth_prescriber
+#: model:ir.model,name:oehealth_prescriber.model_oehealth_prescriber
+msgid "Health Prescriber"
+msgstr "Prescritor (Saúde)"
+
+#. module: oehealth_prescriber
+#: field:oehealth.prescriber,date_prescriber_activation:0
+msgid "Activation Date"
+msgstr "Data da Ativação"
+
+#. module: oehealth_prescriber
+#: help:oehealth.prescriber,partner:0
+msgid "Partner-related data of the prescriber"
+msgstr "Dados do Parceiro relacionado ao Prescritor"
+
+#. module: oehealth_prescriber
+#: model:ir.model,name:oehealth_prescriber.model_oehealth_event_participant
+msgid "oehealth.event.participant"
+msgstr "oehealth.event.participant"
+
+#. module: oehealth_prescriber
+#: view:oehealth.prescriber:0
+msgid "Prescriber Code2..."
+msgstr "Código2 (Prescritor)..."
+
+#. module: oehealth_prescriber
+#: view:oehealth.prescriber:0
+msgid "Street..."
+msgstr "Logradouro..."
+
+#. module: oehealth_prescriber
+#: view:oehealth.prescriber:0
+msgid "Group By..."
+msgstr "Agrupar Por..."
+
+#. module: oehealth_prescriber
+#: model:ir.model,name:oehealth_prescriber.model_oehealth_tag
+msgid "Health Tags"
+msgstr "Etiquetas (Saúde)"
+
+#. module: oehealth_prescriber
+#: view:oehealth.prescriber:0
+msgid "Contact Information"
+msgstr "Informações de Contato"
+
+#. module: oehealth_prescriber
+#: field:oehealth.prescriber,prescriber_code2:0
+msgid "Prescriber Code2"
+msgstr "Código2 (Prescritor)"
+
+#. module: oehealth_prescriber
+#: selection:oehealth.prescriber,prescriber_status:0
+msgid "Inactivated"
+msgstr "Inativo"
+
+#. module: oehealth_prescriber
+#: selection:oehealth.prescriber,state:0
+msgid "New"
+msgstr "Novo"
+
+#. module: oehealth_prescriber
+#: model:ir.actions.act_window,name:oehealth_prescriber.act_open_oehealth_prescriber_view
+#: model:ir.ui.menu,name:oehealth_prescriber.menu_health_health_base_prescribers
+#: view:oehealth.prescriber:0
+#: view:oehealth.specialty:0
+#: field:oehealth.specialty,prescriber_ids:0
+#: view:oehealth.tag:0
+#: field:oehealth.tag,prescriber_ids:0
+#: view:res.partner:0
+#: field:res.partner,prescriber_ids:0
+msgid "Prescribers"
+msgstr "Prescritores"
+
+#. module: oehealth_prescriber
+#: view:oehealth.prescriber:0
+msgid "Prescriber Code..."
+msgstr "Código (Prescritor)..."
+
+#. module: oehealth_prescriber
+#: view:oehealth.prescriber:0
+#: field:oehealth.prescriber,events_ids:0
+msgid "Events"
+msgstr "Eventos"
+
+#. module: oehealth_prescriber
+#: view:oehealth.prescriber:0
+#: selection:oehealth.prescriber,state:0
+msgid "Okay"
+msgstr "Ok"
+
+#. module: oehealth_prescriber
+#: field:oehealth.prescriber,tag_ids:0
+msgid "Tags"
+msgstr "Etiquetas"
+
+#. module: oehealth_prescriber
+#: field:oehealth.prescriber,prescriber_info:0
+msgid "Prescriber Info"
+msgstr "Informações"
+
+#. module: oehealth_prescriber
+#: view:oehealth.prescriber:0
+#: view:oehealth.specialty:0
+#: view:oehealth.tag:0
+msgid "Settings"
+msgstr "Configurações"
+
+#. module: oehealth_prescriber
+#: view:oehealth.prescriber:0
+msgid "Alias..."
+msgstr "Apelido..."
+
+#. module: oehealth_prescriber
+#: view:oehealth.prescriber:0
+#: field:oehealth.prescriber,annotation_ids:0
+msgid "Annotations"
+msgstr "Anotações"
+
+#. module: oehealth_prescriber
+#: view:oehealth.prescriber:0
+#: selection:oehealth.prescriber,state:0
+msgid "Revised"
+msgstr "Revisado"
+
+#. module: oehealth_prescriber
+#: field:oehealth.prescriber,prescriber_code:0
+msgid "Prescriber Code"
+msgstr "Código (Prescritor)"
+
+#. module: oehealth_prescriber
+#: view:oehealth.prescriber:0
+msgid "Specialties..."
+msgstr "Especialidades..."
+
+#. module: oehealth_prescriber
+#: field:oehealth.prescriber,date_prescriber_inactivation:0
+msgid "Inactivation Date"
+msgstr "Data da Inativação"
+
+#. module: oehealth_prescriber
+#: view:oehealth.prescriber:0
+#: selection:oehealth.prescriber,state:0
+msgid "Waiting"
+msgstr "Aguardando"
+
+#. module: oehealth_prescriber
+#: sql_constraint:oehealth.prescriber:0
+msgid "Duplicated Prescriber Code!"
+msgstr "Código (Prescritor) duplicado!"
+
+#. module: oehealth_prescriber
+#: model:ir.model,name:oehealth_prescriber.model_oehealth_annotation
+msgid "Health Annotation"
+msgstr "Anotação (Saúde)"
+
+#. module: oehealth_prescriber
+#: field:oehealth.prescriber,name_prescriber_code:0
+msgid "Name (Prescriber Code)"
+msgstr "Nome (Código)"
+
+#. module: oehealth_prescriber
+#: field:oehealth.prescriber,write_date:0
+msgid "Write Date"
+msgstr "Data da Atualização"
+
+#. module: oehealth_prescriber
+#: sql_constraint:oehealth.prescriber:0
+msgid "Duplicated Prescriber Code2!"
+msgstr "Código2 (Prescritor) duplicado!"
+
+#. module: oehealth_prescriber
+#: view:oehealth.prescriber:0
+#: field:oehealth.prescriber,state:0
+msgid "Stage"
+msgstr "Estágio"
+
+#. module: oehealth_prescriber
+#: model:ir.model,name:oehealth_prescriber.model_oehealth_specialty
+msgid "Health Specialty"
+msgstr "Especialide (Saúde)"
+
+#. module: oehealth_prescriber
+#: view:oehealth.prescriber:0
+msgid "e.g. +32.81.81.37.00"
+msgstr "e.g. 19 3214-7876"
+
+#. module: oehealth_prescriber
+#: selection:oehealth.prescriber,prescriber_status:0
+msgid "Undefined"
+msgstr "Indefinido"
+
+#. module: oehealth_prescriber
+#: view:oehealth.prescriber:0
+msgid "ZIP"
+msgstr "CEP"
+
+#. module: oehealth_prescriber
+#: view:oehealth.prescriber:0
+msgid "Inactive Prescribers"
+msgstr "Prescritores Inativos"
+
+#. module: oehealth_prescriber
+#: view:oehealth.prescriber:0
+msgid "Country"
+msgstr "País"
+
+#. module: oehealth_prescriber
+#: view:oehealth.prescriber:0
+msgid "Address"
+msgstr "Endereço"
+
+#. module: oehealth_prescriber
+#: view:oehealth.prescriber:0
+msgid "Date"
+msgstr "Data"
+
+#. module: oehealth_prescriber
+#: view:oehealth.prescriber:0
+msgid "Name..."
+msgstr "Nome..."
+
+#. module: oehealth_prescriber
+#: field:oehealth.prescriber,specialty_ids:0
+msgid "Specialties"
+msgstr "Especialidades"
+
+#. module: oehealth_prescriber
+#: field:oehealth.prescriber,write_uid:0
+msgid "Write User"
+msgstr "Atualizado por"
+
+#. module: oehealth_prescriber
+#: field:oehealth.annotation,prescriber_id:0
+#: field:oehealth.event.participant,prescriber_id:0
+#: view:oehealth.prescriber:0
+msgid "Prescriber"
+msgstr "Prescritor"
+
+#. module: oehealth_prescriber
+#: field:oehealth.prescriber,prescriber_info2:0
+msgid "Prescriber Info-2"
+msgstr "Informações 2"
+
+#. module: oehealth_prescriber
+#: help:res.partner,is_prescriber:0
+msgid "Check if the partner is a prescriber"
+msgstr "Marcar quando o parceiro for um prescritor"
+
+#. module: oehealth_prescriber
+#: field:oehealth.prescriber,date_prescriber_suspension:0
+msgid "Suspension Date"
+msgstr "Data de Suspensão"
+
+#. module: oehealth_prescriber
+#: field:oehealth.prescriber,create_uid:0
+msgid "Create User"
+msgstr "Criado por"
+
+#. module: oehealth_prescriber
+#: view:oehealth.prescriber:0
+msgid "e.g. http://mostlyopen.org"
+msgstr "e.g. http://mostlyopen.org"
+
+#. module: oehealth_prescriber
+#: field:oehealth.prescriber,alias:0
+msgid "Alias"
+msgstr "Apelido"
+
+#. module: oehealth_prescriber
+#: field:oehealth.prescriber,name_related:0
+#: field:oehealth.prescriber,partner:0
+msgid "Related Partner"
+msgstr "Parceiro Relacionado"
+
+#. module: oehealth_prescriber
+#: view:oehealth.prescriber:0
+msgid "Tags..."
+msgstr "Etiquetas..."
+
+#. module: oehealth_prescriber
+#: view:oehealth.prescriber:0
+msgid "Creation"
+msgstr "Criação"
+
+#. module: oehealth_prescriber
+#: selection:oehealth.prescriber,prescriber_status:0
+msgid "Activated"
+msgstr "Ativo"
+
+#. module: oehealth_prescriber
+#: view:oehealth.prescriber:0
+msgid "State"
+msgstr "Estado"
+
+#. module: oehealth_prescriber
+#: help:oehealth.prescriber,active:0
+msgid "If unchecked, it will allow you to hide the prescriber without removing it."
+msgstr "Se desmarcado, será possível esconder o prescritor sem removê-lo."
+
+#. module: oehealth_prescriber
+#: field:oehealth.prescriber,create_date:0
+msgid "Create Date"
+msgstr "Data da Criação"
+
+#. module: oehealth_prescriber
+#: field:oehealth.prescriber,date_prescriber_inclusion:0
+msgid "Inclusion Date"
+msgstr "Data da Inclusão"
+
+#. module: oehealth_prescriber
+#: view:oehealth.prescriber:0
+msgid "User"
+msgstr "Usuário"
+
+#. module: oehealth_prescriber
+#: selection:oehealth.prescriber,prescriber_status:0
+msgid "Suspended"
+msgstr "Suspenso"
+
+#. module: oehealth_prescriber
+#: help:oehealth.prescriber,alias:0
+msgid "Common name that the Prescriber is referred"
+msgstr "Nome comum com o qual o Prescritor é referenciado"
+
+#. module: oehealth_prescriber
+#: model:ir.model,name:oehealth_prescriber.model_res_partner
+msgid "Partner"
+msgstr "Parceiro"
+
+#. module: oehealth_prescriber
+#: view:oehealth.prescriber:0
+msgid "Personal Information"
+msgstr "Informações Pessoais"
+
+#. module: oehealth_prescriber
+#: field:oehealth.prescriber,active:0
+msgid "Active"
+msgstr "Ativo"
+

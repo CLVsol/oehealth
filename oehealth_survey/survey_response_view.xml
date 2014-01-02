@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <!-- Survey Response -->
+        
+        <record model="ir.ui.view" id="survey_response_form">
+            <field name="name">oehealth_survey_response_form</field>
+            <field name="model">survey.response</field>
+            <field name="inherit_id" ref="survey.survey_response_form"/>
+            <field name="arch" type="xml">
+                <field name="user_id" position="replace">
+                     <field name="patient_id"/>
+                     <field name="user_id"/>
+                </field>
+                <field name="question_ids" position="replace">
+                    <field name="question_ids" nolabel="1" colspan="4" />
+                </field>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="survey_response_tree">
+            <field name="name">oehealth_survey_response_tree</field>
+            <field name="model">survey.response</field>
+            <field name="inherit_id" ref="survey.survey_response_tree"/>
+            <field name="arch" type="xml">
+                <field name="user_id" position="replace">
+                     <field name="patient_id"/>
+                     <field name="user_id"/>
+                </field>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_survey_response_tree">
+            <field name="name">Survey Responses</field>
+            <field name="res_model">survey.response</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <!--field name="domain">[('user_id','=',uid)]</field-->
+            <field name="view_id" ref="survey.survey_response_tree"></field>
+            <!--field name="search_view_id" ref="survey_request_search"/-->
+        </record>
+
+        <menuitem name="Survey Responses" id="menu_survey_responses"
+            action="action_survey_response_tree" parent="survey.menu_surveys"
+            groups="base.group_tool_manager" sequence="10"/>
+
+    </data>
+</openerp>

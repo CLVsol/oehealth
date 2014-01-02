@@ -1,0 +1,273 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* oehealth_annotation
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-29 17:19+0000\n"
+"PO-Revision-Date: 2013-10-29 17:19+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: oehealth_annotation
+#: view:oehealth.annotation.category:0
+msgid "Category"
+msgstr "Categoria"
+
+#. module: oehealth_annotation
+#: view:oehealth.annotation.category:0
+msgid "Information"
+msgstr "Informações"
+
+#. module: oehealth_annotation
+#: field:oehealth.annotation,parent_left:0
+#: field:oehealth.annotation.category,parent_left:0
+msgid "Left parent"
+msgstr "Pai anterior"
+
+#. module: oehealth_annotation
+#: view:oehealth.annotation:0
+#: field:oehealth.annotation,from_user:0
+msgid "From"
+msgstr "De"
+
+#. module: oehealth_annotation
+#: view:oehealth.annotation:0
+msgid "Inactive Annotations"
+msgstr "Anotações Inativas"
+
+#. module: oehealth_annotation
+#: view:oehealth.annotation:0
+msgid "Categories..."
+msgstr "Categorias..."
+
+#. module: oehealth_annotation
+#: field:oehealth.annotation.category,child_ids:0
+msgid "Child Categories"
+msgstr "Categorias Filhas"
+
+#. module: oehealth_annotation
+#: view:oehealth.annotation:0
+msgid "Group By..."
+msgstr "Agrupar Por..."
+
+#. module: oehealth_annotation
+#: model:ir.model,name:oehealth_annotation.model_oehealth_tag
+msgid "Health Tags"
+msgstr "Etiquetas (Saúde)"
+
+#. module: oehealth_annotation
+#: view:oehealth.annotation:0
+#: view:oehealth.annotation.category:0
+#: view:oehealth.tag:0
+msgid "Settings"
+msgstr "Configurações"
+
+#. module: oehealth_annotation
+#: help:oehealth.annotation,active:0
+msgid "If unchecked, it will allow you to hide the annotation without removing it."
+msgstr "Se desmarcado, será possível esconder a anotação sem removê-la."
+
+#. module: oehealth_annotation
+#: model:ir.actions.act_window,name:oehealth_annotation.act_open_oehealth_annotation_view
+#: view:oehealth.annotation:0
+#: view:oehealth.annotation.category:0
+#: field:oehealth.annotation.category,annotation_ids:0
+#: view:oehealth.tag:0
+#: field:oehealth.tag,annotation_ids:0
+msgid "Annotations"
+msgstr "Anotações"
+
+#. module: oehealth_annotation
+#: field:oehealth.annotation,body:0
+msgid "Body"
+msgstr "Corpo do Texto"
+
+#. module: oehealth_annotation
+#: constraint:oehealth.annotation:0
+msgid "Error! You can not create recursive annotations."
+msgstr "Erro! Não é permitido criar anotações recursivas."
+
+#. module: oehealth_annotation
+#: field:oehealth.annotation.category,description:0
+msgid "Description"
+msgstr "Descrição"
+
+#. module: oehealth_annotation
+#: view:oehealth.annotation.category:0
+msgid "Inactive Categories"
+msgstr "Categorias Inativas"
+
+#. module: oehealth_annotation
+#: field:oehealth.annotation,tag_ids:0
+msgid "Tags"
+msgstr "Etiquetas"
+
+#. module: oehealth_annotation
+#: field:oehealth.annotation.category,parent_id:0
+msgid "Parent Category"
+msgstr "Categoria Pai"
+
+#. module: oehealth_annotation
+#: field:oehealth.annotation,write_date:0
+#: field:oehealth.annotation.category,write_date:0
+msgid "Write Date"
+msgstr "Data da Edição"
+
+#. module: oehealth_annotation
+#: field:oehealth.annotation.category,complete_name:0
+#: field:oehealth.annotation.category,name:0
+msgid "Annotation Category"
+msgstr "Categoria (Anotações)"
+
+#. module: oehealth_annotation
+#: view:oehealth.annotation:0
+#: view:oehealth.annotation.category:0
+msgid "User"
+msgstr "Usuário"
+
+#. module: oehealth_annotation
+#: view:oehealth.annotation:0
+#: field:oehealth.annotation,date:0
+#: view:oehealth.annotation.category:0
+msgid "Date"
+msgstr "Data"
+
+#. module: oehealth_annotation
+#: view:oehealth.annotation:0
+#: field:oehealth.annotation,child_ids:0
+msgid "Child Annotations"
+msgstr "Anotações Filhas"
+
+#. module: oehealth_annotation
+#: view:oehealth.annotation:0
+msgid "Annotation"
+msgstr "Anotação"
+
+#. module: oehealth_annotation
+#: field:oehealth.annotation,category_ids:0
+msgid "Categories"
+msgstr "Categorias"
+
+#. module: oehealth_annotation
+#: field:oehealth.annotation.category,info:0
+msgid "Info"
+msgstr "Informações"
+
+#. module: oehealth_annotation
+#: model:ir.actions.act_window,name:oehealth_annotation.act_open_oehealth_annotation_category_view
+#: model:ir.ui.menu,name:oehealth_annotation.menu_health_config_base_annotation_categories
+#: view:oehealth.annotation.category:0
+msgid "Annotation Categories"
+msgstr "Categorias (Anotações)"
+
+#. module: oehealth_annotation
+#: model:ir.model,name:oehealth_annotation.model_oehealth_annotation_category
+msgid "Annotation Categories"
+msgstr "Categorias (Anotações)"
+
+#. module: oehealth_annotation
+#: model:ir.model,name:oehealth_annotation.model_oehealth_annotation
+msgid "Health Annotation"
+msgstr "Anotação (Saúde)"
+
+#. module: oehealth_annotation
+#: field:oehealth.annotation,write_uid:0
+#: field:oehealth.annotation.category,write_uid:0
+msgid "Write User"
+msgstr "Atualizado por"
+
+#. module: oehealth_annotation
+#: help:oehealth.annotation.category,active:0
+msgid "If unchecked, it will allow you to hide the category without removing it."
+msgstr "Se desmarcado, será possível esconder a etiqueta sem removê-la."
+
+#. module: oehealth_annotation
+#: sql_constraint:oehealth.annotation:0
+msgid "The annotation reference must be unique!"
+msgstr "A referência da anotação deve se única!"
+
+#. module: oehealth_annotation
+#: view:oehealth.annotation:0
+#: view:oehealth.annotation.category:0
+msgid "Last Update"
+msgstr "Última Atualização"
+
+#. module: oehealth_annotation
+#: field:oehealth.annotation,create_uid:0
+#: field:oehealth.annotation.category,create_uid:0
+msgid "Create User"
+msgstr "Criado por"
+
+#. module: oehealth_annotation
+#: constraint:oehealth.annotation.category:0
+msgid "Error! You can not create recursive categories."
+msgstr "Erro! Não é possível criar categorias recursivas."
+
+#. module: oehealth_annotation
+#: field:oehealth.annotation,complete_name:0
+#: field:oehealth.annotation,name:0
+msgid "Reference"
+msgstr "Referência"
+
+#. module: oehealth_annotation
+#: field:oehealth.annotation,parent_id:0
+msgid "Parent Annotation"
+msgstr "Anotação Pai"
+
+#. module: oehealth_annotation
+#: view:oehealth.annotation:0
+#: field:oehealth.annotation,to_user:0
+msgid "To"
+msgstr "Para"
+
+#. module: oehealth_annotation
+#: view:oehealth.annotation:0
+msgid "Tags..."
+msgstr "Tags..."
+
+#. module: oehealth_annotation
+#: view:oehealth.annotation:0
+#: view:oehealth.annotation.category:0
+msgid "Creation"
+msgstr "Criação"
+
+#. module: oehealth_annotation
+#: help:oehealth.annotation,name:0
+msgid "Use \"/\" to get an automatic new Reference."
+msgstr "Usar \"/\" para obter automaticamente uma nova Referência."
+
+#. module: oehealth_annotation
+#: field:oehealth.annotation,create_date:0
+#: field:oehealth.annotation.category,create_date:0
+msgid "Create Date"
+msgstr "Data da Criação"
+
+#. module: oehealth_annotation
+#: model:ir.ui.menu,name:oehealth_annotation.menu_health_health_base_annotations
+msgid " Annotations"
+msgstr " Anotações"
+
+#. module: oehealth_annotation
+#: field:oehealth.annotation,subject:0
+msgid "Subject"
+msgstr "Assunto"
+
+#. module: oehealth_annotation
+#: field:oehealth.annotation,parent_right:0
+#: field:oehealth.annotation.category,parent_right:0
+msgid "Right parent"
+msgstr "Próximo pai"
+
+#. module: oehealth_annotation
+#: field:oehealth.annotation,active:0
+#: field:oehealth.annotation.category,active:0
+msgid "Active"
+msgstr "Ativo"
+

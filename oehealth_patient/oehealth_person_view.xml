@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="view_oehealth_person_form" model="ir.ui.view">
+            <field name="name">oehealth.person.form</field>
+            <field name="model">oehealth.person</field>
+            <field name="inherit_id" ref="oehealth_person.view_oehealth_person_form"/>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <field name="person_info" position="after">
+                    <group string="Patients">
+                        <field name="patient_ids" colspan="4" nolabel="1" />
+                    </group>
+                </field>
+            </field>
+        </record>
+
+    </data>
+</openerp>

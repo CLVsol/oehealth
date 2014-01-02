@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_oehealth_tag_oehealth_user,oehealth.tag,model_oehealth_tag,oehealth_base.group_oehealth_user,1,0,0,0
+access_oehealth_tag_oehealth_manager,oehealth.tag,model_oehealth_tag,oehealth_base.group_oehealth_manager,1,1,1,0
+access_oehealth_tag_oehealth_smanager,oehealth.tag,model_oehealth_tag,oehealth_base.group_oehealth_smanager,1,1,1,1

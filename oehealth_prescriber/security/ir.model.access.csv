@@ -1,0 +1,4 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+access_oehealth_prescriber_oehealth_prescriber_user,oehealth.prescriber,model_oehealth_prescriber,oehealth_base.group_oehealth_prescriber_user,1,0,0,0
+access_oehealth_prescriber_oehealth_prescriber_manager,oehealth.prescriber,model_oehealth_prescriber,oehealth_base.group_oehealth_prescriber_manager,1,1,1,0
+access_oehealth_prescriber_oehealth_smanager,oehealth.prescriber,model_oehealth_prescriber,oehealth_base.group_oehealth_smanager,1,1,1,1

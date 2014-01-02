@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <record id="view_oehealth_group_participant_tree" model="ir.ui.view">
+            <field name="name">oehealth.group.participant.tree</field>
+            <field name="model">oehealth.group.participant</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <tree string="Group Participants">
+                    <field name="group_id" />
+                    <field name="role" />
+                    <field name="user_id" />
+                    <field name="info" />
+                </tree>
+            </field>
+        </record>
+        
+        <record id="view_oehealth_group_participant_form" model="ir.ui.view">
+            <field name="name">oehealth.group.participant.form</field>
+            <field name="model">oehealth.group.participant</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <form string="Group Participants" version="7.0">
+                    <sheet>
+                        <group>
+                            <field name="group_id" />
+                            <field name="role" default_focus="1"/>
+                            <field name="user_id" />
+                        </group>
+                        <notebook>
+                            <page string="Information">
+                                <group string="Information" />
+                                <div class="oe_edit_only">
+                                    <label for="info"/>
+                                </div>
+                                <field name="info" colspan="4"/>
+                                <group groups="oehealth_base.group_oehealth_rmanager">
+                                    <group string="Creation" >
+                                        <field name="create_uid" string="User" />
+                                        <field name="create_date" string="Date" />
+                                    </group>
+                                    <group string="Last Update" >
+                                        <field name="write_uid" string="User" />
+                                        <field name="write_date" string="Date"/>
+                                    </group>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record id="view_oehealth_group_participant_search" model="ir.ui.view">
+            <field name="name">oehealth.group.participant.search</field>
+            <field name="model">oehealth.group.participant</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <search string="Group Participants">
+                    <field name="group_id" />
+                    <!--field name="comm_person_id" /-->
+                    <field name="role" />
+                    <newline />
+                    <group expand="0" string="Group By...">
+                        <filter string="Group" domain="[]" context="{'group_by':'group_id'}" />
+                        <!--filter string="Group Participant" domain="[]" context="{'group_by':'comm_person_id'}" /-->
+                        <filter string="Participant Role" domain="[]" context="{'group_by':'role'}" />
+                    </group>
+                </search>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="act_open_oehealth_group_participant_view">
+            <field name="name">Group Participants</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">oehealth.group.participant</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_oehealth_group_participant_search" />
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+        
+        <record model="ir.actions.act_window.view" id="act_open_oehealth_group_participant_view_form">
+            <field name="act_window_id" ref="act_open_oehealth_group_participant_view" />
+            <field name="sequence" eval="20" />
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_oehealth_group_participant_form" />
+        </record>
+        
+        <record model="ir.actions.act_window.view" id="act_open_oehealth_group_participant_view_tree">
+            <field name="act_window_id" ref="act_open_oehealth_group_participant_view" />
+            <field name="sequence" eval="10" />
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_oehealth_group_participant_tree" />
+        </record>
+        
+        <menuitem name="Participants" id="menu_health_health_base_groups_participants"  
+            parent="menu_health_health_base_groups"
+            groups="oehealth_base.group_oehealth_group_user"
+            sequence="20" 
+            action="act_open_oehealth_group_participant_view" />
+
+    </data>
+</openerp>

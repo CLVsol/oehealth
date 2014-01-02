@@ -1,0 +1,387 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* oehealth_event
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-30 23:46+0000\n"
+"PO-Revision-Date: 2013-10-30 23:46+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: oehealth_event
+#: view:oehealth.event.category:0
+msgid "Category"
+msgstr "Categoria"
+
+#. module: oehealth_event
+#: view:oehealth.event:0
+#: view:oehealth.event.category:0
+#: view:oehealth.event.participant:0
+#: view:oehealth.event.participant.role:0
+msgid "Information"
+msgstr "Informações"
+
+#. module: oehealth_event
+#: field:oehealth.event.category,parent_left:0
+msgid "Left parent"
+msgstr "Pai anterior"
+
+#. module: oehealth_event
+#: view:oehealth.event:0
+#: selection:oehealth.event,state:0
+msgid "Revised"
+msgstr "Revisado"
+
+#. module: oehealth_event
+#: sql_constraint:oehealth.event:0
+msgid "The event reference must be unique!"
+msgstr "A referência do evento deve ser única!"
+
+#. module: oehealth_event
+#: view:oehealth.event.participant:0
+msgid "Participant Role"
+msgstr "Função do Participante"
+
+#. module: oehealth_event
+#: view:oehealth.event:0
+msgid "Categories..."
+msgstr "Categorias..."
+
+#. module: oehealth_event
+#: field:oehealth.event.category,child_ids:0
+msgid "Child Categories"
+msgstr "Categorias Filhas"
+
+#. module: oehealth_event
+#: view:oehealth.event:0
+#: view:oehealth.event.participant:0
+msgid "Group By..."
+msgstr "Agrupar Por..."
+
+#. module: oehealth_event
+#: model:ir.model,name:oehealth_event.model_oehealth_tag
+msgid "Health Tags"
+msgstr "Etiquetas (Saúde)"
+
+#. module: oehealth_event
+#: field:oehealth.event.participant,role:0
+msgid "Role"
+msgstr "Função"
+
+#. module: oehealth_event
+#: view:oehealth.event:0
+msgid "Tags..."
+msgstr "Etiquetas..."
+
+#. module: oehealth_event
+#: selection:oehealth.event,state:0
+msgid "New"
+msgstr "Novo"
+
+#. module: oehealth_event
+#: field:oehealth.event,event_tag_ids:0
+msgid "Tags"
+msgstr "Etiquetas"
+
+#. module: oehealth_event
+#: model:ir.actions.act_window,name:oehealth_event.act_open_oehealth_event_view
+#: model:ir.ui.menu,name:oehealth_event.menu_health_config_base_events
+#: model:ir.ui.menu,name:oehealth_event.menu_health_health_base_events
+#: model:ir.ui.menu,name:oehealth_event.menu_health_health_base_events_events
+#: view:oehealth.event:0
+#: view:oehealth.event.category:0
+#: field:oehealth.event.category,event_ids:0
+#: view:oehealth.tag:0
+#: field:oehealth.tag,event_ids:0
+msgid "Events"
+msgstr "Eventos"
+
+#. module: oehealth_event
+#: model:ir.actions.act_window,name:oehealth_event.act_open_oehealth_event_participant_role_view
+#: view:oehealth.event.participant.role:0
+msgid "Event Participant Roles"
+msgstr "Funções dos Participantes (Eventos)"
+
+#. module: oehealth_event
+#: view:oehealth.event:0
+#: selection:oehealth.event,state:0
+msgid "Okay"
+msgstr "Ok"
+
+#. module: oehealth_event
+#: field:oehealth.event.category,description:0
+#: field:oehealth.event.participant.role,description:0
+msgid "Description"
+msgstr "Descrição"
+
+#. module: oehealth_event
+#: view:oehealth.event.category:0
+msgid "Inactive Categories"
+msgstr "Categorias Inativas"
+
+#. module: oehealth_event
+#: help:oehealth.event.participant.role,active:0
+msgid "If unchecked, it will allow you to hide the role without removing it."
+msgstr "Se desmarcado, será possível esconder a função sem removê-la."
+
+#. module: oehealth_event
+#: view:oehealth.event:0
+#: view:oehealth.event.category:0
+#: view:oehealth.event.participant.role:0
+#: view:oehealth.tag:0
+msgid "Settings"
+msgstr "Configurações"
+
+#. module: oehealth_event
+#: view:oehealth.event:0
+#: field:oehealth.event,start_time:0
+msgid "Start Time"
+msgstr "Horário do Início"
+
+#. module: oehealth_event
+#: view:oehealth.event:0
+#: field:oehealth.event,event_annotation_ids:0
+msgid "Annotations"
+msgstr "Anotações"
+
+#. module: oehealth_event
+#: field:oehealth.event,write_date:0
+#: field:oehealth.event.category,write_date:0
+#: field:oehealth.event.participant,write_date:0
+#: field:oehealth.event.participant.role,write_date:0
+msgid "Write Date"
+msgstr "Data da Atualização"
+
+#. module: oehealth_event
+#: field:oehealth.event,end_time:0
+msgid "End Time"
+msgstr "Horário do Término"
+
+#. module: oehealth_event
+#: field:oehealth.event,create_uid:0
+#: field:oehealth.event.category,create_uid:0
+#: field:oehealth.event.participant,create_uid:0
+#: field:oehealth.event.participant.role,create_uid:0
+msgid "Create User"
+msgstr "Criado por"
+
+#. module: oehealth_event
+#: view:oehealth.event:0
+#: selection:oehealth.event,state:0
+msgid "Waiting"
+msgstr "Aguardando"
+
+#. module: oehealth_event
+#: model:ir.model,name:oehealth_event.model_oehealth_annotation
+msgid "Health Annotation"
+msgstr "Anotação (Saúde)"
+
+#. module: oehealth_event
+#: model:ir.ui.menu,name:oehealth_event.menu_health_health_base_events_participants
+#: view:oehealth.event:0
+#: field:oehealth.event,participant_ids:0
+msgid "Participants"
+msgstr "Participantes"
+
+#. module: oehealth_event
+#: field:oehealth.event,subject:0
+msgid "Subject"
+msgstr "Assunto"
+
+#. module: oehealth_event
+#: view:oehealth.event.participant.role:0
+msgid "Inactive Participant Roles"
+msgstr "Funções Inativas (Participantes)"
+
+#. module: oehealth_event
+#: model:ir.ui.menu,name:oehealth_event.menu_health_config_base_events_categorys
+#: field:oehealth.event,event_category_ids:0
+msgid "Categories"
+msgstr "Categorias"
+
+#. module: oehealth_event
+#: view:oehealth.event:0
+#: field:oehealth.event,state:0
+msgid "Stage"
+msgstr "Estágio"
+
+#. module: oehealth_event
+#: field:oehealth.event,event_info:0
+#: field:oehealth.event.category,info:0
+#: field:oehealth.event.participant,info:0
+#: field:oehealth.event.participant.role,info:0
+msgid "Info"
+msgstr "Informações"
+
+#. module: oehealth_event
+#: field:oehealth.event,date_event_inclusion:0
+msgid "Inclusion Date"
+msgstr "Data da Inclusão"
+
+#. module: oehealth_event
+#: view:oehealth.event:0
+#: field:oehealth.event,responsible:0
+msgid "Responsible"
+msgstr "Responsável"
+
+#. module: oehealth_event
+#: model:ir.actions.act_window,name:oehealth_event.act_open_oehealth_event_participant_view
+#: view:oehealth.event.participant:0
+msgid "Event Participants"
+msgstr "Participantes (Evento)"
+
+#. module: oehealth_event
+#: field:oehealth.event.category,parent_id:0
+msgid "Parent Category"
+msgstr "Categoria Pai"
+
+#. module: oehealth_event
+#: model:ir.actions.act_window,name:oehealth_event.act_open_oehealth_event_category_view
+#: model:ir.model,name:oehealth_event.model_oehealth_event_category
+#: view:oehealth.event.category:0
+msgid "Event Categories"
+msgstr "Categorias (Eventos)"
+
+#. module: oehealth_event
+#: view:oehealth.event:0
+#: view:oehealth.event.category:0
+#: view:oehealth.event.participant:0
+#: view:oehealth.event.participant.role:0
+msgid "Date"
+msgstr "Data"
+
+#. module: oehealth_event
+#: field:oehealth.event,write_uid:0
+#: field:oehealth.event.category,write_uid:0
+#: field:oehealth.event.participant,write_uid:0
+#: field:oehealth.event.participant.role,write_uid:0
+msgid "Write User"
+msgstr "Atualizado por"
+
+#. module: oehealth_event
+#: model:ir.model,name:oehealth_event.model_oehealth_event_participant
+msgid "oehealth.event.participant"
+msgstr "oehealth.event.participant"
+
+#. module: oehealth_event
+#: model:ir.model,name:oehealth_event.model_oehealth_event_participant_role
+msgid "oehealth.event.participant.role"
+msgstr "oehealth.event.participant.role"
+
+#. module: oehealth_event
+#: help:oehealth.event.category,active:0
+msgid "If unchecked, it will allow you to hide the category without removing it."
+msgstr "Se desmarcado, será possível esconder a categoria sem removê-la."
+
+#. module: oehealth_event
+#: view:oehealth.event:0
+#: view:oehealth.event.category:0
+#: view:oehealth.event.participant:0
+#: view:oehealth.event.participant.role:0
+msgid "Last Update"
+msgstr "Última Atualização"
+
+#. module: oehealth_event
+#: field:oehealth.event.category,complete_name:0
+#: field:oehealth.event.category,name:0
+msgid "Event Category"
+msgstr "Categoria (Eventos)"
+
+#. module: oehealth_event
+#: constraint:oehealth.event.category:0
+msgid "Error! You can not create recursive categories."
+msgstr "Erro! Não é permitido criar categorias recursivas."
+
+#. module: oehealth_event
+#: field:oehealth.event,name:0
+msgid "Reference"
+msgstr "Referência"
+
+#. module: oehealth_event
+#: model:ir.model,name:oehealth_event.model_oehealth_event
+msgid "Health Event"
+msgstr "Evento (Saúde)"
+
+#. module: oehealth_event
+#: model:ir.ui.menu,name:oehealth_event.menu_health_config_base_events_participant_roles
+msgid "Participant Roles"
+msgstr "Funções (Participantes)"
+
+#. module: oehealth_event
+#: view:oehealth.event:0
+#: view:oehealth.event.category:0
+#: view:oehealth.event.participant:0
+#: view:oehealth.event.participant.role:0
+msgid "Creation"
+msgstr "Criação"
+
+#. module: oehealth_event
+#: view:oehealth.event:0
+msgid "Inactive Events"
+msgstr "Eventos Inativos"
+
+#. module: oehealth_event
+#: help:oehealth.event,name:0
+msgid "Use \"/\" to get an automatic new Reference."
+msgstr "Usar \"/\" para obter automaticamente uma nova Referência."
+
+#. module: oehealth_event
+#: field:oehealth.event,create_date:0
+#: field:oehealth.event.category,create_date:0
+#: field:oehealth.event.participant,create_date:0
+#: field:oehealth.event.participant.role,create_date:0
+msgid "Create Date"
+msgstr "Data da Criação"
+
+#. module: oehealth_event
+#: help:oehealth.event,active:0
+msgid "If unchecked, it will allow you to hide the event without removing it."
+msgstr "Se desmarcado, será possível esconder o evento sem removê-lo."
+
+#. module: oehealth_event
+#: view:oehealth.event:0
+#: view:oehealth.event.category:0
+#: view:oehealth.event.participant:0
+#: field:oehealth.event.participant,user_id:0
+#: view:oehealth.event.participant.role:0
+msgid "User"
+msgstr "Usuário"
+
+#. module: oehealth_event
+#: help:oehealth.event.participant.role,name:0
+msgid "Role of a Participant in an Event"
+msgstr "Função do Participante em um Evento"
+
+#. module: oehealth_event
+#: view:oehealth.event.participant.role:0
+#: field:oehealth.event.participant.role,name:0
+msgid "Event Participant Role"
+msgstr "Função do Participante (Evento)"
+
+#. module: oehealth_event
+#: field:oehealth.annotation,event_id:0
+#: view:oehealth.event:0
+#: view:oehealth.event.participant:0
+#: field:oehealth.event.participant,event_id:0
+#: help:oehealth.event.participant,event_id:0
+msgid "Event"
+msgstr "Evento"
+
+#. module: oehealth_event
+#: field:oehealth.event.category,parent_right:0
+msgid "Right parent"
+msgstr "Próximo pai"
+
+#. module: oehealth_event
+#: field:oehealth.event,active:0
+#: field:oehealth.event.category,active:0
+#: field:oehealth.event.participant.role,active:0
+msgid "Active"
+msgstr "Ativo"
