@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <record id="view_oehealth_patient_mng_tree" model="ir.ui.view">
+            <field name="name">oehealth.patient_mng.tree</field>
+            <field name="model">oehealth.patient_mng</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <tree string="Patient">
+                    <field name="name" />
+                    <field name="alias" />
+                    <field name="patient_category" />
+                    <field name="birthday" />
+                    <field name="age" />
+	                <field name="tag_ids" />
+                    <field name="state" />
+                </tree>
+            </field>
+        </record>
+        
+        <record id="view_oehealth_patient_mng_form" model="ir.ui.view">
+            <field name="name">oehealth.patient_mng.form</field>
+            <field name="model">oehealth.patient_mng</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <form string="Patients" version="7.0">
+                    <header>
+                        <button name="oehealth_patient_mng_revised" string="Revised" states="new,okay" type="workflow" groups="oehealth_base.group_oehealth_patient_mng_manager"/>
+                        <button name="oehealth_patient_mng_processing" string="Processing" states="new,revised" type="workflow" groups="oehealth_base.group_oehealth_patient_mng_manager"/>
+                        <button name="oehealth_patient_mng_okay" string="Okay" states="new,revised,processing" type="workflow" groups="oehealth_base.group_oehealth_patient_mng_manager"/>
+                        <field name="state" widget="statusbar" statusbar_visible="new,revised,processing,okay"
+                        statusbar_colors='{"new":"blue","revised":"blue","processing":"blue","okay":"blue"}' />
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <div class="oe_edit_only">
+                                <label for="category_ids" groups="oehealth_base.group_oehealth_suser"/>
+                            </div>
+                            <h3>
+                                <field name="category_ids" widget="many2many_tags" placeholder="Categories..." groups="oehealth_base.group_oehealth_suser"/>
+                            </h3>
+                            <div class="oe_edit_only">
+                                <label for="tag_ids" groups="oehealth_base.group_oehealth_suser"/>
+                            </div>
+                            <h3>
+                                <field name="tag_ids" widget="many2many_tags" placeholder="Tags..." groups="oehealth_base.group_oehealth_suser"/>
+                            </h3>
+                        </div>
+                        <group>
+	                        <!--group string="Personal Data"-->
+	                        <group>
+	                            <field name="name" default_focus="1"/>
+	                            <field name="alias"/>
+                                <field name="mother_name" />
+                                <field name="father_name" />
+                                <field name="responsible_name" />
+                                <field name="patient_category" />
+	                        </group>
+                            <!--group string="Birth"-->
+	                        <group>
+                                <field name="birthday"/>
+                                <field name="age"/>
+                            </group>
+                            <!--group string="Status"-->
+	                        <group>
+                                <field name="gender"/>
+                                <field name="marital"/>
+                            </group>
+	                    </group>
+                        <notebook>
+                            <page string="Personal Information">
+                                <group string="Citizenship &amp; Other Info">
+                                    <group>
+                                        <field name="country"/>
+                                    </group>
+                                    <group>
+                                        <field name="country_id"/>
+                                        <field name="identification_id"/>
+                                        <field name="otherid"/>
+                                    </group>
+                                </group>
+                                <group string="Contact Information">
+                                    <group>
+                                        <label for="street" string="Address" />
+                                        <div>
+											<field name="street" placeholder="Logradouro..."/>
+											<field name="number" placeholder="Numero" />
+											<!--field name="district" placeholder="Bairro" /-->
+                                            <field name="street2" placeholder="Complemento" />
+                                            <div class="address_format">
+                                                <field name="city" placeholder="City" style="width: 40%%" />
+                                                <field name="country_state" placeholder="State" style="width: 37%%"/>
+                                                <field name="zip" placeholder="ZIP" style="width: 20%%"/>
+                                            </div>
+                                        </div>
+                                        <field name="phone" placeholder="e.g. +32.81.81.37.00"/>
+                                        <field name="mobile"/>
+                                        <field name="fax"/>
+                                        <field name="email" widget="email"/>
+                                    </group>
+                                    <group>
+                                        <field name="state_id"/>
+                                        <!--field name="l10n_br_city_id"/-->
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Patient">
+                                <group>
+                                    <field name="patient" />
+                                    <field name="patient_status" />
+                                    <field name="date_patient_inclusion" />
+                                    <field name="date_patient_activation" />
+                                    <field name="date_patient_inactivation" />
+                                </group>
+                            </page>
+                            <page string="Settings" groups="oehealth_base.group_oehealth_manager">
+                                <group>
+                                    <field name="active" />
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record id="view_oehealth_patient_mng_search" model="ir.ui.view">
+            <field name="name">oehealth.patient_mng.search</field>
+            <field name="model">oehealth.patient_mng</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <search string="Patient">
+                    <field name="name" />
+                    <field name="alias" />
+                    <field name="mother_name" />
+                    <field name="father_name" />
+                    <field name="responsible_name" />
+                    <newline />
+                    <group expand="0" string="Group By...">
+                        <filter string="Stage" domain="[]" context="{'group_by': 'state'}"/>
+                        <filter string="Patient Category" domain="[]" context="{'group_by':'patient_category'}" />
+                    </group>
+                </search>
+            </field>
+        </record>
+        
+        <record model="ir.actions.act_window" id="act_open_oehealth_patient_mng_view">
+            <field name="name">Patients</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">oehealth.patient_mng</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_oehealth_patient_mng_search" />
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+        
+        <record model="ir.actions.act_window.view" id="act_open_oehealth_patient_mng_view_form">
+            <field name="act_window_id" ref="act_open_oehealth_patient_mng_view" />
+            <field name="sequence" eval="20" />
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_oehealth_patient_mng_form" />
+        </record>
+        
+        <record model="ir.actions.act_window.view" id="act_open_oehealth_patient_mng_view_tree">
+            <field name="act_window_id" ref="act_open_oehealth_patient_mng_view" />
+            <field name="sequence" eval="10" />
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_oehealth_patient_mng_tree" />
+        </record>
+        
+        <menuitem name="Patient Management" id="menu_health_health_patient_patient_mng"
+            parent="oehealth_base.menu_health_health_patient"
+            groups="oehealth_base.group_oehealth_patient_mng_user"
+            sequence="20"
+            action="act_open_oehealth_patient_mng_view" />
+
+    </data>
+</openerp>
