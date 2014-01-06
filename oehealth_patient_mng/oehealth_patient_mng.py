@@ -105,7 +105,15 @@ class oehealth_patient_mng(osv.Model):
         #'l10n_br_city_id': fields.many2one('l10n_br_base.city', 'City',
         #                                   domain="[('state_id','=',state_id)]"),
         'patient': fields.many2one('oehealth.patient', 'Related Patient', required=False,
-                                   help='Patient-related data of the insured'),
+                                   help='Patient-related data of the patient'),
+        'person': fields.many2one('oehealth.person', 'Related Person', required=False,
+                                   help='Person-related data of the patient'),
+        'person_mother': fields.many2one('oehealth.person', 'Related Mother', required=False,
+                                   help='Mother-related data of the mother'),
+        'person_father': fields.many2one('oehealth.person', 'Related Father', required=False,
+                                   help='Father-related data of the father'),
+        'person_responsible': fields.many2one('oehealth.person', 'Related Responsible', required=False,
+                                   help='Responsible-related data of the responsible'),
         'active': fields.boolean('Active', help="The active field allows you to hide the insured without removing it."),
     }
 

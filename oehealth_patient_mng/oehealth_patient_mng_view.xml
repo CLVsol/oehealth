@@ -107,6 +107,10 @@
                             </page>
                             <page string="Patient">
                                 <group>
+                                    <field name="person" />
+                                    <field name="person_mother" />
+                                    <field name="person_father" />
+                                    <field name="person_responsible" />
                                     <field name="patient" />
                                     <field name="patient_status" />
                                     <field name="date_patient_inclusion" />
