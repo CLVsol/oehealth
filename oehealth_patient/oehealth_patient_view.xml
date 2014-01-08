@@ -195,6 +195,7 @@
                     <group expand="0" string="Group By...">
                         <filter string="Stage" domain="[]" context="{'group_by': 'state'}"/>
                         <filter string="Patient Status" domain="[]" context="{'group_by':'patient_status'}" />
+                        <filter string="Patient Category" domain="[]" context="{'group_by':'patient_status'}" />
                     </group>
                 </search>
             </field>
