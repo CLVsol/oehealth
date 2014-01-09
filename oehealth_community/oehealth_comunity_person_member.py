@@ -26,7 +26,7 @@ class oehealth_comunity_person_member(osv.Model):
         'community_id': fields.many2one('oehealth.community', string='Community',
                                         help='Community Name'),
         'person_id': fields.many2one('oehealth.person', string='Person',
-                                      help='Person Name'),
+                                     help='Person Name'),
         'info': fields.text(string='Info'),
     }
 

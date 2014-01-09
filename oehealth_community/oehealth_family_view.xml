@@ -10,12 +10,7 @@
             <field name="arch" type="xml">
                 <group string="Information" position="replace">
                     <group string="Communities" />
-                    <field name="community_ids" colspan="4" nolabel="1">
-                        <tree>
-                            <field name="community_id"/>
-                            <field name="info"/>
-                        </tree>
-                    </field>
+                    <field name="community_ids" colspan="4" nolabel="1" />
                     <group string="Information" />
                 </group>
             </field>

@@ -23,9 +23,9 @@ class oehealth_family(orm.Model):
     _inherit = 'oehealth.family'
 
     _columns = {
-         'community_ids': fields.one2many('oehealth.community.family.member',
-                                          'family_id',
-                                          'Communities'),
+        'community_ids': fields.one2many('oehealth.community.family.member',
+                                         'family_id',
+                                         'Communities'),
     }
 
 oehealth_family()
