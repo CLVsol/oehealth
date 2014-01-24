@@ -29,6 +29,8 @@
     'images': [],
     'depends': ['oehealth_medicament',
                 'oehealth_prescriber',
+                'oehealth_pharmacy',
+                'oehealth_insured_card',
                 ],
     'data': ['security/ir.model.access.csv',
              ],

@@ -62,6 +62,8 @@ class oehealth_dispensation(osv.Model):
         'dispensation_date': fields.date(string='Dispensation Date', required=True),
         'prescription_date': fields.date(string='Prescription Date', required=True),
         'prescriber_id': fields.many2one('oehealth.prescriber', string='Prescriber', required=True),
+        'pharmacy_id': fields.many2one('oehealth.pharmacy', string='Pharmacy', required=True),
+        'insured_card_id': fields.many2one('oehealth.insured.card', string='Insured Card', required=True),
         #'patient_id': fields.many2one('oehealth.patient', string='Patient', required=True),
         #'pregnancy_warning': fields.boolean(string='Pregancy Warning', readonly=True),
         'notes': fields.text(string='Prescription Notes'),
