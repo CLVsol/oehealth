@@ -15,6 +15,8 @@
                     <field name="pharmacy_id" />
                     <field name="insured_card_id" />
                     <field name="state"/>
+                    <field name="category_ids" groups="oehealth_base.group_oehealth_suser"/>
+                    <field name="tag_ids" groups="oehealth_base.group_oehealth_suser"/>
                     <field name="notes" />
                 </tree>
             </field>
@@ -83,6 +85,18 @@
                             <h3>
                                 <field name="insured_card_id" placeholder="Insured Card..." />
                             </h3>
+                            <div class="oe_edit_only">
+                                <label for="category_ids" groups="oehealth_base.group_oehealth_suser"/>
+                            </div>
+                            <h2>
+                                <field name="category_ids" widget="many2many_tags" placeholder="Categories..." groups="oehealth_base.group_oehealth_suser"/>
+                            </h2>
+                            <div class="oe_edit_only">
+                                <label for="tag_ids" groups="oehealth_base.group_oehealth_suser"/>
+                            </div>
+                            <h2>
+                                <field name="tag_ids" widget="many2many_tags" placeholder="Tags..." groups="oehealth_base.group_oehealth_suser"/>
+                            </h2>
                         </div>
                         <group>
                             <!--field name="patient_id" /-->
@@ -110,6 +124,11 @@
                                         <field name="write_uid" string="User" />
                                         <field name="write_date" string="Date"/>
                                     </group>
+                                </group>
+                            </page>
+                            <page string="Annotations" groups="oehealth_base.group_oehealth_suser">
+                                <group>
+                                    <field name="annotation_ids" colspan="4" nolabel="1" />
                                 </group>
                             </page>
                             <page string="Settings" groups="oehealth_base.group_oehealth_manager">

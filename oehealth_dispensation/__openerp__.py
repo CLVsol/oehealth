@@ -27,7 +27,9 @@
     'description': '''
     ''',
     'images': [],
-    'depends': ['oehealth_medicament',
+    'depends': ['oehealth_annotation',
+                'oehealth_tag',
+                'oehealth_medicament',
                 'oehealth_prescriber',
                 'oehealth_pharmacy',
                 'oehealth_insured_card',
@@ -38,6 +40,7 @@
     'test': [],
     'init_xml': ['security/oehealth_dispensation_security.xml',
                  'oehealth_dispensation_view.xml',
+                 'oehealth_dispensation_category_view.xml',
                  'oehealth_medicament_template_view.xml',
                  'oehealth_dispensation_workflow.xml',
                  'wizard/create_lab_test.xml'

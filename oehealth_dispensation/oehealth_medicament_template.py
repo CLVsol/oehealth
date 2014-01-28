@@ -25,6 +25,8 @@ class oehealth_medicament_template(orm.Model):
     _columns={
         'dispensation_id': fields.many2one('oehealth.dispensation',
                                             string='Dispensation ID', ),
+        'pack_quantity': fields.integer(string='Pack Quantity',
+                                        help='Quantity of packs of the medicament'),
         }
     
 oehealth_medicament_template()

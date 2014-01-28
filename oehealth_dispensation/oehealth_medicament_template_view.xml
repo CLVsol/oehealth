@@ -12,6 +12,9 @@
                     <field name="dispensation_id" />
                     <field name="name" />
                 </field>
+                <field name="admin_times" position="after">
+                    <field name="pack_quantity" />
+                </field>
             </field>
         </record>
 
@@ -24,6 +27,9 @@
                 <field name="name" position="replace">
                     <field name="dispensation_id" />
                     <field name="name" />
+                </field>
+                <field name="admin_times" position="after">
+                    <field name="pack_quantity" />
                 </field>
             </field>
         </record>

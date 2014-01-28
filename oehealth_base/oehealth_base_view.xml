@@ -121,11 +121,19 @@
         <menuitem name="Medication" id="menu_health_config_medication" 
             parent="menu_health_config"
             sequence="40"/>
+        <!-- Health/Configuration/Prescription -->
+        <menuitem name="Prescription" id="menu_health_config_prescription" 
+            parent="menu_health_config"
+            sequence="40"/>
+        <!-- Health/Configuration/Dispensation -->
+        <menuitem name="Dispensation" id="menu_health_config_dispensation" 
+            parent="menu_health_config"
+            sequence="40"/>
         <!-- Health/Configuration/Pharmacy -->
         <menuitem name="Pharmacy" id="menu_health_config_pharmacy" 
             parent="menu_health_config"
             sequence="50"/>
-        <!-- Health/Configuration/Pharmacy -->
+        <!-- Health/Configuration/Garatemed -->
         <menuitem name="Garatemed" id="menu_health_config_garantemed" 
             parent="menu_health_config"
             sequence="70"/>

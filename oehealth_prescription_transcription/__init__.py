@@ -17,5 +17,8 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.        #
 ################################################################################
 
+import oehealth_annotation
+import oehealth_prescription_transcription_category
 import oehealth_prescription_transcription
 import oehealth_medication_template
+import oehealth_tag
