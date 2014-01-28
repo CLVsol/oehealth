@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        
+        <record id="view_oehealth_group_participant_tree" model="ir.ui.view">
+            <field name="name">oehealth.group.participant.tree</field>
+            <field name="model">oehealth.group.participant</field>
+            <field name="inherit_id" ref="oehealth_group.view_oehealth_group_participant_tree"/>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <field name="user_id" position="after">
+                    <field name="professional_id" />
+                </field>
+            </field>
+        </record>
+
+        <record id="view_oehealth_group_participant_form" model="ir.ui.view">
+            <field name="name">oehealth.group.participant.form</field>
+            <field name="model">oehealth.group.participant</field>
+            <field name="inherit_id" ref="oehealth_group.view_oehealth_group_participant_form"/>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <field name="user_id" position="after">
+                    <field name="professional_id" />
+                </field>
+            </field>
+        </record>
+
+    </data>
+</openerp>

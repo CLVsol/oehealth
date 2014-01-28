@@ -23,3 +23,4 @@ import oehealth_patient_category
 import oehealth_patient
 import oehealth_person
 import oehealth_tag
+import oehealth_group_participant

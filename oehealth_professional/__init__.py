@@ -24,3 +24,4 @@ import oehealth_professional
 import oehealth_tag
 import oehealth_event_participant
 import oehealth_specialty
+import oehealth_group_participant

@@ -134,6 +134,17 @@
                                     <field name="professional_info2" colspan="4" nolabel="1"/>
                                 </group>
                             </page>
+                            <page string="Groups" groups="oehealth_base.group_oehealth_suser">
+                                <group string="Groups">
+                                    <field name="group_ids" colspan="4" nolabel="1">
+                                        <!--tree string="Groups">
+                                            <field name="event_id"/>
+                                            <field name="role"/>
+                                            <field name="info"/>
+                                        </tree-->
+                                    </field>
+                                </group>
+                            </page>
                             <page string="Events" groups="oehealth_base.group_oehealth_suser">
                                 <group string="Events">
                                     <field name="events_ids" colspan="4" nolabel="1">

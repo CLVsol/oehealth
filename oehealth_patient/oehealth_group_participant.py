@@ -17,39 +17,13 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.        #
 ################################################################################
 
-{
-    'name': 'OpenERP Health: Health Professional',
-    'version': '1.0.0',
-    'author': 'Carlos Eduardo Vercelino - CLVsol',
-    'category': 'Generic Modules/Others',
-    'license': 'AGPL-3',
-    'website': 'http://oehealth.org',
-    'description': '''
-    ''',
-    'images': [],
-    'depends': ['oehealth_base',
-                'oehealth_partner',
-                'oehealth_event',
-                'oehealth_group',
-                ],
-    'data': ['security/ir.model.access.csv',
-             ],
-    'demo': [],
-    'test': [],
-    'init_xml': ['res_partner_view.xml',
-                 'oehealth_annotation_view.xml',
-                 'security/oehealth_professional_security.xml',
-                 'oehealth_professional_workflow.xml',
-                 'oehealth_professional_view.xml',
-                 'oehealth_professional_category_view.xml',
-                 'oehealth_tag_view.xml',
-                 'oehealth_event_participant_view.xml',
-                 'oehealth_professional_view.xml',
-                 'oehealth_group_participant_view.xml',
-                  ],
-    'test': [],
-    'update_xml': ['oehealth_professional_sequence.xml'],
-    'installable': True,
-    'active': False,
-    'css': [],
-}
+from openerp.osv import orm, fields
+
+class oehealth_group_participant(orm.Model):
+    _inherit = 'oehealth.group.participant'
+
+    _columns = {
+        'patient_id': fields.many2one('oehealth.patient', string='Patient'),
+    }
+
+oehealth_group_participant()

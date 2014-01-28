@@ -150,6 +150,17 @@
                                     <field name="person_info2" colspan="4" nolabel="1" readonly="True"/>
                                 </group>
                             </page>
+                            <page string="Groups" groups="oehealth_base.group_oehealth_suser">
+                                <group string="Groups">
+                                    <field name="group_ids" colspan="4" nolabel="1">
+                                        <!--tree string="Groups">
+                                            <field name="event_id"/>
+                                            <field name="role"/>
+                                            <field name="info"/>
+                                        </tree-->
+                                    </field>
+                                </group>
+                            </page>
                             <page string="Patient Annotations" groups="oehealth_base.group_oehealth_suser">
                                 <group>
                                     <field name="patient_annotation_ids" colspan="4" nolabel="1" />
