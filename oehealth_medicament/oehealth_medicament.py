@@ -104,7 +104,7 @@ class oehealth_medicament(osv.Model):
                                                 readonly=True, store=True),
         'concentration': fields.char(size=256, string='Concentration'),
         'presentation': fields.char(size=256, string='Presentation'),
-        'pres2': fields.integer(string='Pres2', help='Presentation Quantity'),
+        'pres2': fields.integer(string='Presentation Quantity'),
         'pres3': fields.char(size=256, string='Presentation Form'),
         'composition': fields.text(string='Composition', help='Components'),
         'name_active_component': fields.function(_name_active_component_get_fnc, type="char", string='Name (Active Component)'),
