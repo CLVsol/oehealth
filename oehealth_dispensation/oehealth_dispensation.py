@@ -76,7 +76,7 @@ class oehealth_dispensation(osv.Model):
                                     'dispensation_id', 
                                     'tag_id', 
                                     'Tags'),
-        'notes': fields.text(string='Prescription Notes'),
+        'notes': fields.text(string='Dispensation Notes'),
         #'prescription_line': fields.one2many('oehealth.dispensation.line',
         #                                     'pbm_prescription_order_id',
         #                                     string='Dispensation line',),
