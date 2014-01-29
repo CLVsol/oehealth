@@ -45,6 +45,7 @@
                  'oehealth_drug_form_view.xml',
                  'oehealth_drug_route_view.xml',
                  'oehealth_medicament_template_view.xml',
+                 'oehealth_medicament_template_sequence.xml',
                  ],
     'test': [],
     'update_xml': [],

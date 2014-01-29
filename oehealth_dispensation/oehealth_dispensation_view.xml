@@ -14,6 +14,7 @@
                     <field name="prescriber_id" />
                     <field name="pharmacy_id" />
                     <field name="insured_card_id" />
+                    <field name="total_refund" />
                     <field name="state"/>
                     <field name="category_ids" groups="oehealth_base.group_oehealth_suser"/>
                     <field name="tag_ids" groups="oehealth_base.group_oehealth_suser"/>
@@ -85,6 +86,13 @@
                             <h3>
                                 <field name="insured_card_id" placeholder="Insured Card..." />
                             </h3>
+                            <!--div class="oe_edit_only"-->
+                            <div>
+                                <label for="total_refund"/>
+                            </div>
+                            <h3>
+                                <field name="total_refund" />
+                            </h3>
                             <div class="oe_edit_only">
                                 <label for="category_ids" groups="oehealth_base.group_oehealth_suser"/>
                             </div>
@@ -105,7 +113,7 @@
                             <!--field name="pbm_prescription_warning_ack" /-->
                             <!--field name="user_id" /-->
                             <newline/>
-                            <field name="prescription_line" colspan="4"/>
+                            <field name="dispensation_line" colspan="4"/>
                             <newline/>
                         </group>
                         <notebook>

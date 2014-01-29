@@ -22,11 +22,22 @@ from openerp.osv import orm, fields
 class oehealth_medicament_template(orm.Model):
     _inherit = 'oehealth.medicament.template'
 
+    def _compute_total_refund_price(self, cr, uid, ids, field_name, arg, context={}):
+        result = {}
+        for r in self.browse(cr, uid, ids, context=context):
+            if r.refund_price:
+                result[r.id] = r.refund_price * r.pack_quantity
+            else:
+                result[r.id] = 0.00
+        return result
+
     _columns={
         'dispensation_id': fields.many2one('oehealth.dispensation',
                                             string='Dispensation ID', ),
         'pack_quantity': fields.integer(string='Pack Quantity',
                                         help='Quantity of packs of the medicament'),
+        'refund_price': fields.float('Refund Price'),
+        'total_refund_price' : fields.function(_compute_total_refund_price, method=True, type='float', size=32, string='Refund Value',),
         }
     
 oehealth_medicament_template()

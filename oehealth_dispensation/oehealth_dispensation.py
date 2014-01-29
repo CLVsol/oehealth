@@ -24,6 +24,12 @@ import time
 class oehealth_dispensation(osv.Model):
     _name='oehealth.dispensation'
 
+    def _compute_total_refund_price(self, cr, uid, ids, field_name, arg, context={}):
+        total = {}
+        for obj in self.browse(cr, uid, ids, context=context):
+            total[obj.id] = sum(o2m.total_refund_price for o2m in obj.dispensation_line)
+        return total
+
     def _compute_create_uid(self, cr, uid, ids, field_name, arg, context={}):
         result = {}
         for r in self.browse(cr, uid, ids, context=context):
@@ -80,15 +86,16 @@ class oehealth_dispensation(osv.Model):
         #'prescription_line': fields.one2many('oehealth.dispensation.line',
         #                                     'pbm_prescription_order_id',
         #                                     string='Dispensation line',),
-        'prescription_line': fields.one2many('oehealth.medicament.template',
+        'dispensation_line': fields.one2many('oehealth.medicament.template',
                                              'dispensation_id',
-                                             string='Prescription lines',),
+                                             string='Dispensation lines',),
         #'pbm_prescription_warning_ack': fields.boolean(string='Dispensation verified'),
         #'user_id': fields.many2one('res.users', string='Prescribing Doctor', required=True),
         'active': fields.boolean('Active', help="The active field allows you to hide the dispensation without removing it."),
         'annotation_ids': fields.one2many('oehealth.annotation',
                                           'dispensation_id',
                                           'Annotations'),
+        'total_refund' : fields.function(_compute_total_refund_price, method=True, type='float', size=32, string='Dispensation Total Refund',),
         'state': fields.selection([('new','New'),
                                    ('revised','Revised'),
                                    ('waiting','Waiting'),

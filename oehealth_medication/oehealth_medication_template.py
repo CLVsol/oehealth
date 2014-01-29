@@ -43,8 +43,8 @@ class oehealth_medication_template(osv.Model):
         'quantity': fields.integer(string='Medicament Quantity',
                               help='Quantity of units (eg, 2 capsules) of the medicament'),
         'frequency': fields.integer(string='Frequency', 
-                                     help='Time in between doses the patient must wait (ie, for 1 pill'\
-                                     ' each 8 hours, put here 8 and select \"hours\" in the unit field'),
+                                    help='Time in between doses the patient must wait (ie, for 1 pill'\
+                                    ' each 8 hours, put here 8 and select \"hours\" in the unit field'),
         'frequency_unit': fields.selection([('seconds', 'seconds'),
                                             ('minutes', 'minutes'),
                                             ('hours', 'hours'),

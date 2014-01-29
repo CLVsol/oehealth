@@ -58,6 +58,7 @@ class oehealth_medicament_template(osv.Model):
         return result
 
     _columns = {
+        #'name': fields.char(size=256, string='Name'),
         'name': fields.char(string='Medicament Template Code', size=64, required=True,  
                             help='Medicament Template Code'),
         'medicament': fields.many2one('oehealth.medicament',
@@ -85,7 +86,7 @@ class oehealth_medicament_template(osv.Model):
                                             ('days', 'days'),
                                             ('weeks', 'weeks'),
                                             ('wr', 'when required'),
-                                            ], string='frequency unit',select=True, sort=False),
+                                            ], string='unit',select=True, sort=False),
         'duration': fields.integer(string='Treatment duration',
                                    help='Period that the patient must take the medicament. in minutes, '\
                                         'hours, days, months, years or indefinately'),
@@ -103,6 +104,13 @@ class oehealth_medicament_template(osv.Model):
         'admin_times': fields.char(size=256, string='Administration hours', 
                                    help='Suggested administration hours. For example, at 08:00, 13:00'\
                                         ' and 18:00 can be encoded like 08 13 18'),
+        'state': fields.selection([('new','New'),
+                                   ('revised','Revised'),
+                                   ('waiting','Waiting'),
+                                   ('canceled','Canceled'),
+                                   ('not_authorized','Not Authorized')
+                                   ('authorized','Authorized')
+                                   ], 'Stage', readonly=True),
         'create_uid': fields.function(_compute_create_uid, method=True, type='char', string='Create User',),
         'create_date': fields.function(_compute_create_date, method=True, type='datetime', string='Create Date',),
         'write_uid': fields.function(_compute_write_uid, method=True, type='char', string='Write User',),
@@ -149,6 +157,26 @@ class oehealth_medicament_template(osv.Model):
                 vals['name'] = code_str[15 - code_len:21]
             elif code_len > 12 and code_len <= 14:
                 vals['name'] = code_str[14 - code_len:21]
-        return super(oehealth_medicament_template, self).create(cr, uid, vals, context)
+        return super(oehealth_authorization, self).create(cr, uid, vals, context)
+
+    def oehealth_medicament_tmpl_new(self, cr, uid, ids):
+         self.write(cr, uid, ids, {'state': 'new'})
+         return True
+
+    def oehealth_medicament_tmpl_revised(self, cr, uid, ids):
+         self.write(cr, uid, ids, {'state': 'revised'})
+         return True
+
+    def oehealth_medicament_tmpl_waiting(self, cr, uid, ids):
+         self.write(cr, uid, ids, {'state': 'waiting'})
+         return True
+
+    def oehealth_medicament_tmpl_authorized(self, cr, uid, ids):
+         self.write(cr, uid, ids, {'state': 'authorized'})
+         return True
+
+    def oehealth_medicament_tmpl_canceled(self, cr, uid, ids):
+         self.write(cr, uid, ids, {'state': 'canceled'})
+         return True
 
 oehealth_medicament_template()

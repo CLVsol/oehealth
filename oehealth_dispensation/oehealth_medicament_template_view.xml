@@ -14,6 +14,8 @@
                 </field>
                 <field name="admin_times" position="after">
                     <field name="pack_quantity" />
+                    <field name="refund_price" />
+                    <field name="total_refund_price" />
                 </field>
             </field>
         </record>
@@ -30,6 +32,8 @@
                 </field>
                 <field name="admin_times" position="after">
                     <field name="pack_quantity" />
+                    <field name="refund_price" />
+                    <field name="total_refund_price" />
                 </field>
             </field>
         </record>
