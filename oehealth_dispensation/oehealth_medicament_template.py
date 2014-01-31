@@ -38,6 +38,10 @@ class oehealth_medicament_template(orm.Model):
                                         help='Quantity of packs of the medicament'),
         'refund_price': fields.float('Refund Price'),
         'total_refund_price' : fields.function(_compute_total_refund_price, method=True, type='float', size=32, string='Refund Value',),
-        }
+    }
+    
+    _defaults = {
+        'name': '/',
+    }
     
 oehealth_medicament_template()

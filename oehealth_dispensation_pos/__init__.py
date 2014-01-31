@@ -17,9 +17,4 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.        #
 ################################################################################
 
-import oehealth_annotation
-import oehealth_dispensation_category
 import oehealth_medicament_template
-import oehealth_dispensation
-import wizard
-import oehealth_tag

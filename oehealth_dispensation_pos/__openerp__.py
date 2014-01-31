@@ -17,20 +17,27 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.        #
 ################################################################################
 
-from osv import osv
-from osv import fields
-
-
-class oehealth_medicament_form(osv.Model):
-    _name = 'oehealth.medicament.form'
-
-    _columns = {
-        'code': fields.char(size=256, string='Code'),
-        'name': fields.char(size=256, string='Form', required=True,
-                            translate=True),
-    }
-    _sql_constraints = [
-        ('name_uniq', 'UNIQUE(name)', 'Name must be unique!'),
-    ]
-
-oehealth_medicament_form()
+{
+    'name': 'OpenERP Health: Dispensation (pos)',
+    'version': '1.0.0',
+    'author': 'Carlos Eduardo Vercelino - CLVsol',
+    'category': 'Generic Modules/Others',
+    'license': 'AGPL-3',
+    'website': 'http://oehealth.org',
+    'description': '''
+    ''',
+    'images': [],
+    'depends': ['oehealth_dispensation',
+                ],
+    'data': [],
+    'demo': [],
+    'test': [],
+    'init_xml': ['oehealth_medicament_template_view.xml',
+                 'oehealth_medicament_template_workflow.xml',
+                 ],
+    'test': [],
+    'update_xml': [],
+    'installable': True,
+    'active': False,
+    'css': [],
+}

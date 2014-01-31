@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <record id="view_oehealth_medicament_template_tree" model="ir.ui.view">
+            <field name="name">oehealth.medicament.template.tree</field>
+            <field name="model">oehealth.medicament.template</field>
+            <field name="inherit_id" ref="oehealth_dispensation.view_oehealth_medicament_template_tree"/>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <field name="name" position="after">
+                    <field name="state" />
+                    <field name="state_msg" />
+                </field>
+            </field>
+        </record>
+
+        <record id="view_oehealth_medicament_template_form" model="ir.ui.view">
+            <field name="name">oehealth.medicament.template.form</field>
+            <field name="model">oehealth.medicament.template</field>
+            <field name="inherit_id" ref="oehealth_medicament.view_oehealth_medicament_template_form"/>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <sheet string="Medicament Template" position="before">
+                    <header>
+                        <button name="oehealth_medicament_tmpl_revised" string="Revised" states="new,waiting,canceled,not_authorized,authorized" type="workflow" groups="oehealth_base.group_oehealth_dispensation_manager"/>
+                        <button name="oehealth_medicament_tmpl_waiting" string="Waiting" states="new,revised" type="workflow" groups="oehealth_base.group_oehealth_dispensation_manager"/>
+                        <button name="oehealth_medicament_tmpl_canceled" string="Canceled" states="waiting" type="workflow" groups="oehealth_base.group_oehealth_dispensation_manager"/>
+                        <button name="oehealth_medicament_tmpl_not_authorized" string="Not Authorized" states="waiting" type="workflow" groups="oehealth_base.group_oehealth_dispensation_manager"/>
+                        <button name="oehealth_medicament_tmpl_authorized" string="Authorized" states="waiting" type="workflow" groups="oehealth_base.group_oehealth_dispensation_manager"/>
+                        <field name="state" widget="statusbar" statusbar_visible="new,revised,waiting,canceled,not_authorized,authorized"
+                        statusbar_colors='{"new":"blue","revised":"blue","waiting":"blue","canceled":"red","not_authorized":"red","authorized":"green"}' />
+                    </header>
+                </sheet>
+            </field>
+        </record>
+
+    </data>
+</openerp>

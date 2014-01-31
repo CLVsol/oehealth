@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="workflow_oehealth_medicament_tmpl" model="workflow">
+            <field name="name">oehealth.medicament.template.wkf</field>
+            <field name="osv">oehealth.medicament.template</field>
+            <field name="on_create" eval='True' />
+        </record>
+
+         <record id="act_new" model="workflow.activity">
+            <field name="wkf_id" ref="workflow_oehealth_medicament_tmpl" />
+            <field name="flow_start" eval='True' />
+            <field name="name">medicament_tmpl_new</field>
+            <field name="kind">function</field>
+            <field name="action">oehealth_medicament_tmpl_new()</field>
+        </record>
+
+        <record id="act_revised" model="workflow.activity">
+            <field name="wkf_id" ref="workflow_oehealth_medicament_tmpl" />
+            <field name="name">medicament_tmpl_revised</field>
+            <field name="kind">function</field>
+            <field name="action">oehealth_medicament_tmpl_revised()</field>
+        </record>
+
+        <record id="act_waiting" model="workflow.activity">
+            <field name="wkf_id" ref="workflow_oehealth_medicament_tmpl" />
+            <field name="name">medicament_tmpl_waiting</field>
+            <field name="kind">function</field>
+            <field name="action">oehealth_medicament_tmpl_waiting()</field>
+        </record>
+
+        <record id="act_canceled" model="workflow.activity">
+            <field name="wkf_id" ref="workflow_oehealth_medicament_tmpl" />
+            <field name="name">medicament_tmpl_canceled</field>
+            <field name="kind">function</field>
+            <field name="action">oehealth_medicament_tmpl_canceled()</field>
+        </record>
+
+        <record id="act_not_authorized" model="workflow.activity">
+            <field name="wkf_id" ref="workflow_oehealth_medicament_tmpl" />
+            <field name="name">medicament_tmpl_not_authorized</field>
+            <field name="kind">function</field>
+            <field name="action">oehealth_medicament_tmpl_not_authorized()</field>
+        </record>
+
+        <record id="act_authorized" model="workflow.activity">
+            <field name="wkf_id" ref="workflow_oehealth_medicament_tmpl" />
+            <field name="name">medicament_tmpl_authorized</field>
+            <field name="kind">function</field>
+            <field name="action">oehealth_medicament_tmpl_authorized()</field>
+        </record>
+
+        <record id="t01" model="workflow.transition">
+            <field name="act_from" ref="act_new" />
+            <field name="act_to" ref="act_revised" />
+            <field name="signal">oehealth_medicament_tmpl_revised</field>
+        </record>
+
+        <record id="t02" model="workflow.transition">
+            <field name="act_from" ref="act_new" />
+            <field name="act_to" ref="act_waiting" />
+            <field name="signal">oehealth_medicament_tmpl_waiting</field>
+        </record>
+
+        <record id="t03" model="workflow.transition">
+            <field name="act_from" ref="act_revised" />
+            <field name="act_to" ref="act_waiting" />
+            <field name="signal">oehealth_medicament_tmpl_waiting</field>
+        </record>
+
+        <record id="t04" model="workflow.transition">
+            <field name="act_from" ref="act_waiting" />
+            <field name="act_to" ref="act_revised" />
+            <field name="signal">oehealth_medicament_tmpl_revised</field>
+        </record>
+
+        <record id="t05" model="workflow.transition">
+            <field name="act_from" ref="act_waiting" />
+            <field name="act_to" ref="act_canceled" />
+            <field name="signal">oehealth_medicament_tmpl_canceled</field>
+        </record>
+
+        <record id="t06" model="workflow.transition">
+            <field name="act_from" ref="act_waiting" />
+            <field name="act_to" ref="act_not_authorized" />
+            <field name="signal">oehealth_medicament_tmpl_not_authorized</field>
+        </record>
+
+        <record id="t07" model="workflow.transition">
+            <field name="act_from" ref="act_waiting" />
+            <field name="act_to" ref="act_authorized" />
+            <field name="signal">oehealth_medicament_tmpl_authorized</field>
+        </record>
+
+        <record id="t08" model="workflow.transition">
+            <field name="act_from" ref="act_canceled" />
+            <field name="act_to" ref="act_revised" />
+            <field name="signal">oehealth_medicament_tmpl_revised</field>
+        </record>
+
+        <record id="t09" model="workflow.transition">
+            <field name="act_from" ref="act_not_authorized" />
+            <field name="act_to" ref="act_revised" />
+            <field name="signal">oehealth_medicament_tmpl_revised</field>
+        </record>
+
+        <record id="t10" model="workflow.transition">
+            <field name="act_from" ref="act_authorized" />
+            <field name="act_to" ref="act_revised" />
+            <field name="signal">oehealth_medicament_tmpl_revised</field>
+        </record>
+
+    </data>
+</openerp>

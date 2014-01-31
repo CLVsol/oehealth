@@ -36,11 +36,11 @@
             <field name="priority" eval="8" />
             <field name="arch" type="xml">
                 <form string="Medicament Template" version="7.0">
-                    <sheet>
+                    <sheet string="Medicament Template">
                         <group>
                             <!--field name="transcription_id" /-->
                             <field name="name" />
-                            <field name="medicament" default_focus="1"/>
+                            <field name="medicament" />
                             <field name="form" />
                             <field name="route" />
                             <field name="dose" />
@@ -78,43 +78,11 @@
             <field name="priority" eval="8" />
             <field name="arch" type="xml">
                 <search string="Medicament Template">
-                    <!--field name="name" /-->
-                    <!--field name="start_treatment" /-->
-                    <!--field name="form" /-->
-                    <!--field name="route" /-->
-                    <!--field name="quantity" /-->
-                    <!--field name="dose" /-->
-                    <!--field name="duration" /-->
-                    <!--field name="frequency_prn" /-->
-                    <!--field name="frequency" /-->
-                    <!--field name="indication" /-->
+                    <field name="name" />
                     <field name="medicament" />
-                    <!--field name="common_dosage" /-->
-                    <!--field name="admin_times" /-->
-                    <!--field name="end_treatment" /-->
-                    <!--field name="dose_unit" /-->
                     <newline />
                     <group expand="0" string="Group By...">
-                        <!--filter string="Start" domain="[]" context="{'group_by':'start_treatment'}" /-->
-                        <!--filter string="Name" domain="[]" context="{'group_by':'name'}" /-->
-                        <!--filter string="Form" domain="[]" context="{'group_by':'form'}" /-->
-                        <!--filter string="Administration Route" domain="[]"
-                            context="{'group_by':'route'}" /-->
-                        <!--filter string="x" domain="[]" context="{'group_by':'quantity'}" /-->
-                        <!--filter string="Dose" domain="[]" context="{'group_by':'dose'}" /-->
-                        <!--filter string="Treatment duration" domain="[]"
-                            context="{'group_by':'duration'}" /-->
-                        <!--filter string="PRN" domain="[]" context="{'group_by':'frequency_prn'}" /-->
-                        <!--filter string="Frequency" domain="[]" context="{'group_by':'frequency'}" /-->
-                        <!--filter string="Indication" domain="[]"
-                            context="{'group_by':'indication'}" /-->
-                        <!--filter string="Medicament" domain="[]" context="{'group_by':'medicament'}" /-->
-                        <!--filter string="Frequency" domain="[]"
-                            context="{'group_by':'common_dosage'}" /-->
-                        <!--filter string="Admin hours" domain="[]"
-                            context="{'group_by':'admin_times'}" /-->
-                        <!--filter string="End" domain="[]" context="{'group_by':'end_treatment'}" /-->
-                        <!--filter string="dose unit" domain="[]" context="{'group_by':'dose_unit'}" /-->
+                        <filter string="Medicament" domain="[]" context="{'group_by':'medicament'}" />
                     </group>
                 </search>
             </field>

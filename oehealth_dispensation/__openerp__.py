@@ -41,8 +41,8 @@
     'init_xml': ['security/oehealth_dispensation_security.xml',
                  'oehealth_dispensation_view.xml',
                  'oehealth_dispensation_category_view.xml',
-                 'oehealth_medicament_template_view.xml',
                  'oehealth_dispensation_workflow.xml',
+                 'oehealth_medicament_template_view.xml',
                  'wizard/create_lab_test.xml'
                  ],
     'test': [],
