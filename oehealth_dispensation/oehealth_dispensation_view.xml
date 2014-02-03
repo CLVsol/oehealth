@@ -90,6 +90,13 @@
                             </h3>
                             <!--div class="oe_edit_only"-->
                             <div>
+                                <label for="price_list_id"/>
+                            </div>
+                            <h3>
+                                <field name="price_list_id" placeholder="Price List..." />
+                            </h3>
+                            <!--div class="oe_edit_only"-->
+                            <div>
                                 <label for="total_refund"/>
                             </div>
                             <h3>

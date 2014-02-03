@@ -41,7 +41,7 @@ class oehealth_medicament_template(orm.Model):
     
     def oehealth_medicament_tmpl_new(self, cr, uid, ids):
          self.write(cr, uid, ids, {'state': 'new'})
-         self.write(cr, uid, ids, {'state_msg': ''})
+         #self.write(cr, uid, ids, {'state_msg': ''})
          return True
 
     def oehealth_medicament_tmpl_revised(self, cr, uid, ids):

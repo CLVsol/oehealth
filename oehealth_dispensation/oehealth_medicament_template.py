@@ -48,9 +48,15 @@ class oehealth_medicament_template(orm.Model):
         if context is None:
             context = {}
 
+        dispensation_id = vals['dispensation_id']
+        dispensation_obj = self.pool.get('oehealth.dispensation')
+        price_list_id = dispensation_obj.read(cr, uid, dispensation_id, ['price_list_id'])['price_list_id'][0]
+        #vals['state_msg'] = price_list_id
+        #vals['pack_quantity'] = dispensation_id
+
         medicament = vals['medicament']
         price_list_item_obj = self.pool.get('oehealth.medicament.price_list.item')
-        item_id = price_list_item_obj.search(cr, uid, [('medicament_id', '=', medicament),])
+        item_id = price_list_item_obj.search(cr, uid, [('price_list_id', '=', price_list_id),('medicament_id', '=', medicament),])
         if item_id != []:
             refund_price = price_list_item_obj.read(cr, uid, item_id, ['refund_price'])[0]['refund_price']
         else:
