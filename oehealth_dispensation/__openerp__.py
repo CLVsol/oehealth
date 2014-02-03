@@ -33,6 +33,7 @@
                 'oehealth_prescriber',
                 'oehealth_pharmacy',
                 'oehealth_insured_card',
+                'oehealth_prescription_transcription',
                 ],
     'data': ['security/ir.model.access.csv',
              ],

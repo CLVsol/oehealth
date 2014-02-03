@@ -25,7 +25,7 @@ class oehealth_medicament_template(orm.Model):
     def _compute_total_refund_price(self, cr, uid, ids, field_name, arg, context={}):
         result = {}
         for r in self.browse(cr, uid, ids, context=context):
-            if r.refund_price:
+            if r.state == 'authorized':
                 result[r.id] = r.refund_price * r.pack_quantity
             else:
                 result[r.id] = 0.00
@@ -44,4 +44,20 @@ class oehealth_medicament_template(orm.Model):
         'name': '/',
     }
     
+    def create(self, cr, uid, vals, context=None):
+        if context is None:
+            context = {}
+
+        medicament = vals['medicament']
+        price_list_item_obj = self.pool.get('oehealth.medicament.price_list.item')
+        item_id = price_list_item_obj.search(cr, uid, [('medicament_id', '=', medicament),])
+        if item_id != []:
+            refund_price = price_list_item_obj.read(cr, uid, item_id, ['refund_price'])[0]['refund_price']
+        else:
+            refund_price = 0.00
+
+        vals['refund_price'] = refund_price
+
+        return super(oehealth_medicament_template, self).create(cr, uid, vals, context)
+
 oehealth_medicament_template()

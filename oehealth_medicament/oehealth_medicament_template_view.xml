@@ -40,7 +40,7 @@
                         <group>
                             <!--field name="transcription_id" /-->
                             <field name="name" />
-                            <field name="medicament" />
+                            <field name="medicament" default_focus="1"/>
                             <field name="form" />
                             <field name="route" />
                             <field name="dose" />

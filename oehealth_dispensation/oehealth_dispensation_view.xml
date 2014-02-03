@@ -40,8 +40,10 @@
                         <div class="oe_button_box oe_right">
                             <!--button name="get_authorization" states="new,revised,waiting,okay" string="Get Authorization" 
                                     type="object" icon="gtk-execute" context="{}" attrs="{}" class="oe_edit_only"/-->
+                            <button name="create_transcription" states="new,revised,waiting,okay" string="Create Transcription" 
+                                    type="object" icon="gtk-execute" context="{}" attrs="{}" class="oe_edit_only" groups="oehealth_base.group_oehealth_dispensation_manager"/>
                             <button name="get_authorization" states="new,revised,waiting,okay" string="Get Authorization" 
-                                    type="object" icon="gtk-execute" context="{}" attrs="{}" groups="oehealth_base.group_oehealth_dispensation_manager"/>
+                                    type="object" icon="gtk-execute" context="{}" attrs="{}" class="oe_edit_only" groups="oehealth_base.group_oehealth_dispensation_manager"/>
                         </div>
                         <div string="Dispensation" class="oe_title">
                             <!--div class="oe_edit_only"-->
@@ -105,6 +107,13 @@
                             <h2>
                                 <field name="tag_ids" widget="many2many_tags" placeholder="Tags..." groups="oehealth_base.group_oehealth_suser"/>
                             </h2>
+                            <!--div class="oe_edit_only"-->
+                            <div>
+                                <label for="transcription_id"/>
+                            </div>
+                            <h3>
+                                <field name="transcription_id" />
+                            </h3>
                         </div>
                         <group>
                             <!--field name="patient_id" /-->
@@ -113,8 +122,27 @@
                             <!--field name="pbm_prescription_warning_ack" /-->
                             <!--field name="user_id" /-->
                             <newline/>
-                            <field name="dispensation_line" colspan="4"/>
-                            <newline/>
+                            <!--field name="dispensation_line" colspan="4"/-->
+							<field name="dispensation_line" colspan="4">
+							    <tree>
+				                    <field name="name" />
+				                    <field name="medicament" />
+				                    <!--field name="form" /-->
+				                    <!--field name="route" /-->
+				                    <field name="dose" />
+				                    <field name="dose_unit" />
+				                    <field name="quantity" />
+				                    <field name="frequency" />
+				                    <field name="frequency_unit" />
+				                    <field name="duration" />
+				                    <field name="duration_period" />
+				                    <!--field name="admin_times" /-->
+				                    <field name="pack_quantity" />
+				                    <field name="refund_price" />
+				                    <field name="total_refund_price" />
+							    </tree>
+							</field>
+							<newline/>
                         </group>
                         <notebook>
                             <page string="Information" groups="oehealth_base.group_oehealth_suser">

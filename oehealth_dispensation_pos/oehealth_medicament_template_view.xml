@@ -32,6 +32,23 @@
                         statusbar_colors='{"new":"blue","revised":"blue","waiting":"blue","canceled":"red","not_authorized":"red","authorized":"green"}' />
                     </header>
                 </sheet>
+                <field name="name" position="replace">
+                    <field name="state_msg" />
+                    <field name="name" />
+                </field>
+            </field>
+        </record>
+
+        <record id="view_oehealth_dispensation_form" model="ir.ui.view">
+            <field name="name">oehealth.dispensation.form</field>
+            <field name="model">oehealth.dispensation</field>
+            <field name="inherit_id" ref="oehealth_dispensation.view_oehealth_dispensation_form"/>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <field name="medicament" position="before">
+                    <field name="state" />
+                    <field name="state_msg" />
+                </field>
             </field>
         </record>
 
