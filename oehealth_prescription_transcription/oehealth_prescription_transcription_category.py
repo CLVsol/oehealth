@@ -110,7 +110,7 @@ class oehealth_prescription_trasncription_category(osv.osv):
         'parent_left': fields.integer('Left parent', select=True),
         'parent_right': fields.integer('Right parent', select=True),
         'transcription_ids': fields.many2many('oehealth.prescription.transcription', 
-                                              'oehealth_prescription_trasncription_category_rel', 
+                                              'oehealth_prescription_transcription_category_rel', 
                                               'category_id', 
                                               'transcription_id', 
                                               'Transcriptions'),
