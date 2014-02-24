@@ -17,4 +17,5 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.        #
 ################################################################################
 
+import oehealth_annotation
 import oehealth_medicament_template

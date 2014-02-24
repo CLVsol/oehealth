@@ -17,13 +17,22 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.        #
 ################################################################################
 
-from openerp.osv import orm, fields
-
-class oehealth_group_participant(orm.Model):
-    _inherit = 'oehealth.group.participant'
-
-    _columns = {
-        'professional_id': fields.many2one('oehealth.professional', string='Professional'),
-    }
-
-oehealth_group_participant()
+{
+    'name': 'OpenERP Health - Web',
+    'version': '1.0.0',
+    'author': 'Carlos Eduardo Vercelino - CLVsol',
+    'category': 'Generic Modules/Others',
+    'license': 'AGPL-3',
+    'website': 'http://oehealth.org',
+    'description': '''
+    ''',
+    'depends': ['base',
+                ],
+    'data': [],
+    'init_xml': ['res_users_view.xml',
+                 ],
+    'test': [],
+    'update_xml': [],
+    'installable': True,
+    'active': False,
+}

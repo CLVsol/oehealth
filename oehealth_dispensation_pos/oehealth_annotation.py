@@ -19,11 +19,11 @@
 
 from openerp.osv import orm, fields
 
-class oehealth_group_participant(orm.Model):
-    _inherit = 'oehealth.group.participant'
+class oehealth_annotation(orm.Model):
+    _inherit = 'oehealth.annotation'
 
     _columns = {
-        'professional_id': fields.many2one('oehealth.professional', string='Professional'),
+        'medicament_template_id' : fields.many2one ('oehealth.medicament.template', 'Medicament Template'),
     }
 
-oehealth_group_participant()
+oehealth_annotation()

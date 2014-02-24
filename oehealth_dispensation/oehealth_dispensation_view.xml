@@ -11,6 +11,7 @@
                     <field name="name" />
                     <field name="dispensation_date" />
                     <field name="prescription_date" />
+                    <field name="transcription_id" />
                     <field name="prescriber_id" />
                     <field name="pharmacy_id" />
                     <field name="insured_card_id" />
@@ -203,6 +204,7 @@
                         <filter string="Prescriber" domain="[]" context="{'group_by':'prescriber_id'}" />
                         <filter string="Prescription Date" domain="[]" context="{'group_by':'prescription_date'}" />
                         <filter string="Stage" domain="[]" context="{'group_by':'state'}" />
+                        <filter string="Transcription ID" domain="[]" context="{'group_by':'transcription_id'}" />
                     </group>
                 </search>
             </field>

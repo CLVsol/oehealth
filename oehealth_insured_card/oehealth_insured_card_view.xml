@@ -12,10 +12,10 @@
                     <field name="insured_card_code" />
                     <field name="printed_name" />
                     <field name="insurance_id" />
+                    <field name="insured_card_status" />
                     <field name="state" />
                     <field name="insured_card_category_ids" groups="oehealth_base.group_oehealth_suser"/>
                     <field name="insured_card_tag_ids" groups="oehealth_base.group_oehealth_suser"/>
-                    <field name="insured_card_status" />
                     <field name="insured_card_info" colspan="4"/>
                 </tree>
             </field>
@@ -96,7 +96,8 @@
                                     <group>
                                         <field name="health_partner_code" string='Health Partner Code' readonly='True'/>
                                         <field name="insured_code" string='Insured Code' readonly='True'/>
-                                        <field name="insured_card_status" string='Status'/>
+                                        <!--field name="insured_card_status" string='Status'/-->
+                                        <field name="insured_card_status"/>
                                         <field name="date_insured_card_inclusion" string='Inclusion Date'/>
                                         <field name="date_insured_card_activation" string='Activation Date'/>
                                         <field name="date_insured_card_inactivation" string='Inctivation Date'/>

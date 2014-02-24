@@ -36,6 +36,11 @@
                     <field name="state_msg" />
                     <field name="name" />
                 </field>
+                <group string="Information" position="before">
+                    <group>
+                        <field name="annotation_ids" colspan="4" nolabel="1" />
+                    </group>
+                </group>
             </field>
         </record>
 

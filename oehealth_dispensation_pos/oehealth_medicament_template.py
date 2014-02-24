@@ -33,6 +33,9 @@ class oehealth_medicament_template(orm.Model):
         'state_msg': fields.char(size=256,
                                  string='Stage Message', 
                                  help='Stage Message'),
+        'annotation_ids': fields.one2many('oehealth.annotation',
+                                          'medicament_template_id',
+                                          'Annotations'),
         }
     
     _defaults = {

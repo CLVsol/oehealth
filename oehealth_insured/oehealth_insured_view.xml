@@ -14,10 +14,10 @@
                     <field name="insured_code" />
                     <field name="cpf" />
                     <field name="birthday" />
+                    <field name="insured_status" />
                     <field name="state" />
                     <field name="insured_category_ids" groups="oehealth_base.group_oehealth_suser"/>
                     <field name="insured_tag_ids" groups="oehealth_base.group_oehealth_suser"/>
-                    <field name="insured_status" />
                     <field name="insured_info" colspan="4"/>
                 </tree>
             </field>
@@ -203,12 +203,13 @@
                     <field name="cpf" />
                     <field name="insured_category_ids" />
                     <field name="insured_tag_ids" />
-                    <field name="insured_status" />
                     <field name="insured_info" />
                     <newline />
                     <group expand="0" string="Group By...">
-                        <filter string="Stage" domain="[]" context="{'group_by': 'state'}"/>
+                        <filter string="Stage" domain="[]" context="{'group_by':'state'}"/>
                         <filter string="Insured Status" domain="[]" context="{'group_by':'insured_status'}" />
+                        <filter string="Insurance Client" domain="[]" context="{'group_by':'insurance_client_id'}" />
+                        <filter string="Insurance" domain="[]" context="{'group_by':'insurance_id'}" />
                     </group>
                 </search>
             </field>

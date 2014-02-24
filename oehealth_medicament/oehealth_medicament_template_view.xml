@@ -57,7 +57,7 @@
                             <!--field name="start_treatment" /-->
                             <!--field name="end_treatment" /-->
                         </group>
-                        <group groups="oehealth_base.group_oehealth_rmanager">
+                        <group string="Information" groups="oehealth_base.group_oehealth_rmanager">
                             <group string="Creation" >
                                 <field name="create_uid" string="User" />
                                 <field name="create_date" string="Date" />
