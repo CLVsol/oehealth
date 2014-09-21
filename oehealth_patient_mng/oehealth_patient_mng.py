@@ -92,11 +92,15 @@ class oehealth_patient_mng(osv.Model):
         'date_patient_inclusion' : fields.date('Patient Inclusion Date'),
         'date_patient_activation' : fields.date('Patient Activation Date'),
         'date_patient_inactivation' : fields.date('Patient Inactivation Date'),
+        # 'patient_status': fields.selection([('U', 'Undefined'),
+        #                                     ('A', 'Activated'),
+        #                                     ('I', 'Inactivated'),
+        #                                     ], string='Patient Status',
+        #                                        select=True, sort=False, required=False, translate=True),
         'patient_status': fields.selection([('U', 'Undefined'),
                                             ('A', 'Activated'),
                                             ('I', 'Inactivated'),
-                                            ], string='Patient Status',
-                                               select=True, sort=False, required=False, translate=True),
+                                            ], string='Patient Status', select=True, sort=False),
 
 
 

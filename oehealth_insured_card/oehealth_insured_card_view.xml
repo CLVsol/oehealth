@@ -159,6 +159,7 @@
                     <group expand="0" string="Group By...">
                         <filter string="Stage" context="{'group_by': 'state'}"/>
                         <filter string="Insured Card Status" context="{'group_by': 'insured_card_status'}"/>
+                        <filter string="Insurance" context="{'group_by': 'insurance_id'}"/>
                     </group>
                 </search>
             </field>
